@@ -1,0 +1,6 @@
+.DS_Store
+*.drawio.dtmp
+.vscode
+*.drawio.bkp
+.idea
+*~$*
