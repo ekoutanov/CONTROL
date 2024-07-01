@@ -88,6 +88,8 @@ Maruping, L. M., Venkatesh, V., & Agarwal, R. (2009). "A control theory perspect
 
 McBreen, P. (2003). Questioning Extreme Programming. Boston: Addison-Wesley; p. 100.
 
+Mills, H. D. (1975). "How to write correct programs and know it", SIGPLAN Not. 10, 6 (June 1975), 363–370; https://doi.org/10.1145/390016.808459.
+
 Ramasubbu, N., & Kemerer, C. F. (2016). "Technical debt and the reliability of enterprise software systems: A competing risks analysis", Management Science, 62(5), 1298-1316.
 
 Rico, R., & Cohen, S. (2004). "Effects of task interdependence and type of communication on performance in virtual teams", Journal of Management Information Systems, 20(4), 297-323.
