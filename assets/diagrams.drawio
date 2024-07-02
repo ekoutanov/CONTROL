@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-07-01T07:03:50.073Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="TmIN1QeII7w2ak19iJtk" version="24.5.3" type="device" pages="13">
+<mxfile host="Electron" modified="2024-07-02T01:48:43.280Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.3 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="O9VIokUlDNLRqwr5e166" version="24.5.3" type="device" pages="13">
   <diagram name="org-model" id="TnyNX9Vgl1ORh8cvrKMd">
     <mxGraphModel dx="1264" dy="924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -2323,7 +2323,7 @@
             <mxPoint x="379" y="209" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PJjzCouRSXgrtPrtl10h-3" value="&lt;b&gt;AGILE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#FFDAB0;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="PJjzCouRSXgrtPrtl10h-3" value="&lt;b&gt;AGILE&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#D79B00;strokeColor=#d79b00;strokeWidth=2;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="40" y="74" width="200" height="24" as="geometry" />
         </mxCell>
         <mxCell id="_SV5v4vJEq_fDePxXovT-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=70;" vertex="1" parent="1">
@@ -2332,7 +2332,7 @@
         <mxCell id="PJjzCouRSXgrtPrtl10h-6" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;ul&gt;&lt;li&gt;Driven by planning&amp;nbsp;&lt;/li&gt;&lt;li&gt;Medium to large teams&amp;nbsp;&lt;/li&gt;&lt;li&gt;Distant stakeholders, rarely available&amp;nbsp;&lt;/li&gt;&lt;li&gt;Stable assumptions&amp;nbsp;&lt;/li&gt;&lt;li&gt;Predictability&amp;nbsp;&lt;/li&gt;&lt;li&gt;Focus on the system&amp;nbsp;&lt;/li&gt;&lt;li&gt;Up-front design&amp;nbsp;&lt;/li&gt;&lt;li&gt;Nonfunctional qualities in sync with functional delivery&amp;nbsp;&lt;/li&gt;&lt;li&gt;Documented knowledge and asynchronous communication&lt;/li&gt;&lt;li&gt;Thriving on order&lt;/li&gt;&lt;li&gt;Pre-organised teams&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=none;size=0;align=left;spacingRight=0;spacingLeft=-23;verticalAlign=top;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="375" y="390" width="200" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="PJjzCouRSXgrtPrtl10h-7" value="&lt;b&gt;CLASSICAL&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="PJjzCouRSXgrtPrtl10h-7" value="&lt;b&gt;CLASSICAL&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#B5739D;strokeColor=#9673a6;strokeWidth=2;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="375" y="390" width="200" height="24" as="geometry" />
         </mxCell>
         <mxCell id="PJjzCouRSXgrtPrtl10h-9" value="" style="endArrow=oval;html=1;rounded=0;strokeColor=#9673A6;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endFill=1;endSize=14;strokeWidth=2;" edge="1" parent="1" source="PJjzCouRSXgrtPrtl10h-7">
@@ -2344,19 +2344,19 @@
         <mxCell id="PJjzCouRSXgrtPrtl10h-13" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=none;size=0;align=left;spacingRight=0;spacingLeft=-23;verticalAlign=top;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;opacity=70;" vertex="1" parent="1">
           <mxGeometry x="110" y="390" width="200" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="PJjzCouRSXgrtPrtl10h-10" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Teams of varying skills and experience&amp;nbsp;&lt;/li&gt;&lt;li&gt;Increments of varying granularity&lt;/li&gt;&lt;li&gt;Reliance on knowledgeable stakeholders&lt;/li&gt;&lt;li&gt;Clear ways of measuring success&lt;/li&gt;&lt;li&gt;Known delivery constraints (time and budget)&lt;/li&gt;&lt;li&gt;Reliance on estimation techniques&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=none;size=0;align=left;spacingRight=0;spacingLeft=-23;verticalAlign=top;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=50;" vertex="1" parent="1">
+        <mxCell id="PJjzCouRSXgrtPrtl10h-10" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Teams of varying skills and experience&amp;nbsp;&lt;/li&gt;&lt;li&gt;Increments of varying granularity&lt;/li&gt;&lt;li&gt;Reliance on knowledgeable stakeholders&lt;/li&gt;&lt;li&gt;Clear ways of measuring success&lt;/li&gt;&lt;li&gt;Known delivery constraints (time and budget)&lt;/li&gt;&lt;li&gt;Reliance on estimation techniques&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=none;size=0;align=left;spacingRight=0;spacingLeft=-23;verticalAlign=top;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#CCA3BE;opacity=50;" vertex="1" parent="1">
           <mxGeometry x="110" y="390" width="200" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="PJjzCouRSXgrtPrtl10h-11" value="&lt;b&gt;BOTH&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;opacity=40;" vertex="1" parent="1">
+        <mxCell id="PJjzCouRSXgrtPrtl10h-11" value="&lt;b&gt;BOTH&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#B5739D;strokeColor=#CCA3BE;strokeWidth=2;opacity=60;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="110" y="390" width="200" height="24" as="geometry" />
         </mxCell>
         <mxCell id="PJjzCouRSXgrtPrtl10h-15" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;ul&gt;&lt;li&gt;Clear accountability model&amp;nbsp;&lt;/li&gt;&lt;li&gt;Team growth and succession focus&lt;br&gt;&lt;/li&gt;&lt;li&gt;Drives meritocratic culture&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontFamily=Helvetica;fontSize=13;labelBackgroundColor=none;size=0;align=left;spacingRight=0;spacingLeft=-23;verticalAlign=top;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="623" y="390" width="200" height="110" as="geometry" />
+          <mxGeometry x="791" y="153" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="PJjzCouRSXgrtPrtl10h-16" value="&lt;b&gt;NEITHER&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="623" y="390" width="200" height="24" as="geometry" />
+        <mxCell id="PJjzCouRSXgrtPrtl10h-16" value="&lt;b&gt;NEITHER&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;fillColor=#B85450;strokeColor=#b85450;strokeWidth=2;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="791" y="153" width="200" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="PJjzCouRSXgrtPrtl10h-17" value="" style="endArrow=oval;html=1;rounded=0;strokeColor=#B85450;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=0.25;exitY=0;exitDx=0;exitDy=0;endFill=1;endSize=14;strokeWidth=2;" edge="1" parent="1" source="PJjzCouRSXgrtPrtl10h-16">
+        <mxCell id="PJjzCouRSXgrtPrtl10h-17" value="" style="endArrow=oval;html=1;rounded=0;strokeColor=#B85450;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=1;endSize=14;strokeWidth=2;exitPerimeter=0;" edge="1" parent="1" source="PJjzCouRSXgrtPrtl10h-15">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="710" y="392" as="sourcePoint" />
             <mxPoint x="672" y="208" as="targetPoint" />
