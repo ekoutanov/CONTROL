@@ -1,7 +1,5 @@
-CONTROL
+CONTROL: Remedy for Software Engineering Chaos
 ---
-Antidote for Software Engineering Chaos.
-
 ![Static Badge](https://img.shields.io/badge/0.1-green?style=flat-square&label=version)
 
 [Preface](preface.md)
