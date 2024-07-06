@@ -36,6 +36,8 @@ Collins, J. (2001). Good to Great: Why Some Companies Make the Leap... and Other
 
 Constantine, L. (2001). "Methodological Agility", Software Development; pp. 67–69.
 
+Covey, S. R. (2024). The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change. Free Press.
+
 Dikert, K., Paasivaara, M., & Lassenius, C. (2016). "Challenges and success factors for large-scale agile transformations: A systematic literature review", Journal of Systems and Software, 119, 87-108.
 
 Dingsøyr, T., Nerur, S., Balijepally, V., & Moe, N. B. (2012). "A decade of agile methodologies: Towards explaining agile software development", Journal of Systems and Software, 85(6), 1213-1221.
@@ -70,6 +72,8 @@ Jacobson, I., Booch, G., & Rumbaugh, J. (1999). The Unified Software Development
 
 Kamei, F., Maldonado, J. C., Conte, T., & Figueiredo, E. (2013). "The influence of the type of requirements on the variability of size and effort of agile projects", Proceedings of the 2013 International Conference on Software Engineering, 846-856.
 
+Katzenbach, J. R., & Smith, D. K. (1993). The Wisdom of Teams: Creating the High-Performance Organization. Harvard Business Review Press.
+
 Keizer, K., Lindenberg, S., & Steg, L. (2008). The Spreading of Disorder. Science (New York, N.Y.). 322. 1681-5.
 
 Kruchten, P., Nord, R. L., & Ozkaya, I. (2012). "Technical debt: From metaphor to theory and practice", IEEE Software, 29(6), 18-21.
@@ -79,6 +83,8 @@ Laanti, M., Salo, O. & Abrahamsson, P. (2011). "Agile methods rapidly replacing 
 Larman, C., & Basili, V. R. (2003). "Iterative and Incremental Development: A Brief History", IEEE Computer, 36(6), 47-56.
 
 Latané, B., Williams, K., & Harkins, S. (1979). "Many hands make light the work: The causes and consequences of social loafing", Journal of Personality and Social Psychology, 37(6), 822-832.
+
+Lencioni, P. (2002). The Five Dysfunctions of a Team: A Leadership Fable. Jossey-Bass.
 
 Mahoney, M. S. (1990). "The Roots of Software Engineering", CWI Quarterly, pp. 325-334.
 
@@ -90,6 +96,8 @@ McBreen, P. (2003). Questioning Extreme Programming. Boston: Addison-Wesley; p. 
 
 Mills, H. D. (1975). "How to write correct programs and know it", SIGPLAN Not. 10, 6 (June 1975), 363–370; https://doi.org/10.1145/390016.808459.
 
+Project Management Institute (PMI). (2021). A Guide to the Project Management Body of Knowledge (PMBOK Guide) – Seventh Edition. Project Management Institute. Available: https://www.pmi.org/pmbok-guide-standards/foundational/pmbok.
+
 Ramasubbu, N., & Kemerer, C. F. (2016). "Technical debt and the reliability of enterprise software systems: A competing risks analysis", Management Science, 62(5), 1298-1316.
 
 Rico, R., & Cohen, S. (2004). "Effects of task interdependence and type of communication on performance in virtual teams", Journal of Management Information Systems, 20(4), 297-323.
@@ -99,6 +107,8 @@ Ries, E. (2011). The Lean Startup. Crown Business.
 Ringelmann, M. (1913). Recherches sur les moteurs animés: Travail de l'homme. Annales de l'Institut National Agronomique, 12, 1-40. [Original French].
 
 Ringelmann, M. (1913). La tendance à la moindre effort dans les groupes humains. Journal de Psychologie Normale et Pathologique, 10(3), 137-149. [Original French].
+
+Robbins, S. P., & Coulter M. A. (2021). Management, Global Edition. 15th ed., Pearson. ISBN: 9781292340883.
 
 Rosenblatt, V. (2012). "Hierarchies, Power Inequalities, and Organizational Corruption", J Bus Ethics 111, 237–251; https://doi.org/10.1007/s10551-012-1204-y.
 
