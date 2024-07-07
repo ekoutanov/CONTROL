@@ -38,6 +38,8 @@ Constantine, L. (2001). "Methodological Agility", Software Development; pp. 67�
 
 Covey, S. R. (2024). The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change. Free Press.
 
+Dempsey, J. R., Davis, W. A., Crossfield, A. S., & Walter C. Williams. (1964). "Program Management in Design and Development", in Third Annual Aerospace Reliability and Maintainability Conference, Society of Automotive Engineers, p. 7–8.
+
 Dikert, K., Paasivaara, M., & Lassenius, C. (2016). "Challenges and success factors for large-scale agile transformations: A systematic literature review", Journal of Systems and Software, 119, 87-108.
 
 Dingsøyr, T., Nerur, S., Balijepally, V., & Moe, N. B. (2012). "A decade of agile methodologies: Towards explaining agile software development", Journal of Systems and Software, 85(6), 1213-1221.
@@ -75,6 +77,8 @@ Kamei, F., Maldonado, J. C., Conte, T., & Figueiredo, E. (2013). "The influence 
 Katzenbach, J. R., & Smith, D. K. (1993). The Wisdom of Teams: Creating the High-Performance Organization. Harvard Business Review Press.
 
 Keizer, K., Lindenberg, S., & Steg, L. (2008). The Spreading of Disorder. Science (New York, N.Y.). 322. 1681-5.
+
+Kranz G. (2009). Failure Is Not an Option: Mission Control from Mercury to Apollo 13 and Beyond. New York: Simon and Schuster, 308–339.
 
 Kruchten, P., Nord, R. L., & Ozkaya, I. (2012). "Technical debt: From metaphor to theory and practice", IEEE Software, 29(6), 18-21.
 
