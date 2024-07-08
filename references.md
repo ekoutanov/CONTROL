@@ -136,4 +136,6 @@ Thomas, D. (2014). Agile Is Dead (Long Live Agility). Available: http://pragdave
 
 Tom, E., Aurum, A., & Vidgen, R. (2013). "An exploration of technical debt", Journal of Systems and Software, 86(6), 1498-1516.
 
+Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User Acceptance of Information Technology: Toward a Unified View. MIS Quarterly, 27(3), 425-478.
+
 Wilson, J. Q., & Kelling, G. L. (1982). Broken windows. The Atlantic. Available: https://www.theatlantic.com/magazine/archive/1982/03/broken-windows/304465/.
