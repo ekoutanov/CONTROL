@@ -24,11 +24,15 @@ Boehm, B. W. (2000). "Spiral Development: Experience, Principles, and Refinement
 
 Boehm, B. W., & Turner, R. (2004). Balancing Agility and Discipline: A Guide for the Perplexed. Addison-Wesley Professional.
 
+Bregman, P. (2016, January 11). The right way to hold people accountable. Harvard Business Review. Accessible: https://hbr.org/2016/01/the-right-way-to-hold-people-accountable.
+
 Brézillon, P. (1999). "Context in problem solving: A survey", The Knowledge Engineering Review. 14. 10.1017/S0269888999141018.
 
 Brooks, F. P. (1975). The Mythical Man-Month: Essays on Software Engineering. Addison-Wesley. ISBN 978-0-201-83595-3.
 
 Brooks, F. P. (1986). "No Silver Bullet — Essence and Accident in Software Engineering", Proceedings of the IFIP Tenth World Computing Conference: 1069–1076.
+
+Brown, D., Chheng, S., Melian, V., Parker, K., & Solow, M. (2015). Global human capital trends 2015: Leading in the new world of work. Deloitte University Press. pp. 35-41.
 
 Chagas, L. F., de Carvalho, D. D., Lima, A. M., Reis, C. A. L. (2014). "Systematic Literature Review on the Characteristics of Agile Project Management in the Context of Maturity Models", In: Mitasiunas, A., Rout, T., O’Connor, R.V., Dorling, A. (eds) Software Process Improvement and Capability Determination. SPICE 2014. Communications in Computer and Information Science, vol 477. Springer, Cham; https://doi.org/10.1007/978-3-319-13036-1_16.
 
@@ -48,9 +52,11 @@ Finkelstein, S., Hambrick, D. C., & Cannella, A. A. (2009). Strategic Leadership
 
 Fitzgerald, B., Hartnett, G., & Conboy, K. (2006). "Customising agile methods to software practices at Intel Shannon", European Journal of Information Systems, 15(2), 200-213.
 
-Gregory, P., Barroca, L., Sharp, H., Deshpande, A., & Taylor, K. (2016). "The challenges that challenge: Engaging with agile practitioners’ concerns", Information and Software Technology, 77, 92-104.
+Gallup. (2015). State of the American manager: Analytics and advice for leaders. Gallup, Inc. 
 
 Goodhart, C. (1975). "Problems of Monetary Management: The U.K. Experience", Papers in Monetary Economics. Papers in monetary economics 1975; p. 1-20. Vol. 1.
+
+Gregory, P., Barroca, L., Sharp, H., Deshpande, A., & Taylor, K. (2016). "The challenges that challenge: Engaging with agile practitioners’ concerns", Information and Software Technology, 77, 92-104.
 
 Gubko, M. V. (2008). "The search for optimal organizational hierarchies with homogeneous manager cost functions", Autom Remote Control 69, 89–104; https://doi.org/10.1134/S0005117908010098.
 
@@ -89,6 +95,8 @@ Larman, C., & Basili, V. R. (2003). "Iterative and Incremental Development: A Br
 Latané, B., Williams, K., & Harkins, S. (1979). "Many hands make light the work: The causes and consequences of social loafing", Journal of Personality and Social Psychology, 37(6), 822-832.
 
 Lencioni, P. (2002). The Five Dysfunctions of a Team: A Leadership Fable. Jossey-Bass.
+
+Madgavkar, A., Schaninger, B., Maor, D., White, O., Smit, S., Samandari, H., Woetzel, J., Carlin, D., & Chockalingam, K. (2023, February). Performance through people — Transforming human capital into competitive advantage. McKinsey Global Institute.
 
 Mahoney, M. S. (1990). "The Roots of Software Engineering", CWI Quarterly, pp. 325-334.
 
