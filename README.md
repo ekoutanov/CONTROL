@@ -2,6 +2,8 @@ CONTROL: Remedy for Software Engineering Chaos
 ---
 ![Static Badge](https://img.shields.io/badge/0.1-green?style=flat-square&label=version)
 
+_Dedicated to my mentors, who guided me with wisdom and patience._
+
 [Preface](preface.md)
 
 [Chapter 1. Historical Context](ch01.md)
