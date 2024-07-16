@@ -22,7 +22,7 @@ _Dedicated to my mentors, who guided me with wisdom and patience._
 
 [Chapter 8. Growth](ch08.md)
 
-Chapter 9. Non-Product Delivery
+Chapter 9. Maintenance
 
 Chapter 10. Recommendations
 
