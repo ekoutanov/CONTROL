@@ -14,6 +14,10 @@ Beetson, D. (2020). Leading Software Teams with Context, not Control. LeanPub. I
 
 Bell T. E., & Thayer T. A. (1976). "Software requirements: Are they really a problem?" Proceeding ICSE '76 Proceedings of the 2nd international conference on Software Engineering. IEEE Computer Society Press Los Alamitos, CA, USA. pp. 61-68.
 
+Bernerth, J. B., Walker, H. J., & Harris, S. G. (2011). Change fatigue: Development and initial validation of a new measure. Work & Stress, 25 (4), 321 – 337.
+
+Beaudan, E. (2006). Making change last: How to get beyond change fatigue. Ivey Business Journal.
+
 Bidwell, M. (2011). "Paying More to Get Less: The Effects of External Hiring versus Internal Mobility", Administrative Science Quarterly, 56(3), 369-407.
 
 Bock, L. (2015). Work Rules! Insights from Inside Google That Will Transform How You Live and Lead. Twelve.
@@ -41,6 +45,8 @@ Collins, J. (2001). Good to Great: Why Some Companies Make the Leap... and Other
 Constantine, L. (2001). "Methodological Agility", Software Development; pp. 67–69.
 
 Covey, S. R. (2024). The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change. Free Press.
+
+DeMarco, T., & Lister, T. (2013). Peopleware: Productive projects and teams (3rd ed.). Addison-Wesley.
 
 Dempsey, J. R., Davis, W. A., Crossfield, A. S., & Walter C. Williams. (1964). "Program Management in Design and Development", in Third Annual Aerospace Reliability and Maintainability Conference, Society of Automotive Engineers, p. 7–8.
 
@@ -75,6 +81,8 @@ IEEE-USA, IEEE-USA Salary & Benefits Survey Report - 2019 Edition, IEEE, 2019.
 Ingham, A. G., Levinger, G., Graves, J., & Peckham, V. (1974). "The Ringelmann effect: Studies of group size and group performance", Journal of Experimental Social Psychology, 10(4), 371-384.
 
 International Software Testing Qualifications Board. (2018). Certified Tester Foundation Level Syllabus. Available: https://istqb-main-web-prod.s3.amazonaws.com/media/documents/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf.
+
+Jackman, M. (1998, July). "Homeopathic Remedies for Team Toxicity," IEEE Software, pp. 43–45.
 
 Jacobson, I., Booch, G., & Rumbaugh, J. (1999). The Unified Software Development Process. Reading, MA: Addison-Wesley.
 
@@ -126,6 +134,8 @@ Rosenblatt, V. (2012). "Hierarchies, Power Inequalities, and Organizational Corr
 
 Royce, W. (1970). "Managing the Development of Large Software Systems", Proceedings of IEEE WESCON; https://dl.acm.org/doi/10.5555/41765.41801.
 
+Ruff J. (2023, December). Change Fatigue in The Workplace: Definition, Causes, Effects, Signs, And How to Overcome. ChangingPoint. Available: https://changing-point.com/change-fatigue-in-the-workplace/.
+
 Sapiro, A. (2024). Operating Model and Organization Design. In: Strategic Management. Classroom Companion: Business. Springer, Cham; https://doi.org/10.1007/978-3-031-55669-2_11.
 
 Spence, M. (1973). "Job Market Signaling", The Quarterly Journal of Economics, vol. 87, no. 3, pp. 355-374.
@@ -145,5 +155,7 @@ Thomas, D. (2014). Agile Is Dead (Long Live Agility). Available: http://pragdave
 Tom, E., Aurum, A., & Vidgen, R. (2013). "An exploration of technical debt", Journal of Systems and Software, 86(6), 1498-1516.
 
 Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User Acceptance of Information Technology: Toward a Unified View. MIS Quarterly, 27(3), 425-478.
+
+de Vries, M. S. E. & de Vries, M. S. (2023). Repetitive reorganisations, uncertainty and change fatigue. Public Money & Management. 43 (2), pp. 126–135.
 
 Wilson, J. Q., & Kelling, G. L. (1982). Broken windows. The Atlantic. Available: https://www.theatlantic.com/magazine/archive/1982/03/broken-windows/304465/.
