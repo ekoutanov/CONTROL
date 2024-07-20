@@ -54,6 +54,8 @@ Dikert, K., Paasivaara, M., & Lassenius, C. (2016). "Challenges and success fact
 
 Dingsøyr, T., Nerur, S., Balijepally, V., & Moe, N. B. (2012). "A decade of agile methodologies: Towards explaining agile software development", Journal of Systems and Software, 85(6), 1213-1221.
 
+Erickson, C. (2023). Better Custom Software Estimates. Available: https://atomicobject.com/client-resources/better-custom-software-estimates.
+
 Finkelstein, S., Hambrick, D. C., & Cannella, A. A. (2009). Strategic Leadership: Theory and Research on Executives, Top Management Teams, and Boards. Oxford University Press.
 
 Fitzgerald, B., Hartnett, G., & Conboy, K. (2006). "Customising agile methods to software practices at Intel Shannon", European Journal of Information Systems, 15(2), 200-213.
@@ -63,6 +65,8 @@ Gallup. (2015). State of the American manager: Analytics and advice for leaders.
 Goodhart, C. (1975). "Problems of Monetary Management: The U.K. Experience", Papers in Monetary Economics. Papers in monetary economics 1975; p. 1-20. Vol. 1.
 
 Gregory, P., Barroca, L., Sharp, H., Deshpande, A., & Taylor, K. (2016). "The challenges that challenge: Engaging with agile practitioners’ concerns", Information and Software Technology, 77, 92-104.
+
+Griffiths, M. (2008, January). Software Estimates - Managing Expectations via Ranges. Available: https://www.leadinganswers.com/2008/01/software-estima.html.
 
 Gubko, M. V. (2008). "The search for optimal organizational hierarchies with homogeneous manager cost functions", Autom Remote Control 69, 89–104; https://doi.org/10.1134/S0005117908010098.
 
@@ -94,6 +98,8 @@ Keizer, K., Lindenberg, S., & Steg, L. (2008). The Spreading of Disorder. Scienc
 
 Kranz G. (2009). Failure Is Not an Option: Mission Control from Mercury to Apollo 13 and Beyond. New York: Simon and Schuster, 308–339.
 
+Kravcenko, V. (2003, July). Rules of Thumb for Software Development Estimations. Available: https://vadimkravcenko.com/shorts/project-estimates.
+
 Kruchten, P., Nord, R. L., & Ozkaya, I. (2012). "Technical debt: From metaphor to theory and practice", IEEE Software, 29(6), 18-21.
 
 Laanti, M., Salo, O. & Abrahamsson, P. (2011). "Agile methods rapidly replacing traditional methods at Nokia: A survey of opinions on agile transformation", Information and Software Technology. 53(3):276–290.
@@ -113,6 +119,10 @@ Mann, C., & Maurer, F. (2005). "A case study on the impact of scrum on overtime 
 Maruping, L. M., Venkatesh, V., & Agarwal, R. (2009). "A control theory perspective on agile methodology use and changing user requirements", Information Systems Research, 20(3), 377–399; https://doi.org/10.1287/isre.1090.0238.
 
 McBreen, P. (2003). Questioning Extreme Programming. Boston: Addison-Wesley; p. 100.
+
+McConnell, S. (2006). Software Estimation: Demystifying the Black Art. Redmond, WA: Microsoft Press.
+
+Miller, R. W. (1963). Schedule, Cost, and Profit Control with PERT - A Comprehensive Guide for Program Management. McGraw-Hill. ISBN 9780070419940.
 
 Mills, H. D. (1975). "How to write correct programs and know it", SIGPLAN Not. 10, 6 (June 1975), 363–370; https://doi.org/10.1145/390016.808459.
 
