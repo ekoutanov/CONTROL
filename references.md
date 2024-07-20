@@ -126,6 +126,8 @@ Miller, R. W. (1963). Schedule, Cost, and Profit Control with PERT - A Comprehen
 
 Mills, H. D. (1975). "How to write correct programs and know it", SIGPLAN Not. 10, 6 (June 1975), 363–370; https://doi.org/10.1145/390016.808459.
 
+Pressman, R. S., & Maxim, B. R. (2020). Software Engineering: A Practitioner's Approach (9th ed.). New York, NY: McGraw-Hill Education.
+
 Project Management Institute (PMI). (2021). A Guide to the Project Management Body of Knowledge (PMBOK Guide) – Seventh Edition. Project Management Institute. Available: https://www.pmi.org/pmbok-guide-standards/foundational/pmbok.
 
 Ramasubbu, N., & Kemerer, C. F. (2016). "Technical debt and the reliability of enterprise software systems: A competing risks analysis", Management Science, 62(5), 1298-1316.
