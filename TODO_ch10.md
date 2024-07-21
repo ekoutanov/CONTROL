@@ -5,6 +5,39 @@
 Non-core aspects of CONTROL.
 
 # Documentation
+The generation of documentation, as well as other non-executable artefacts associated with software, is one of the most polarising aspects of software development methods, often used to compare Classical and Agile methodologies. Seemingly, one inundates developers with documentation while the other throws documentation out of the window.
+
+Neither claim is true in its entirety. Many Classical methods take a risk-centric approach to elaborating artefacts of all forms, especially documentation. This approach is advocated heavily in both the Unified Process (and its variants) and Boehm's Spiral model. At the opposing end, Agile embraces documentation but, according to Highsmith, "not hundreds of pages of never-maintained and rarely-used tomes." (Beck et al., 2001.) Each approach tries to strike a balance that works for the _kinds of problems it aims to solve_.
+
+Since practice has a tendency to diverge from theory, this point remains a scorched battleground. In practice, many method adopters avoid independent thought and choose to follow the herd instead, taking on the most commanding of dogmas. This further intensifies the polarisation: proponents of a method will gravitate towards the closest extremity in attempt to distance themselves from their ideological opposition. A three-year study into the adoption and tailoring of Agile methods in Intel highlighted inordinate emphasis on working software over comprehensive documentation, making it harder to scale Agile teams and maintain the software in the long run (Fitzgerald, Hartnett, & Conboy, 2006). Equivalently, many plan-driven adopters have disadvantaged themselves by taking the opposing stance, allowing documentation bureaucracy to stand in the way of progress<sup>1</sup>.
+
+><sup>1 </sup>Sadly, the overwhelming majority of empirical studies compare Agile exclusively to Waterfall, making worthwhile comparisons with the broader class of Classical methodology difficult if not impossible.
+
+>In Chapter 9, we considered software maintenance activities and their importance in their long-term support of software production. If one treats documentation purely as a production activity, its value relative to writing code is minuscule. Documentation doesn't compile or execute; at best, it might assist the end-user in navigating the product or help to onboard a new starter. Is documentation, therefore, next to worthless? 
+>
+>Not quite. The above assumes that the cost of software production dominates the total cost of ownership. Is that really the case?
+>
+>According to Robert Glass (2002), maintenance typically accounts for 60 per cent of overall software costs. Studies by Lientz and Swanson (1980) have placed this figure at between 60 and 80 per cent. Thomas Pigoski (1996) has reported that maintenance can consume up to 90 per cent of the total cost of software. The precise figure depends entirely on the type of software project but we can safely assume that the maintenance costs for most projects will be north of 60 per cent. Furthermore, the longer the projected lifespan of a software system, the greater this ratio.
+>
+>So, the table turns once documentation is recognised as an essential maintenance activity. Few paragraphs of concise documentation will arguably generate more long-term value than the source code of an average-sized function. Documentation of the stable parts of the system will also pay greater dividends compared to that of the fast-changing parts. 
+
+Regardless of one's stance on the working software vs. documentation, the latter has incontrovertible long-term value. The question is not whether one ought to be preferred over another, but one of cost and resulting value. As we routinely question the amount of code one needs to solve a product problem — avoiding gold-plating and so forth, we should also challenge how much documentation one needs to solve a future maintenance problem. Sadly, there is no objective measure. We may attempt to position documentation within some risk framework but the prescribed effort will remain a largely subjective measure. So, what to do?
+
+There is no good answer, just more questions. Consider the documentation's intended audience. It may be one of three distinct classes, listed here in the order of most apparent to least apparent.
+
+1. Others, present and future.
+2. Your future self.
+3. Your present self.
+
+The first class of audience is one that most practitioners imagine when they begin writing documentation (or commission others for this task). We believe in the existence of some tacit knowledge that mustn't be kept indefinitely; it must be shared for the continuity of the system. Presumably, it comprises nuanced insights that are apparent to the select minority but opaque to others. In the extreme case, that minority is the documentation's sole would-be author. The extreme case further compels the author to share their insights with others.
+
+Software tends to accrue complexity as it evolves. On the other hand, the use of design patterns, off-the-shelf components, standards, conventions, and self-documenting naming, neutralises much of that complexity. The deliberation of what to document (and to what extent) becomes largely a function of separating the types of complexities that can be reasonably reconstructed by a trained professional from those that require a specific set of insights and context. In the former, given the same problem, most will come up with a similar solution or, in the worst case, identify the link between the presented solution and the problem. In the latter, most will fail to establish the link, let alone reconstruct an equivalent solution. It is specifically the latter case that benefits from documentation. Documenting the former is largely worthless.
+
+Naturally, there are risks with this approach. The distinction between the cases is largely subjective and draws on one's own skills and experience; what is obvious to us is may not be to others. Donald Norman in the Design of Everyday Things stresses this very point. Nonetheless, some assumptions must be made to avoid wastage. Why not ask our peers? Exercises like code reviews and walkthroughs can be useful in distinguishing the obvious from the obscure. If our colleagues struggle understanding something "obvious" but do not otherwise contend the solution, it may be an indication of obscurity. It may also be that our colleagues lack the necessary skills. Either way, one must simplify the solution or improve the documentation, or both in some cases.
+
+The second class of audience is what the most experienced and battle-hardened practitioners imagine when they contemplate documentation.
+
+
 * One of the most polarising aspects of software development models, often used to compare Agile and Classical methodologies
 * Neither is at the extreme, although proponents of each argue that the other is at the extreme.
 * Agile argues for moderate documentation. Classical (UP, Spiral) often takes a risk-centric approach to producing artefacts.
@@ -30,16 +63,15 @@ The traditionalist approach which emphasises document centeredness is not withou
 
 Documentation serves three sets of audiences, listed here in the order of most apparent to least apparent:
 
-1. Others, present and future.
-2. Your future self.
-3. Your present self.
 
+## Rules of thumb
 * Don't document too soon, before the feature is stabilised
 * The best documentation is the kind that doesn't have to be written:
     + Self-documenting code
     + Standard and idiomatic design and coding practices
     + Convention over configuration
 * Prefer high-level documentation to low-level. For an explorer who doesn't know where to start, a map of a county is better than a detailed map of one village.
+* Convey the context where possible.
 * Written communication, while highly efficient, is not always a substitute for face-to-face interactions.
     + Documentation assumes some level of background knowledge and comprehension (language, technical, etc.) skills on behalf of the audience.
     + In practice, this varies greatly.
@@ -301,6 +333,10 @@ Favour the management of infrastructure through code instead of manual processes
 * Patterns and guidelines can be derived internally, especially for highly niche application domains where industry knowledge is hard to come by and is rarely shared. In many cases, internal patterns and guidelines can form the core intellectual property of an organisation; their leakage is highly undesirable.
 * Both patterns and guidelines serve common purposes. They aim improve the overall quality and maintainability of software. They ensure consistency in how problems are solved and tasks are performed across teams and software projects.
 
+>Patterns are not unique to software by any stretch. They come to us from the world of architecture, first described by Christopher Alexander, Sara Ishikawa, and Murray Silverstein in 1977. In the original definition, a pattern is a "recurring solution to a common problem in a given context and system of forces."
+>
+>Many authors have contributed to the evolution of patterns in software engineering and the definition itself has been refined and reinterpreted. Brad Appleton (1998) defines a design pattern as "a named 'nugget' of insight which conveys the essence of a proven solution to a recurring problem within a certain context amidst competing concerns."
+
 Some commonly used patterns include:
 
 * **Repository**: Encapsulate the logic needed to access data sources, making data access easier and more consistent.
@@ -320,7 +356,7 @@ Patterns will typically offer more than a one-paragraph description. There will 
     - Code review and merging guidelines
     - Telemetry guidelines (covering the structure, organisation and best-practices relating logging, metrics, and traces.)
 
-Regarding off-the-shelf patterns, Architects and Engineering Managers shouldn't assume that just because many patterns are commonly available and easily accessible, their use will be implied within the organisation. It is better to be explicit than to assume that Engineers will wilfully engage in research activities to determine the best tools for the job. (In theory, they will do precisely that. In practice, they don't.) Pick the most useful patterns that relate to your operating context and enrol them into the pattern catalogue. The same is said of guidelines.
+Regarding off-the-shelf patterns, Architects and Engineering Managers shouldn't assume that just because many patterns are commonly available and easily accessible, their use will be implied within the organisation. It is better to be explicit than to assume that Engineers will wilfully engage in research activities to determine the best tools for the job. (In theory, they will do precisely that. In practice, they won't.) Pick the most useful patterns that relate to your operating context and enrol them into the pattern catalogue. The same is said of guidelines.
 
 # Summary
 //TODO

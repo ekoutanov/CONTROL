@@ -2,7 +2,11 @@ References
 ---
 Akerlof, G. A. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism", Quarterly Journal of Economics, vol. 84, no. 3, pp. 488-500.
 
+Alexander, C., Ishikawa, S., & Silverstein, M. (1977). A Pattern Language: Towns, Buildings, Construction. New York, NY: Oxford University Press. 
+
 Alves, N. S., Mendes, T. S., de Mendonça, M. G., Spinola, R. O., & Shull, F. (2016). "Identification and management of technical debt: A systematic mapping study", Information and Software Technology, 70, 100-121.
+
+Appleton, B. (1998). Patterns in a Nutshell. CM Crossroads. Resources for ALM, Agile and Cloud.
 
 Basili, V., & Turner J. (1975). "Iterative Enhancement: A Practical Technique for Software Development", IEEE Trans. Software Eng., pp. 390-396.
 
@@ -62,6 +66,8 @@ Fitzgerald, B., Hartnett, G., & Conboy, K. (2006). "Customising agile methods to
 
 Gallup. (2015). State of the American manager: Analytics and advice for leaders. Gallup, Inc. 
 
+Glass, R. L. (2002). Facts and Fallacies of Software Engineering. Addison-Wesley Professional. ISBN: 0321117425.
+
 Goodhart, C. (1975). "Problems of Monetary Management: The U.K. Experience", Papers in Monetary Economics. Papers in monetary economics 1975; p. 1-20. Vol. 1.
 
 Gregory, P., Barroca, L., Sharp, H., Deshpande, A., & Taylor, K. (2016). "The challenges that challenge: Engaging with agile practitioners’ concerns", Information and Software Technology, 77, 92-104.
@@ -110,6 +116,8 @@ Latané, B., Williams, K., & Harkins, S. (1979). "Many hands make light the work
 
 Lencioni, P. (2002). The Five Dysfunctions of a Team: A Leadership Fable. Jossey-Bass.
 
+Lientz, B. P., & Swanson, E. B. (1980). Software Maintenance Management. Addison-Wesley.
+
 Madgavkar, A., Schaninger, B., Maor, D., White, O., Smit, S., Samandari, H., Woetzel, J., Carlin, D., & Chockalingam, K. (2023, February). Performance through people — Transforming human capital into competitive advantage. McKinsey Global Institute.
 
 Mahoney, M. S. (1990). "The Roots of Software Engineering", CWI Quarterly, pp. 325-334.
@@ -125,6 +133,10 @@ McConnell, S. (2006). Software Estimation: Demystifying the Black Art. Redmond, 
 Miller, R. W. (1963). Schedule, Cost, and Profit Control with PERT - A Comprehensive Guide for Program Management. McGraw-Hill. ISBN 9780070419940.
 
 Mills, H. D. (1975). "How to write correct programs and know it", SIGPLAN Not. 10, 6 (June 1975), 363–370; https://doi.org/10.1145/390016.808459.
+
+Norman, D. A. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books.
+
+Pigoski, T. M. (1996). Practical Software Maintenance: Best Practices for Managing Your Software Investment. John Wiley & Sons.
 
 Pressman, R. S., & Maxim, B. R. (2020). Software Engineering: A Practitioner's Approach (9th ed.). New York, NY: McGraw-Hill Education.
 

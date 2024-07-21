@@ -4,6 +4,8 @@ Chapter 9. Maintenance
 
 A software system is widely considered to be a delivery platform for a business product or a suite of interconnected products. Initially, during the early stages of the build, most changes to a system directly support the delivery of products. They may be of both functional and nonfunctional nature, and CONTROL's requirements-gathering process advocates for both aspects to be represented equally. Almost every change marks a perceptible improvement to the functionality or quality of the system. As the system evolves and matures, however, the engineering effort shifts towards maintenance activities that loosely support the embedded product(s). This chapter explores the main sources of these changes.
 
+>The German word "verschlimmbessern" means to make something worse in an honest but failed attempt to improve it. In English, we call that "software maintenance".
+
 # Technical capabilities
 The first hint that capabilities may not be directly supporting a product (feature or quality) was revealed in Chapter 3. The _Terminology_ section defines a technical capability as work that is "not immediately attributable to product needs but supports product delivery indirectly."
 
@@ -94,9 +96,9 @@ The third approach takes a more probabilistic, statistically-derived approach to
 >
 >The three-point method is just one example of estimation based on risk and uncertainty. One can adopt others or communicate some kind of a confidence interval or an uncertainty measure. Either way, stakeholders will come to appreciate the inherently uncertain nature of the estimates.
 >
->To the point above, there is a strong argument that _all_ estimates should be quoted as ranges or distributions. Communicating uncertainty is generally a prudent thing to do, and I fail to see any major drawbacks with this approach. Many authors have corroborated this view (Kravcenko, 2003, McConnell, 2006, Griffiths, 2008, and Erickson, 2023).
+>There is a strong argument that _all_ estimates should be quoted as ranges or distributions. Communicating uncertainty is generally a prudent thing to do, and I fail to see any major drawbacks with this approach. Many authors have corroborated this view (Kravcenko, 2003, McConnell, 2006, Griffiths, 2008, and Erickson, 2023).
 
-Some BAU activities may appear to affect multiple teams but are actually multiple distinct BAU items that stem from a larger, overarching initiative. For example, Bookworm Inc. — a hypothetical software company — is transitioning from a legacy, on-premises build server to a Cloud-hosted CI/CD platform. Bookworm Inc. has four Engineering teams that have embraced the DevOps model; teams is empowered to evolve their pipelines as they see fit. The change requires each team to adapt its pipeline code within the cut-over period. Is this a cross-team BAU item?
+Some BAU activities may appear to affect multiple teams but are actually multiple distinct BAU items that stem from a larger, overarching initiative. For example, Bookworm Inc. — a fictional software company — is transitioning from a legacy, on-premises build server to a Cloud-hosted CI/CD platform. Bookworm Inc. has four Engineering teams that have embraced the DevOps model; teams is empowered to evolve their pipelines as they see fit. The change requires each team to adapt its pipeline code within the cut-over period. Is this a cross-team BAU item?
 
 While the CI/CD example of Bookworm Inc. impacts multiple teams, it can be modelled as four separate BAU items linked to the overarching "CI/CD upgrade" initiative. An instance of the BAU item is appended to each team's backlog, where it is assessed by the EM. Since each instance is linked to the overarching activity, there is no need for duplication. Anyone wishing to determine what the activity entails can consult the overarching initiative description. The latter contains, among other things, the cut-over date. This date will be used by the EMs to prioritise work within their teams. Every team within Bookworm Inc. will thus cut over to the new CI/CD platform on their own terms.
 
