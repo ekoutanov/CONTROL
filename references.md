@@ -1,5 +1,7 @@
 References
 ---
+Ackerman, C. E. (2018, June). What Is Instant Gratification? Positive Psychology. Available: https://positivepsychology.com/instant-gratification/.
+
 Akerlof, G. A. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism", Quarterly Journal of Economics, vol. 84, no. 3, pp. 488-500.
 
 Alexander, C., Ishikawa, S., & Silverstein, M. (1977). A Pattern Language: Towns, Buildings, Construction. New York, NY: Oxford University Press. 
@@ -9,6 +11,8 @@ Alves, N. S., Mendes, T. S., de Mendonça, M. G., Spinola, R. O., & Shull, F. (2
 Appleton, B. (1998). Patterns in a Nutshell. CM Crossroads. Resources for ALM, Agile and Cloud.
 
 Basili, V., & Turner J. (1975). "Iterative Enhancement: A Practical Technique for Software Development", IEEE Trans. Software Eng., pp. 390-396.
+
+Beaudan, E. (2006). Making change last: How to get beyond change fatigue. Ivey Business Journal.
 
 Beck, K. (1999). Extreme Programming Explained. Boston: Addison-Wesley.
 
@@ -20,7 +24,7 @@ Bell T. E., & Thayer T. A. (1976). "Software requirements: Are they really a pro
 
 Bernerth, J. B., Walker, H. J., & Harris, S. G. (2011). Change fatigue: Development and initial validation of a new measure. Work & Stress, 25 (4), 321 – 337.
 
-Beaudan, E. (2006). Making change last: How to get beyond change fatigue. Ivey Business Journal.
+Bernstein, P. A., Hadzilacos, V., & Goodman, N. (1987). Concurrency control and recovery in database systems. Addison-Wesley.
 
 Bidwell, M. (2011). "Paying More to Get Less: The Effects of External Hiring versus Internal Mobility", Administrative Science Quarterly, 56(3), 369-407.
 
@@ -84,6 +88,8 @@ Hope, P., Lavenhar, S. & Peterson, G. "Architectural Risk Analysis", Cigital Inc
 
 Hornibrook, J. (2021). Archives reveal more history of Hornibrook innovation in building Sydney Opera House. State Library of Queensland. Available: https://www.slq.qld.gov.au/blog/archives-reveal-more-history-hornibrook-innovation-building-sydney-opera-house.
 
+IBM Corporation. (1981). "Implementing Software Inspections", course notes, IBM Systems Sciences Institute.
+
 IEEE 829-2008. (2008). IEEE Standard for Software and System Test Documentation. doi:10.1109/IEEESTD.2008.4475823.
 
 IEEE-USA, IEEE-USA Salary & Benefits Survey Report - 2019 Edition, IEEE, 2019.
@@ -133,6 +139,16 @@ McConnell, S. (2006). Software Estimation: Demystifying the Black Art. Redmond, 
 Miller, R. W. (1963). Schedule, Cost, and Profit Control with PERT - A Comprehensive Guide for Program Management. McGraw-Hill. ISBN 9780070419940.
 
 Mills, H. D. (1975). "How to write correct programs and know it", SIGPLAN Not. 10, 6 (June 1975), 363–370; https://doi.org/10.1145/390016.808459.
+
+Mischel, W., Ebbesen, E. B. (1970). "Attention in delay of gratification". Journal of Personality and Social Psychology. 16 (2): 329–337. doi:10.1037/h0029815.
+
+Mischel, W., Shoda, Y., & Peake, P. K. (1988). The nature of adolescent competencies predicted by preschool delay of gratification. Journal of personality and social psychology, 54(4), 687–696. https://doi.org/10.1037//0022-3514.54.4.687
+
+Mischel, W., Shoda, Y., & Peake, P. K. (1990). Predicting Adolescent Cognitive and Self-Regulatory Competencies From Preschool Delay of Gratification: Identifying Diagnostic Conditions. Developmental Psychology. 26. 978-986. 10.1037/0012-1649.26.6.978. 
+
+Mischel, W., Shoda, Y., & Rodriguez, M. I. (1989). Delay of gratification in children. Science (New York, N.Y.), 244(4907), 933–938. https://doi.org/10.1126/science.2658056
+
+Newell, A., & Simon, H. A. (1975). "Computer Science as Empirical Inquiry: Symbols and Search", Carnegie-Mellon University, Pittsburgh, Pennsylvania.
 
 Norman, D. A. (2013). The Design of Everyday Things: Revised and Expanded Edition. Basic Books.
 

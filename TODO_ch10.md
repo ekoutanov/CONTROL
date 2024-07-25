@@ -74,7 +74,7 @@ Group three — your present self — is seldom given the attention it needs. Oc
 ## Rules of thumb
 The introductory section set the overall scene with a touch of the philosophical, positioning documentation as a worthwhile maintenance activity and identifying distinct audience groups. This section offers more practical advice in the form of a handful of lightweight principles. 
 
-### Moderate documentation effort based on stability
+### Moderate the documentation effort based on stability
 Rapidly changing aspects of the system suggest that the maintenance phase is yet to start for them. Since documentation largely supports maintainability, one may moderate the documentation efforts for those aspects that have yet to stabilise.
 
 Documentation has a cost both in terms of effort and opportunity. The latter is important because documentation is often written by people who could otherwise be producing software; documentation and working software often contend directly for the same set of resources. Documenting fast-moving aspects will likely result in wasted effort whose benefits will not be realised fully. In that regard, documenting stable parts of the system yields more favourable cost-benefit ratios.
@@ -97,7 +97,7 @@ The crux of this principle is in commoditising as much of the software as possib
 
 The principles above aren't just conducive to reducing documentation effort — they are beneficial in general. They lead to software that is easier to understand and maintain, and in many cases reduce the total amount of software that is produced.
 
-### Convey the context where possible
+### Convey the problem context where possible
 The preservation of context is one of CONTROL's foundational principle, stating that those having a more complete appreciation of the problem context are more likely to arrive at an optimal solution. Equivalently, the propagation of context within documentation aids in the understanding of the solution being described. The audience will make same or similar conclusions to the author; the solution will seem less foreign once rationalised in the context of the original problem. 
 
 ### Written communication is not a substitute for face-to-face interaction
@@ -121,29 +121,52 @@ When a seemingly random question has been answered elsewhere, it is unquestionab
 ### Feedback informs documentation
 Referring to the "written communication is not a substitute for face-to-face interaction" principle, it is likely that many follow-up questions will be asked when the subject matter is complex or the audience is varied.
 
-Be careful in answering questions without understanding the reason for their asking:
+Be careful in answering questions in haste without understanding the reason for their asking:
 
 1. If the question has been asked by someone who is not across the topic, then the best course of action may be to explain directly or refer the individual to some background reading. A face-to-face interaction may end up being the optimal course of action, depending on questioner's abilities.
-2. If it is asked by someone who hasn't read the documentation properly, then it is best to refer them back to the source. As a token of courtesy, one should direct them to the relevant passage. The questioner may have missed the original point by accident, out of sheer laziness, or a contempt for reading. A hastily made assumption here may prove incorrect. Hanlon's Razor will serve you well: never assume malice where incompetence, or a simple oversight, will do.
+2. If it is asked by someone who hasn't read the documentation properly, then it is best to refer them back to the source. As a token of courtesy, one should direct them to the relevant passage. The questioner may have missed the original point by accident, out of sheer laziness, or a contempt for reading. A hastily made assumption here may prove incorrect. Hanlon's Razor will serve you well: never assume malice where incompetence, or a simple oversight, or a momentary lapse of judgement, will do.
 3. If the question is sensible but the answer to it is not documented, then consider revising the documentation before responding. In fact, it is better to respond with reference to the updated documentation and have the questioner confirm later that the updated documentation completes their understanding. This is
 
-Point 3 is precisely the concept embodied by this principle. Stated otherwise, documentation should act as a medium for answering questions within a feedback loop. This is a highly effective method for verifying and enhancing the accuracy of documentation. Sadly, it is rarely practiced in our industry.
+Point 3 is precisely the concept embodied by this principle. Stated otherwise, documentation should act as a medium for answering questions within a feedback loop. This is a highly effective method for verifying and enhancing the accuracy of documentation. Sadly, this method is rarely practiced in our industry.
 
 >As with all philosophical heuristics, Hanlon's Razor isn't always right but is right on average.
 >
->I have witnessed many colleagues' behaviours that signalled contempt for reading documentation. Or so I felt at the time. Thereafter, my perceptions were disproved on numerous occasions. The same colleagues would later read other documentation, often my own.
+>I have witnessed many colleagues' behaviours that signalled contempt for reading documentation. Or so I felt at the time. Thereafter, my perceptions were disproved on numerous occasions. The same colleagues would later read other documentation, often my own. What gives?
 >
->After long searching and the occasional doubting of Robert Hanlon's wisdom, I believe I now have a satisfactory explanation. The reason software engineers resent reading documentation is precisely the same reason they vacuously copy StackOverflow snippets and use large language models like Microsoft's Copilot to generate code that later blows up in production. That reason is called _instant gratification_. It has been described in psychology for well over half a century, starting from the famous Stamford Marshmallow Experiment (Mischel & Ebbesen, 1970). We will revisit the findings later, but for now we assume the reader is familiar with the term. If not, instant gratification refers to "the temptation, and resulting tendency, to forego a future benefit in order to obtain a less rewarding but more immediate benefit." (Ackerman, 2018.)
+>After long searching and the occasional doubting of Robert Hanlon's wisdom, I believe I now have a satisfactory explanation. The reason software engineers resent reading documentation is precisely the same reason they blindly copy Stack Overflow snippets and use large language models like Microsoft's Copilot to generate code that later blows up in production. That reason is two-pronged: _instant gratification_ and _deferring the inevitable_. 
 >
->Consider the following example. Rachel, a senior software developer, is stumped by an occasional deadlock in the database and doesn't know where to begin her investigation. Her best course of action is to read the "bible" on concurrency control theory by Phil Bernstein and colleagues. The first three chapters of Concurrency Control and Recovery in Database Systems offer a superb entry-level understanding, which would likely make Rachel seem like an expert compared to many of her colleagues.
+>The effects of regulating gratification have been described in psychology for well over half a century, starting from the famous Stamford Marshmallow Experiment (Mischel & Ebbesen, 1970). We will revisit its findings later. Most readers will be familiar with the term; if not, instant gratification refers to "the temptation, and resulting tendency, to forego a future benefit in order to obtain a less rewarding but more immediate benefit." (Ackerman, 2018.)
 >
->Instead, Rachel pokes around, asks the Internet
+>Consider the following example. Tao, a senior software developer, is stumped by an occasional deadlock in the order management database and doesn't know where to begin. Her best course of action is to read the "bible" on concurrency control theory by Phil Bernstein and colleagues. The first three chapters of Concurrency Control and Recovery in Database Systems offer a superb introductory understanding, which would likely make Tao's newfound knowledge put many of her colleagues to shame. Alternatively, many databases offer free and comprehensive documentation, including that of transaction semantics.
+>
+>Instead, Tao pokes around, asks the Internet, and consults a chat bot. She learns of a connection between transaction isolation levels and deadlocks. After little deliberation, Tao decides to lower the isolation level of some queries. The deadlocks seem to vanish.
+>
+>Three months down the line, the business has grown substantially. Many customers are reporting problems with their orders. Some are missing from the system despite the customers' accounts having been charged. Others are fulfilled in duplicate. Financial reports are showing incorrect figures. The problem was first noticed sometime after the deadlock fix and appears to be exacerbated by transaction volumes. The business is panicking. The CEO has sent several personal letters of apology.
+>
+>Tao is back on the case. She ends up reading introductory texts on concurrency control, discovering such concepts as transaction isolation, atomicity, serialisability, transaction histories, and scheduling. She also consults the database documentation. Eventually, Tao reverts the isolation level and carefully rearranges the order in which resources are accessed in certain queries. This eliminates transaction dependency cycles, resolving the deadlock condition without introducing consistency problems.
+>
+>There are two important issues at play here. The first issue is one of instant gratification. Tao was aware of how badly her knowledge was lacking but consciously chose a more expedient path that was later shown to be erroneous, as it so frequently is. The second issue is one of deferring the inevitable. Like it or not, the problem required a proper solution, which needed time investment on Tao's behalf. Often, those craving a "quick hit" will eventually realise their misstep and take more prudent actions. If not, those actions will be taken by others on their behalf.
+>
+>Returning to Mischel and Ebbesen's experiment. It involved a group of children, each seated in a private room with a marshmallow in front of them and a researcher present. A deal was offered: they could eat the marshmallow while the researcher stepped out, ending the experiment. But if they waited for the researcher to return, they'd be rewarded with a second marshmallow. So, one treat now or two later.
+>
+>Some children took to the marshmallow immediately. Others wiggled and fidgeted in an attempt to self-restrain but succumbed to the temptation eventually. Only a few had the patience to await the second marshmallow. The results were predictable and mostly unremarkable.
+>
+>The truly interesting part occurred years later, when the children matured. Follow up studies were conducted, tracking each child's progress. The youths who had delayed their gratification during the earlier experiment ended up having higher exam scores, lower levels of substance abuse, lower likelihood of obesity, better responses to stress, and better social skills. (Mischel, Shoda, & Peake, 1988, Mischel, Shoda, & Rodriguez, 1989, and Mischel, Shoda, & Peake, 1990.)
+>
+>The researchers tracked each child for more than forty years and, repeatedly, the group who waited patiently for the second marshmallow succeed in every measured capacity.
+>
+>In the same way that awaiting a second marshmallow increases our likelihood of success, taking the time to uplift our skills achieves the same.
 
-Mischel, W.; Ebbesen, E. B. (1970). "Attention in delay of gratification". Journal of Personality and Social Psychology. 16 (2): 329–337. doi:10.1037/h0029815.
+Each of us has a role to play in ensuring that our colleagues and, in reciprocation, ourselves, are acting judiciously and not succumbing to perilous expediences. It is for their good and ours. Regarding documentation, the occasional need for verbal explanations notwithstanding, the questions that may be answered via documentation should be answered via documentation.
 
-Ackerman, C. E. (2018, June). What Is Instant Gratification? Positive Psychology. Available: https://positivepsychology.com/instant-gratification/.
+### Breadth of documentation is preferable to depth
+Assuming that the resources expendable on documentation are finite, it is better to strive for more high-level documentation covering diverse areas than to have a narrow concentration of low-level documentation.
 
-Bernstein, P. A., Hadzilacos, V., & Goodman, N. (1987). Concurrency control and recovery in database systems. Addison-Wesley.
+Consider the analogy of a tourist in a foreign country. What would benefit them more, a map of the country showing the major urban areas and connecting routes or a detailed map of one town? Assume there is no access to mapping software and satellite positioning services.
+
+One can get by without a town map; once they get to the town, they'll either ask directions or find someplace that sells local maps. Conversely, it's a lot harder to find a town without some topological reference, at minimum. The tourist cannot stop in the middle of nowhere to ask for directions.
+
+Similarly, exploring a complex software system without high-level documentation is like trekking through unfamiliar terrain without a map.
 
 
 * Don't document too soon, before the feature is stabilised
@@ -224,13 +247,21 @@ Note that the detail of the onboarding documentation should be closer to a count
 The above is not meant to be an exhaustive list.
 
 # Chalk outlines
-There are two recommendations in this chapter that do not conform to mainstream thinking.
+There are three recommendations in this chapter that do not conform to mainstream thinking. At least, it does not conform to mainstream acting.
 
 The first recommendation is that documentation ought to address the "third audience" — the present self. The general consensus within the software community is that documentation should elucidate others and the future self. Within the majority opinion, documentation is a form of communication, no more, no less.
 
 Writing fosters a process of self-reflection, identifying gaps in our subconscious reasoning; subtle gaps that are our intuition may be oblivious to. Writers have known this for centuries and philosophers for longer still, and yet there are many engineers who fail to recognise writing as an extension of thinking.
 
+Documentation is an essential artefact in the software engineering process. It is also a distinguishing factor between software engineering and mere programming. If one were to treat software engineering as a structured process rooted in a scientific discipline, then repeatability would presumably be a factor of some importance. Especially if one subscribes to Newell and Simon's viewpoint (1975) that each new piece of software is an experiment. It is hard to imagine experimental repeatability without some form of documentation.
+
+Yet I do not indulge in documentation and do not expect others to. The topic is nonetheless close to my heart. As a part-time author, it is the writing that I find constructive. Having written several books, and peer-reviewed academic papers on various computer science topics, not to mention random blogs and work-related pieces for my clients, I can attest to the effectiveness of introspection via the written word. The same applies to my journal-keeping experience; many of my thoughts have never been shared (which is perhaps a good thing) but in their writing they have been scrutinised. (And some debunked.) I am, without doubt, my most formidable critic.
+
 The second recommendation is that documentation should be used as a medium for answering questions.//TODO
+
+The third recommendation is to never delay studying a topic whose understanding is pivotal to your future success. Do not fall into the trap of instant gratification. Don't ask a question before you have convinced yourself that the answer is not already at your disposal. Read the friggin' manual. Taking the time to study a subject thoroughly will offer answers to many questions not yet asked.
+
+Everyone learns from their mistakes eventually but the more intelligent learn from the mistakes of others.
 
 # Principle-led decision-making
 Our approach to decision-making affects the quality of our decisions...
