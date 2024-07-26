@@ -190,6 +190,8 @@ Sweller, J. (1988). "Cognitive load during problem solving: Effects on learning"
 
 Taiz, L., & Zeiger, E. (2010). Plant Physiology (5th ed.). Sinauer Associates.
 
+The Open Group. (2018). The TOGAF Standard, Version 9.2. Available: https://pubs.opengroup.org/architecture/togaf92-doc/arch/.
+
 Thomas, D. (2014). Agile Is Dead (Long Live Agility). Available: http://pragdave.me/blog/2014/03/04/time-to-kill-agile/ (Accessed June 29, 2024).
 
 Tom, E., Aurum, A., & Vidgen, R. (2013). "An exploration of technical debt", Journal of Systems and Software, 86(6), 1498-1516.

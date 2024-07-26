@@ -2,9 +2,10 @@
 ---
 **WORK IN PROGRESS**
 
+//TODO intro
 Non-core aspects of CONTROL.
 
-# Documentation
+# The dividing line
 The generation of documentation, as well as other non-executable artefacts associated with software, is among the most polarising aspects of software development methods, often used to compare Classical and Agile methodologies. Seemingly, one inundates developers with documentation while the other throws documentation out of the window.
 
 Neither claim is true in its entirety. Many Classical methods take a risk-centric approach to elaborating artefacts of all forms, especially documentation. This approach is advocated heavily in both the Unified Process (and its variants) and Boehm's Spiral model. At the opposing end, Agile embraces documentation but, according to Highsmith, "not hundreds of pages of never-maintained and rarely-used tomes." (Beck et al., 2001.) Each approach tries to strike a balance that works for the _kinds of problems it aims to solve_.
@@ -13,6 +14,7 @@ Since practice has a tendency to diverge from theory, this point remains a scorc
 
 ><sup>1 </sup>Sadly, the overwhelming majority of empirical studies compare Agile exclusively to Waterfall, making worthwhile comparisons with the broader class of Classical methodology difficult if not impossible.
 
+# The many values of documenting
 In Chapter 9, we considered software maintenance activities and their importance in their long-term support of software production. If one treats documentation purely as a production activity, its value relative to writing code is minuscule. Documentation doesn't compile or execute; at best, it might assist the end-user in navigating an unintuitive product (a problem in its own right) or help onboard a new starter. Is documentation, therefore, a grandiose waste of time? 
 
 Not quite. The above assumes that the cost of software production dominates the total cost of ownership. Is that really the case?
@@ -69,12 +71,12 @@ Group one — others, present and future — is indispensable and should be at t
 
 Group two — your future self — is too often disregarded through misplaced faith in one's own memory. Assume that a dozen other projects and hundreds of context switches will stand between your present and future selves. What are the things you are likely to lose track of?
 
-Group three — your present self — is seldom given the attention it needs. Occasionally, it may be ignored: perhaps the solution was heavily scrutinised or jointly developed, reducing the chance of misguided intuition. Otherwise, assume there are many falsi waiting to be debunked.
+Group three — your present self — is seldom given the attention it needs. Occasionally, it may be ignored: perhaps the solution was previously scrutinised or jointly developed, reducing the chance of misguided intuition. Otherwise, assume there are many falsi waiting to be debunked.
 
-## Rules of thumb
-The introductory section set the overall scene with a touch of the philosophical, positioning documentation as a worthwhile maintenance activity and identifying distinct audience groups. This section offers more practical advice in the form of a handful of lightweight principles. 
+# Documentation principles
+The previous section set the overall scene with a touch of the philosophical, positioning documentation as a worthwhile maintenance activity and identifying distinct audience groups. This section offers more practical advice in the form of a handful of lightweight principles. 
 
-### Moderate the documentation effort based on stability
+## Moderate the documentation effort based on stability
 Rapidly changing aspects of the system suggest that the maintenance phase is yet to start for them. Since documentation largely supports maintainability, one may moderate the documentation efforts for those aspects that have yet to stabilise.
 
 Documentation has a cost both in terms of effort and opportunity. The latter is important because documentation is often written by people who could otherwise be producing software; documentation and working software often contend directly for the same set of resources. Documenting fast-moving aspects will likely result in wasted effort whose benefits will not be realised fully. In that regard, documenting stable parts of the system yields more favourable cost-benefit ratios.
@@ -85,7 +87,7 @@ The needs of the third audience group must also be considered. Some things shoul
 
 The principle is to document early but moderate the effort according to the stability of the thing being documented. Within the thing itself, identify the parts that are relatively stable (e.g., the algorithm) and those that chop and change (e.g., the implementation), and apportion documentation efforts accordingly. Wait for overall stability before documenting the thing to the ideal level of completeness.
 
-### The best documentation is the kind that doesn't have to be written
+## The best documentation is the kind that doesn't have to be written
 Documentation offers the greatest benefits when the aspects being described are otherwise difficult to understand by trained software professionals. (We focus on maintenance documentation here; user guides are separate concerns.) Difficulty of understanding is usually attributable to something novel or sufficiently different to what people have been exposed previously. While originality drives progress, not everything novel or different is beneficial or required.
 
 The crux of this principle is in commoditising as much of the software as possible to minimise the documentation effort. To this point —
@@ -97,10 +99,10 @@ The crux of this principle is in commoditising as much of the software as possib
 
 The principles above aren't just conducive to reducing documentation effort — they are beneficial in general. They lead to software that is easier to understand and maintain, and in many cases reduce the total amount of software that is produced.
 
-### Convey the problem context where possible
+## Convey the problem context where possible
 The preservation of context is one of CONTROL's foundational principle, stating that those having a more complete appreciation of the problem context are more likely to arrive at an optimal solution. Equivalently, the propagation of context within documentation aids in the understanding of the solution being described. The audience will make same or similar conclusions to the author; the solution will seem less foreign once rationalised in the context of the original problem. 
 
-### Written communication is not a substitute for face-to-face interaction
+## Written communication is not a substitute for face-to-face interaction
 Written communication, while highly efficient, is not always a substitute for face-to-face interactions<sup>2</sup>. Documentation assumes some level of background knowledge and skills (language, technical, domain, etc.) on behalf of the audience. When writing, we usually target a specific audience with some but usually minimal variability in receptiveness. We could produce documentation with weaker assumptions — containing explanations of simpler topics and more overall redundancy, which may be frustrating to some readers. Equally, we acknowledge that stronger assumptions in documentation can alienate an audience that is less technically proficient or is unfamiliar with certain domain-specific terminology. We rarely have the luxury of targeting a truly diverse audience in technical documentation.
 
 ><sup>2 </sup>While this may sound suspiciously like a principle from the Agile canon, the latter takes a more extreme form, stating that face-to-face interactions are better unequivocally. Here, we are saying that only some face-to-face interactions may be more suitable.
@@ -109,7 +111,7 @@ Compromises must, therefore, be made. One shouldn't assume that a monologue with
 
 This is not a call to minimise documentation; only to avoid the disillusionment that might ensue if it is relied upon as the sole carrier of knowledge.
 
-### Documentation does not build relationships
+## Documentation does not build relationships
 The reliance on documentation, for all its benefits, is not without drawbacks. For example, people who document their work thoroughly and direct others' attention to it unyieldingly may be seen as unapproachable or, worse, condescending. In the long run, people may choose to withhold their queries if the documentation fails to answer them, rather than seeking clarification from the source. Or they may have unrelated queries that could be suppressed because of the perception of unapproachability. For example, they might have an idea to run by you, seeing that you are the expert — judging by your impeccable documentation — but a lack of relationship or biased perceptions may impede their approachment.
 
 Where practical, it is best to balance comprehensive documentation with either follow-up activities or separate interactions aimed at establishing rapport with one's audience. Note, this is subtly different from the previous principle, which identified the occasional need to explain things. Here, we are discussing the forging of relationships between the producer and consumer parties, not resolving occasional misunderstandings. It may well be that the audience understands perfectly what has been documented, proving the documentation's effectiveness, but doing little in the way of relationship-building.
@@ -118,7 +120,7 @@ Interpersonal communication can foster collaboration and occasionally create men
 
 When a seemingly random question has been answered elsewhere, it is unquestionably better to direct the questioner's attention to the source than to answer directly. Otherwise, you are not only wasting time but encouraging further interrogation. But it may be worthwhile to follow up with them to ensure they are satisfied with the answer. This gesture will not go unappreciated and could mark the beginnings of a more fruitful working relationship.
 
-### Feedback informs documentation
+## Feedback informs documentation
 Referring to the "written communication is not a substitute for face-to-face interaction" principle, it is likely that many follow-up questions will be asked when the subject matter is complex or the audience is varied.
 
 Be careful in answering questions in haste without understanding the reason for their asking:
@@ -159,38 +161,68 @@ Point 3 is precisely the concept embodied by this principle. Stated otherwise, d
 
 Each of us has a role to play in ensuring that our colleagues and, in reciprocation, ourselves, are acting judiciously and not succumbing to perilous expediences. It is for their good and ours. Regarding documentation, the occasional need for verbal explanations notwithstanding, the questions that may be answered via documentation should be answered via documentation.
 
-### Breadth of documentation is preferable to depth
+## Prefer breadth of documentation to depth
 Assuming that the resources expendable on documentation are finite, it is better to strive for more high-level documentation covering diverse areas than to have a narrow concentration of low-level documentation.
 
 Consider the analogy of a tourist in a foreign country. What would benefit them more, a map of the country showing the major urban areas and connecting routes or a detailed map of one town? Assume there is no access to mapping software and satellite positioning services.
 
 One can get by without a town map; once they get to the town, they'll either ask directions or find someplace that sells local maps. Conversely, it's a lot harder to find a town without some topological reference, at minimum. The tourist cannot stop in the middle of nowhere to ask for directions.
 
-Similarly, exploring a complex software system without high-level documentation is like trekking through unfamiliar terrain without a map.
+Exploring a complex software system without high-level documentation is like trekking through unfamiliar terrain without a map. Where to begin? Whom to ask? Access to detailed component designs will not help those starting out. On the other hand, overview-level documentation can be used for further prompting. The audience can leverage their newfound knowledge of the coarse-grained elements and their relationships to drill into specific areas of the system that interest them most. Their queries may be answered by the owners of components or subsystems. Over time, the frequency and nature of the queries can empirically inform the optimum allocation of effort for subsequent documentation.
+
+# What to document
+Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail. Where should you begin?
+
+Here, we consider the most important aspects of the system whose documentation cannot be neglected. At minimum, the following should be put to paper.
+
+## System architecture
+Imagine the system as a complex puzzle. The high-level architecture is like the box of the puzzle that shows a simplified version of the completed image. It provides a broad overview of the system's structure and the principles guiding its evolution. It identifies the key components and their relationships, and explains how those components and the system as a whole may change over time. Architectural documentation generally contains the following elements.
+
+* **Introduction**: Describes the purpose and sets the context, guiding the understanding of the other architectural elements that follow. Ideally, it should also bind the scope of the document and specify its target audience. A glossary of common terms may also reside here.
+* **Subsystems and components**: These are the fundamental parts of the system described at a coarse level of granularity. 
+    + In large systems, subsystems are generally the next level of decomposition. They are essentially smaller systems with interesting architectural elements of their own. Architecture documentation may comprise just the subsystems or both the subsystems and the underlying components, depending on the level of detail. When describing two levels of decomposition (or more), it is best to split the documentation into multiple parts to not overwhelm the audience with excessive upfront detail.
+    + In small systems, it is the components that generally make up the systems directly.
+    + Diagrams are invaluable tools to communicate complex information effectively. Annotated component diagrams can convey much of the essential complexity without excessive verbosity.
+* **Interactions**: The interactions between key elements can be depicted using both static and dynamic views, showing not only their relationships but how the elements collaborate during specific work flows.
+    + Focus on the interactions between the elements at the coarsest level of granularity; i.e., define how subsystems relate to and interact with each other.
+    + Only once the coarse-grained interactions are captured should refinement occur.
+    + Sequence diagrams, collaboration diagrams, and data flow diagrams are useful here.
+* **Boundaries**: A system is rarely deployed in isolation; it often interfaces with other systems and end-users. Which other systems? Which users? How do they interact with the system? Via which interfaces? It is easy for an architect to assume that everyone knows such basics but these are the sorts of questions that an entry-level audience often has.
+* **Team ownership**: Understanding who is responsible for each part of the system is essential for collaboration and accountability. Subsystems and components will be built and supported by engineering teams. Knowing which teams are responsible for specific elements of the system allows the audience to reach out to the teams in question in pursuit of further inquiries.
+* **Architectural principles**: These are the guiding stars for the system's growth, setting the overall path for its future evolution. The principles inform all those working on the system to make changes in line with the ideas and concepts upon which the system was founded. Recall the foundational principles described in Chapter 4. A set of well-defined architectural principles supports CONTROL's _conceptual integrity_ principle.
+* **Handling of nonfunctional requirements**: Most systems will exhibit specific nonfunctional qualities, like scalability, reliability, etc. How these are met may not be immediately obvious when consulting the various architectural views. For example, it may be necessary to explain how the system behaves in the presence of failures, or how it responds to increased workloads.
+* **Data**: Often, architectural overviews focus on components and connectors, forgetting the cardinal object being manipulated. In many systems, almost every component will refer to data in some way: some components will parse, format, read, persist, and transform it. Furthermore, the proliferation of distributed systems has meant that data is no longer stored in one master location and is seldom normalised. There's too much of it. It thus makes sense to capture those aspects that convey the most amount of useful information to the audience:
+    + The main business entities manipulated or referred to by the system. This includes their attributes and data types.
+    + The relationships between the key entities including the associated cardinalities.
+    + The flow of data between various subsystems and components, indicating how data is modified along its journey.
+    + A common vocabulary for key entities. This ensures alignment by discouraging inconsistent use of terminology.
+    + How data privacy concerns are handled, where applicable.
+    + The retention and availability requirements of different types of data. This includes backup, redundancy, and recovery constraints.
+    + Archival, deletion, and the broader lifecycle concerns.
+* **Deployment**: Much of architecture thrives in the land of abstractions and yet the real system will ultimately consist of processes and infrastructure resources that must be deployed in a physical sense. It may be worthwhile specifying —
+    + A catalogue of environments; e.g., development, staging, and production.
+    + A description of the network topologies and perimeter controls used; e.g., subnets, firewalls, and load-balancers.
+    + Material differences between environments; e.g., development and staging use lower-spec hardware.
 
 
-* Don't document too soon, before the feature is stabilised
-* The best documentation is the kind that doesn't have to be written:
-    + Self-documenting code
-    + Standard and idiomatic design and coding practices
-    + Convention over configuration
-    + Patterns and guidelines
-    + Use of off-the-shelf libraries or components
-* Prefer high-level documentation to low-level. For an explorer who doesn't know where to start, a map of a county is better than a detailed map of one village.
-* Convey the context where possible.
-* Written communication, while highly efficient, is not always a substitute for face-to-face interactions.
-    + Documentation assumes some level of background knowledge and comprehension (language, technical, etc.) skills on behalf of the audience.
-    + In practice, this varies greatly.
-    + While documentation can and should make the best attempt at conveying knowledge asynchronously, certain complex concepts or intricate details may require additional explanation that is more effectively conveyed in person.
-    + Reading of comprehensive documentation may generate additional follow-up questions, which are sometimes best explained in person. (Especially when the documentation covers these queries adequately but the reader may not be best-equipped to understand it.)
-* Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail.
-* Documentation does not build relationships. 
-    + Interpersonal communication can foster collaboration and even create mentoring opportunities, especially when knowledge transfer flows from more senior and experienced engineers to the juniors. Personal interactions can boost motivation and morale, making team members feel more connected and engaged with the project.
-    + Understanding Nuances: Non-verbal cues such as body language, facial expressions, and tone of voice play a significant role in communication and understanding, which are absent in written documentation.
-    + Addressing Concerns: Non-verbal signals can also help identify when someone has concerns or is confused, allowing for immediate addressing of issues.
-* Trick of not answering questions directly but updating the documentation instead
+>The distinction between components and subsystems is purely notional in many texts. They are a granule of functionality with well-defined boundaries. Nonetheless, I distinguish among them using the following heuristic: a subsystem is a system in its own right, albeit a smaller one. Being a system, it has architectural concerns that may vary greatly from its peer subsystems. Subsystems derive from the overall architectural principles of the overarching systems but may add principles of their own; those principles may be unique and highly specialised.
+>
+>Imagine, for example, a sports wagering system. In a very simplified form, it comprises 1) an _offering subsystem_ that processes various market feeds and calculates the betting odds, and 2) a _betting subsystem_ that takes customers' bets, assesses their risk, and settles the winners. Each subsystem comprises multiple components; in other words, each is interesting architecturally. The two subsystems have very different nonfunctional characteristics. The offering subsystem must process very large volumes of data with low latency, but it is not concerned with transactions and may operate under relaxed consistency constraints. The betting subsystem deals with lower volumes but must preserve strict transactional semantics as it is dealing with customers' money. Each subsystem is heavily specialised. It is, therefore, conceivable that each requires a unique set of principles and guidelines. They may be built using different technologies, employing different skill sets, and are thus likely owned and operated by different engineering teams.
+>
+>In comparison, the components that make up one (sub)system will have much more in common. They are generally built using similar technology and follow identical principles.
 
-At minimum, the following should be documented:
+The above is not a complete list of architectural aspects, but I believe it to be sufficient for most systems. Some architecture frameworks may require more viewpoints and advocate proprietary modelling notations. The Open Group Architecture Framework (TOGAF), for example, is keen on business process views (The Open Group, 2018), which are immensely useful for many kinds of business work flow systems.
+
+
+
+Remember: The goal is to create a clear and concise overview that sets the stage for understanding the system in more detail. It's about providing enough information to get a sense of the system without getting bogged down in specifics.
+
+The high-level architecture of the system is the equivalent of the national map in the "prefer breadth of documentation to depth" principle. It gives its explorers a place to start their journey.
+
+
+## Deployment overview
+
+
 
 * High-level architecture of the system:
     + The main components/subsystems that make up the overarching system and their relationships. Focus on visual representations: consider using diagrams whenever possible, accompanied by text to explain complex aspects.
@@ -241,6 +273,33 @@ At minimum, the following should be documented:
     + At the department level: what problems do we solve as a larger group?
     + At the system level: what are we building and where will my contributions fit in?
     + At the team level: how do I become an effective member of my team? A bare-bones guide on how to set up their development environment, access code repositories, and run the components locally.
+* Change management
+* As-builts vs designs
+* Testing strategy
+
+* Don't document too soon, before the feature is stabilised
+* The best documentation is the kind that doesn't have to be written:
+    + Self-documenting code
+    + Standard and idiomatic design and coding practices
+    + Convention over configuration
+    + Patterns and guidelines
+    + Use of off-the-shelf libraries or components
+* Prefer high-level documentation to low-level. For an explorer who doesn't know where to start, a map of a county is better than a detailed map of one village.
+* Convey the context where possible.
+* Written communication, while highly efficient, is not always a substitute for face-to-face interactions.
+    + Documentation assumes some level of background knowledge and comprehension (language, technical, etc.) skills on behalf of the audience.
+    + In practice, this varies greatly.
+    + While documentation can and should make the best attempt at conveying knowledge asynchronously, certain complex concepts or intricate details may require additional explanation that is more effectively conveyed in person.
+    + Reading of comprehensive documentation may generate additional follow-up questions, which are sometimes best explained in person. (Especially when the documentation covers these queries adequately but the reader may not be best-equipped to understand it.)
+* Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail.
+* Documentation does not build relationships. 
+    + Interpersonal communication can foster collaboration and even create mentoring opportunities, especially when knowledge transfer flows from more senior and experienced engineers to the juniors. Personal interactions can boost motivation and morale, making team members feel more connected and engaged with the project.
+    + Understanding Nuances: Non-verbal cues such as body language, facial expressions, and tone of voice play a significant role in communication and understanding, which are absent in written documentation.
+    + Addressing Concerns: Non-verbal signals can also help identify when someone has concerns or is confused, allowing for immediate addressing of issues.
+* Trick of not answering questions directly but updating the documentation instead
+
+At minimum, the following should be documented:
+
 
 Note that the detail of the onboarding documentation should be closer to a county map than to a village map. It should have links to more detailed documentation in specific areas. The immediate objective is to get a new team member to become aware to a point that they can discover on their own and ask for directions if necessary.
 
@@ -263,7 +322,8 @@ The third recommendation is to never delay studying a topic whose understanding 
 
 Everyone learns from their mistakes eventually but the more intelligent learn from the mistakes of others.
 
-# Principle-led decision-making
+Principled Decision-Making
+---
 Our approach to decision-making affects the quality of our decisions...
 
 What often happens:
