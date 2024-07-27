@@ -176,53 +176,87 @@ Some knowledge will invariably remain in tacit form. It is, nonetheless, irrespo
 Here, we consider the most important aspects of the system whose documentation cannot be neglected. At minimum, the following should be put to paper.
 
 ## System architecture
-Imagine the system as a complex puzzle. The high-level architecture is like the box of the puzzle that shows a simplified version of the completed image. It provides a broad overview of the system's structure and the principles guiding its evolution. It identifies the key components and their relationships, and explains how those components and the system as a whole may change over time. Architectural documentation generally contains the following elements.
+Imagine the system as a complex puzzle. The high-level architecture is like the box of the puzzle that shows a simplified version of the completed image. It provides a broad overview of the system's structure and the principles guiding its evolution. It identifies the key components and their relationships, and explains how those components and the system as a whole may change over time. At a minimum, architectural documentation should contain the following elements.
 
 * **Introduction**: Describes the purpose and sets the context, guiding the understanding of the other architectural elements that follow. Ideally, it should also bind the scope of the document and specify its target audience. A glossary of common terms may also reside here.
 * **Subsystems and components**: These are the fundamental parts of the system described at a coarse level of granularity. 
-    + In large systems, subsystems are generally the next level of decomposition. They are essentially smaller systems with interesting architectural elements of their own. Architecture documentation may comprise just the subsystems or both the subsystems and the underlying components, depending on the level of detail. When describing two levels of decomposition (or more), it is best to split the documentation into multiple parts to not overwhelm the audience with excessive upfront detail.
+    + In large systems, subsystems are generally the next level of decomposition. They are essentially smaller systems with interesting architectural elements of their own. Architecture documentation may comprise just the subsystems or both the subsystems and the underlying components, depending on the level of detail one is willing to convey. When describing two (or more) levels of decomposition, it is best to split documentation into multiple parts to not overwhelm the audience with excessive upfront detail.
     + In small systems, it is the components that generally make up the systems directly.
     + Diagrams are invaluable tools to communicate complex information effectively. Annotated component diagrams can convey much of the essential complexity without excessive verbosity.
 * **Interactions**: The interactions between key elements can be depicted using both static and dynamic views, showing not only their relationships but how the elements collaborate during specific work flows.
     + Focus on the interactions between the elements at the coarsest level of granularity; i.e., define how subsystems relate to and interact with each other.
     + Only once the coarse-grained interactions are captured should refinement occur.
     + Sequence diagrams, collaboration diagrams, and data flow diagrams are useful here.
-* **Boundaries**: A system is rarely deployed in isolation; it often interfaces with other systems and end-users. Which other systems? Which users? How do they interact with the system? Via which interfaces? It is easy for an architect to assume that everyone knows such basics but these are the sorts of questions that an entry-level audience often has.
+* **Boundaries**: A system is rarely deployed in isolation; it often interfaces with other systems and end-users. Which other systems? Which users? How do they interact with the system? Via which interfaces? It is easy for an architect to assume that everyone knows such basics but these are the sorts of questions that an entry-level audience comes up with.
 * **Team ownership**: Understanding who is responsible for each part of the system is essential for collaboration and accountability. Subsystems and components will be built and supported by engineering teams. Knowing which teams are responsible for specific elements of the system allows the audience to reach out to the teams in question in pursuit of further inquiries.
-* **Architectural principles**: These are the guiding stars for the system's growth, setting the overall path for its future evolution. The principles inform all those working on the system to make changes in line with the ideas and concepts upon which the system was founded. Recall the foundational principles described in Chapter 4. A set of well-defined architectural principles supports CONTROL's _conceptual integrity_ principle.
+* **Architectural principles**: These are the guiding stars for the system's growth, setting the overall path for its future evolution. The architectural principles inform all those working on the system to make changes in line with the ideas and concepts upon which the system was founded. A set of well-defined architectural principles supports CONTROL's _conceptual integrity_ foundational principle, introduced in Chapter 4.
 * **Handling of nonfunctional requirements**: Most systems will exhibit specific nonfunctional qualities, like scalability, reliability, etc. How these are met may not be immediately obvious when consulting the various architectural views. For example, it may be necessary to explain how the system behaves in the presence of failures, or how it responds to increased workloads.
-* **Data**: Often, architectural overviews focus on components and connectors, forgetting the cardinal object being manipulated. In many systems, almost every component will refer to data in some way: some components will parse, format, read, persist, and transform it. Furthermore, the proliferation of distributed systems has meant that data is no longer stored in one master location and is seldom normalised. There's too much of it. It thus makes sense to capture those aspects that convey the most amount of useful information to the audience:
+* **Data**: Architectural overviews often disproportionately focus on components and connectors, and detailed interactions in some cases, neglecting the cardinal object being manipulated. Almost every component will refer to data in some way: some will parse, format, read, persist, and transform data, and many will perform a combination of the these. Furthermore, the proliferation of distributed systems has meant that data is no longer stored in one master location, and is seldom normalised. There's often too much of it to describe comprehensively. It thus makes sense to capture those aspects that convey the most amount of useful information to the audience:
     + The main business entities manipulated or referred to by the system. This includes their attributes and data types.
     + The relationships between the key entities including the associated cardinalities.
     + The flow of data between various subsystems and components, indicating how data is modified along its journey.
-    + A common vocabulary for key entities. This ensures alignment by discouraging inconsistent use of terminology.
+    + A common vocabulary for key entities. This ensures alignment across all members of the audience by promoting consistent use of terminology.
     + How data privacy concerns are handled, where applicable.
     + The retention and availability requirements of different types of data. This includes backup, redundancy, and recovery constraints.
-    + Archival, deletion, and the broader lifecycle concerns.
+    + Archival, deletion, and the broader data lifecycle concerns.
 * **Deployment**: Much of architecture thrives in the land of abstractions and yet the real system will ultimately consist of processes and infrastructure resources that must be deployed in a physical sense. It may be worthwhile specifying —
     + A catalogue of environments; e.g., development, staging, and production.
     + A description of the network topologies and perimeter controls used; e.g., subnets, firewalls, and load-balancers.
     + Material differences between environments; e.g., development and staging use lower-spec hardware.
-
+    + For applications that run on end-user devices, how they are deployed to their intended destination.
 
 >The distinction between components and subsystems is purely notional in many texts. They are a granule of functionality with well-defined boundaries. Nonetheless, I distinguish among them using the following heuristic: a subsystem is a system in its own right, albeit a smaller one. Being a system, it has architectural concerns that may vary greatly from its peer subsystems. Subsystems derive from the overall architectural principles of the overarching systems but may add principles of their own; those principles may be unique and highly specialised.
 >
->Imagine, for example, a sports wagering system. In a very simplified form, it comprises 1) an _offering subsystem_ that processes various market feeds and calculates the betting odds, and 2) a _betting subsystem_ that takes customers' bets, assesses their risk, and settles the winners. Each subsystem comprises multiple components; in other words, each is interesting architecturally. The two subsystems have very different nonfunctional characteristics. The offering subsystem must process very large volumes of data with low latency, but it is not concerned with transactions and may operate under relaxed consistency constraints. The betting subsystem deals with lower volumes but must preserve strict transactional semantics as it is dealing with customers' money. Each subsystem is heavily specialised. It is, therefore, conceivable that each requires a unique set of principles and guidelines. They may be built using different technologies, employing different skill sets, and are thus likely owned and operated by different engineering teams.
+>Imagine, for example, a sports wagering system. In a very simplified form, it comprises 1) an _offering subsystem_ that processes various market feeds and calculates the betting odds, and 2) a _betting subsystem_ that takes customers' bets, assesses their exposure risk, and settles the winners. Each subsystem comprises multiple components; in other words, each is interesting architecturally. The two subsystems have very different nonfunctional characteristics. The offering subsystem must process large volumes of data with low latency, but it is unconcerned with transactions and may operate under relaxed consistency constraints. The betting subsystem deals with lower volumes but must preserve strict transactional semantics as it deals with customers' money. Each subsystem is heavily specialised. It is, therefore, conceivable that each requires a unique set of principles and guidelines. They may be built using different technologies, employing different skill sets, and are thus likely owned and operated by different engineering teams.
 >
 >In comparison, the components that make up one (sub)system will have much more in common. They are generally built using similar technology and follow identical principles.
 
 The above is not a complete list of architectural aspects, but I believe it to be sufficient for most systems. Some architecture frameworks may require more viewpoints and advocate proprietary modelling notations. The Open Group Architecture Framework (TOGAF), for example, is keen on business process views (The Open Group, 2018), which are immensely useful for many kinds of business work flow systems.
 
-
-
-Remember: The goal is to create a clear and concise overview that sets the stage for understanding the system in more detail. It's about providing enough information to get a sense of the system without getting bogged down in specifics.
-
 The high-level architecture of the system is the equivalent of the national map in the "prefer breadth of documentation to depth" principle. It gives its explorers a place to start their journey.
 
+## Engineering principles
+While the overarching system will evolve according to a set of architectural principles, the implementation of elements will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
 
-## Deployment overview
+Teams differ from practices. A team is a group of professionals working together to achieve specific goals. A practice is a grouping of people based on common characteristics, such as methods or ways of working.
 
+Consider an example: A company has three cross-functional engineering teams, comprising both front-end and back-end developers. The teams look after three separate customer experience verticals: shopping cart, product catalogue, and account management. Simultaneously, the company operates separate practices for front-end and back-end technologies. The company has a common set of engineering principles, covering such crosscutting concerns as logging and security.
 
+In addition, each practice lays down specific principles relating to their respective technology stacks and preferred ways of working. The front-end practice is mostly concerned with the development, versioning, and deployment of React components. Conversely, the back-end practice sets guidance for the development of Java applications, including the design of REST APIs and the use of object-relational mapping frameworks. Each drives consistency and excellence within the engineering aspects under its purview. They can incubate new ideas and techniques, and ensure that the organisation's technology portfolio evolves sustainably.
+
+>Most engineering organisations feature multiple engineering teams but only few commit to engineering practices. I believe this to be a missed opportunity, especially considering the ease with which a practice may be spun up and their benefits relative to cost. For starters, it's an informal group that can be truly self-organising. While teams are managed by accountable individuals, practices may be run in more egalitarian ways. Individuals' participation in practices may take active or passive forms, depending on their interests and available time. In addition to the obvious benefits of driving consistency and promoting overall excellence, they offer a club-like experience for their members. Practices support their members and help smoothen the new-starter experience. They can heighten the individuals' sense of belonging and provide a platform for continuous learning, fostering a culture of collaboration. They can also set the scene for mentorship, allowing more experienced engineers to share their knowledge and help junior members grow.
+
+Finally, some engineering teams may adopt principles of their own. For example, the account management team benefits from a consistent, if opinionated approach from its team members regarding the storage and transmission of personally identifiable information (PII). Crucially, principles local to teams and practices mustn't conflict with higher-level principles. In our example, the team's principled handling of PII must be in line with all security principles codified at the engineering and architecture levels. Remember, if a pair of principles contradict, one or both are incorrect or misinterpreted. Clarifications or amendments may be required.
+
+Principles should be documented close to their intended audience and readily accessible. When using a wiki, for example, the team principles should be contained in the team's local space. The responsibility and (in most cases) accountability for defining and maintaining principles rests with those managing the intended audience. For example, the Head of Engineering maintains the engineering principles, while the Engineering Manager handles the principles for their team. Delegation is possible and sometimes necessary. Practice-level principles are maintained by either the practice lead, the seniormost member, or the complete collective, depending on the chosen structure and conventions. There may not be a single person accountable for a practice. It is chiefly for that reason that engineering practices and centres of excellence are not part of the CONTROL delivery organisation, although their presence is encouraged.
+
+## Requirements, standards, conventions, and guidelines
+These are extensions of the engineering principles but are more specialised. They are rules prescribing the day-to-day activities of various team members — coding, testing, releasing, and deploying software, for example. They should be specified unambiguously where possible. Ideally, their use should be enforced programmatically (e.g., code coverage ratio) although this is not always achievable (e.g., code review guidelines).
+
+Examples of these rules include:
+
+* Language-specific coding conventions and best practices: style guides, linting rules, etc.
+* Acceptable code coverage level, which may be specified at both the line and branch level.
+* The use of specific standards; for example, the ISO-8601 standard for encoding dates and times in JSON payloads.
+* Branching strategies, code review and merge policies.
+* Where applicable, guidelines for selecting and adding new dependencies.
+* Code and API documentation standards and guidelines. For example, "we encourage an API-first approach with OpenAPI 3.0 as the specification language, and Swagger as our interactive documentation tool."
+* Conventions for writing integration and performance tests. The latter, in particular, are not frequently practiced by Agile organisations but are required by CONTROL's focus on nonfunctional requirements and its accountability model. The expectations on software engineers should thus be documented clearly.
+* Error handling practices.
+* Telemetry standards and guidelines: 
+    + What to log and how to structure and organise logs. For example, some teams will format logs using JSON.
+    + What should be captured in metrics; e.g., latency, retry rates, error rates, throughput, and queue depth. How should these be organised: whether metrics should be capturing scalar values or histogram-like distributions, and guidance on when one approach might be preferred over another.
+    + What sort interactions should have traces associated with them. How should traces be stitched together in a distributed system.
+    + Which telemetry libraries are preferred, and whether there is a preference for auto-instrumentation or hand-crafted production of telemetry.
+
+Much like engineering principles, these specialised rules can be established different levels of the engineering organisation and further refined by the team or practice dimension. Those in charge of the principles also curate the more specialised rules at the corresponding level.
+
+## Team inventory and as-builts
+Enumeration of the intellectual assets of each engineering team, detailing the items under each team's care. Some of these assets may have already been captured by the system architecture at an outline level. The team-level documentation offers a more detailed account.
+
+Architecture documentation tends to hover at the level of ideas, concepts, and abstractions. This is great because it hides unnecessary detail and conveys an at-a-glance appreciation of a very broad landscape. When detail is sought, one may find it by consulting more specific documentation at the subsystem level. However, the risk with all architecture documentation is that it tends to be produced by those who envision an ideal design void of compromises.
+
+ without the examination of the underlying detail.
 
 * High-level architecture of the system:
     + The main components/subsystems that make up the overarching system and their relationships. Focus on visual representations: consider using diagrams whenever possible, accompanied by text to explain complex aspects.
@@ -276,6 +310,7 @@ The high-level architecture of the system is the equivalent of the national map 
 * Change management
 * As-builts vs designs
 * Testing strategy
+* Roles and accountabilities
 
 * Don't document too soon, before the feature is stabilised
 * The best documentation is the kind that doesn't have to be written:
@@ -321,6 +356,9 @@ The second recommendation is that documentation should be used as a medium for a
 The third recommendation is to never delay studying a topic whose understanding is pivotal to your future success. Do not fall into the trap of instant gratification. Don't ask a question before you have convinced yourself that the answer is not already at your disposal. Read the friggin' manual. Taking the time to study a subject thoroughly will offer answers to many questions not yet asked.
 
 Everyone learns from their mistakes eventually but the more intelligent learn from the mistakes of others.
+
+# Summary
+The goal is to create a clear and concise overview that sets the stage for understanding the system in more detail. It's about providing enough information to get a sense of the system without getting bogged down in specifics.
 
 Principled Decision-Making
 ---
@@ -540,6 +578,8 @@ Patterns will typically offer more than a one-paragraph description. There will 
     - Telemetry guidelines (covering the structure, organisation and best-practices relating logging, metrics, and traces.)
 
 Regarding off-the-shelf patterns, Architects and Engineering Managers shouldn't assume that just because many patterns are commonly available and easily accessible, their use will be implied within the organisation. It is better to be explicit than to assume that Engineers will wilfully engage in research activities to determine the best tools for the job. (In theory, they will do precisely that. In practice, they won't.) Pick the most useful patterns that relate to your operating context and enrol them into the pattern catalogue. The same is said of guidelines.
+
+If any pair of principles contradict, it is an indication that one or both are incorrect, or that their interpretation is incorrect.  
 
 # Summary
 //TODO
