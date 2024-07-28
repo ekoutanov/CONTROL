@@ -116,6 +116,8 @@ Kruchten, P., Nord, R. L., & Ozkaya, I. (2012). "Technical debt: From metaphor t
 
 Laanti, M., Salo, O. & Abrahamsson, P. (2011). "Agile methods rapidly replacing traditional methods at Nokia: A survey of opinions on agile transformation", Information and Software Technology. 53(3):276–290.
 
+Lamport, L. (1987, May). Email sent to a DEC SRC bulletin board at 12:23:29 PDT on 28 May 1987. Available: https://www.microsoft.com/en-us/research/uploads/prod/2016/12/Distribution.pdf.
+
 Larman, C., & Basili, V. R. (2003). "Iterative and Incremental Development: A Brief History", IEEE Computer, 36(6), 47-56.
 
 Latané, B., Williams, K., & Harkins, S. (1979). "Many hands make light the work: The causes and consequences of social loafing", Journal of Personality and Social Psychology, 37(6), 822-832.

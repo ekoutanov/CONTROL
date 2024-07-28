@@ -183,12 +183,12 @@ Imagine the system as a complex puzzle. The high-level architecture is like the 
     + In large systems, subsystems are generally the next level of decomposition. They are essentially smaller systems with interesting architectural elements of their own. Architecture documentation may comprise just the subsystems or both the subsystems and the underlying components, depending on the level of detail one is willing to convey. When describing two (or more) levels of decomposition, it is best to split documentation into multiple parts to not overwhelm the audience with excessive upfront detail.
     + In small systems, it is the components that generally make up the systems directly.
     + Diagrams are invaluable tools to communicate complex information effectively. Annotated component diagrams can convey much of the essential complexity without excessive verbosity.
-* **Interactions**: The interactions between key elements can be depicted using both static and dynamic views, showing not only their relationships but how the elements collaborate during specific work flows.
-    + Focus on the interactions between the elements at the coarsest level of granularity; i.e., define how subsystems relate to and interact with each other.
+* **Interactions**: The interactions between key components can be depicted using both static and dynamic views, showing not only their relationships but how the components collaborate during specific work flows.
+    + Focus on the interactions between the components at the coarsest level of granularity; i.e., define how subsystems relate to and interact with each other.
     + Only once the coarse-grained interactions are captured should refinement occur.
     + Sequence diagrams, collaboration diagrams, and data flow diagrams are useful here.
 * **Boundaries**: A system is rarely deployed in isolation; it often interfaces with other systems and end-users. Which other systems? Which users? How do they interact with the system? Via which interfaces? It is easy for an architect to assume that everyone knows such basics but these are the sorts of questions that an entry-level audience comes up with.
-* **Team ownership**: Understanding who is responsible for each part of the system is essential for collaboration and accountability. Subsystems and components will be built and supported by engineering teams. Knowing which teams are responsible for specific elements of the system allows the audience to reach out to the teams in question in pursuit of further inquiries.
+* **Team ownership**: Understanding who is responsible for each part of the system is essential for collaboration and accountability. Subsystems and components will be built and supported by engineering teams. Knowing which teams are responsible for specific parts of the system allows the audience to reach out to the teams in question in pursuit of further inquiries.
 * **Architectural principles**: These are the guiding stars for the system's growth, setting the overall path for its future evolution. The architectural principles inform all those working on the system to make changes in line with the ideas and concepts upon which the system was founded. A set of well-defined architectural principles supports CONTROL's _conceptual integrity_ foundational principle, introduced in Chapter 4.
 * **Handling of nonfunctional requirements**: Most systems will exhibit specific nonfunctional qualities, like scalability, reliability, etc. How these are met may not be immediately obvious when consulting the various architectural views. For example, it may be necessary to explain how the system behaves in the presence of failures, or how it responds to increased workloads.
 * **Data**: Architectural overviews often disproportionately focus on components and connectors, and detailed interactions in some cases, neglecting the cardinal object being manipulated. Almost every component will refer to data in some way: some will parse, format, read, persist, and transform data, and many will perform a combination of the these. Furthermore, the proliferation of distributed systems has meant that data is no longer stored in one master location, and is seldom normalised. There's often too much of it to describe comprehensively. It thus makes sense to capture those aspects that convey the most amount of useful information to the audience:
@@ -205,18 +205,20 @@ Imagine the system as a complex puzzle. The high-level architecture is like the 
     + Material differences between environments; e.g., development and staging use lower-spec hardware.
     + For applications that run on end-user devices, how they are deployed to their intended destination.
 
->The distinction between components and subsystems is purely notional in many texts. They are a granule of functionality with well-defined boundaries. Nonetheless, I distinguish among them using the following heuristic: a subsystem is a system in its own right, albeit a smaller one. Being a system, it has architectural concerns that may vary greatly from its peer subsystems. Subsystems derive from the overall architectural principles of the overarching systems but may add principles of their own; those principles may be unique and highly specialised.
+>The distinction between components and subsystems is purely notional in many texts. Each is a granule of functionality with well-defined boundaries. Nonetheless, I distinguish among them using the following heuristic: a subsystem is a type of component that represents system in its own right, albeit a smaller one. Being a system, it has architectural concerns that may vary greatly from its peer subsystems. Subsystems derive from the overall architectural principles of the overarching systems but may add principles of their own; those principles may be unique and highly specialised.
 >
 >Imagine, for example, a sports wagering system. In a very simplified form, it comprises 1) an _offering subsystem_ that processes various market feeds and calculates the betting odds, and 2) a _betting subsystem_ that takes customers' bets, assesses their exposure risk, and settles the winners. Each subsystem comprises multiple components; in other words, each is interesting architecturally. The two subsystems have very different nonfunctional characteristics. The offering subsystem must process large volumes of data with low latency, but it is unconcerned with transactions and may operate under relaxed consistency constraints. The betting subsystem deals with lower volumes but must preserve strict transactional semantics as it deals with customers' money. Each subsystem is heavily specialised. It is, therefore, conceivable that each requires a unique set of principles and guidelines. They may be built using different technologies, employing different skill sets, and are thus likely owned and operated by different engineering teams.
 >
 >In comparison, the components that make up one (sub)system will have much more in common. They are generally built using similar technology and follow identical principles.
+>
+>Since a subsystem is a type of component, the latter is more generalised. There may be other kinds of components too. For example, a class is a component of an object-orientated application. Therefore, when the term is used without further qualification, it may refer to any part of a larger whole.
 
 The above is not a complete list of architectural aspects, but I believe it to be sufficient for most systems. Some architecture frameworks may require more viewpoints and advocate proprietary modelling notations. The Open Group Architecture Framework (TOGAF), for example, is keen on business process views (The Open Group, 2018), which are immensely useful for many kinds of business work flow systems.
 
 The high-level architecture of the system is the equivalent of the national map in the "prefer breadth of documentation to depth" principle. It gives its explorers a place to start their journey.
 
 ## Engineering principles
-While the overarching system will evolve according to a set of architectural principles, the implementation of elements will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
+While the overarching system will evolve according to a set of architectural principles, the implementation of its components will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
 
 Teams differ from practices. A team is a group of professionals working together to achieve specific goals. A practice is a grouping of people based on common characteristics, such as methods or ways of working.
 
@@ -252,11 +254,56 @@ Examples of these rules include:
 Much like engineering principles, these specialised rules can be established different levels of the engineering organisation and further refined by the team or practice dimension. Those in charge of the principles also curate the more specialised rules at the corresponding level.
 
 ## Team inventory and as-builts
-Enumeration of the intellectual assets of each engineering team, detailing the items under each team's care. Some of these assets may have already been captured by the system architecture at an outline level. The team-level documentation offers a more detailed account.
+This comprises an enumeration of the intellectual assets of each engineering team, detailing the items under each team's care. Some of these assets may have already been captured by the system architecture at an outline level. The team-level documentation offers a more detailed account.
 
-Architecture documentation tends to hover at the level of ideas, concepts, and abstractions. This is great because it hides unnecessary detail and conveys an at-a-glance appreciation of a very broad landscape. When detail is sought, one may find it by consulting more specific documentation at the subsystem level. However, the risk with all architecture documentation is that it tends to be produced by those who envision an ideal design void of compromises.
+Design documentation tends to hover at the level of ideas, concepts, algorithms, and abstractions. This is great because it hides unnecessary detail and conveys an at-a-glance appreciation of a complex solution. When detail is sought, one may find it by consulting more specific documentation at the subsystem level. However, the risk with all design documentation is that it tends to be produced by those who envision an ideal system void of compromises.
 
- without the examination of the underlying detail.
+A real system is built by engineers who seek compromises; these are not always aligned with the views of the designers — Architects, Principal and Staff Engineers, and others. While designs generally conceals the details, the compromises are not always in the details. The implementation may differ from the design from the outset, or it may diverge unnoticed over the course of the system's maintenance.
+
+It is thus necessary for engineering teams to maintain an accurate account of their current state, also known as an as-built. As-builts, unlike conventional design documentation, do not guide the development of the system. Instead, they capture what has been developed. A set of as-builts may be more narrowly scoped than the initial design. This occurs during the early stages of a capability delivery, where some parts of the system may have been delivered. As-builts never capture aspirational aspects of a system that have not yet materialised or take a different form from the original design. Conversely, the scope of an as-built may grow to eclipse that of the original design with time, as more features are delivered or the system is refactored.
+
+>The term "as-built" has its origins in civil engineering, referring to the final set of drawings and documents that reflect the actual construction of a structure, as opposed to what was initially planned, the latter termed "as-designed". 
+>
+>The practice of creating as-built drawings has been standard fare in construction for decades. These were traditionally created by marking up the original design using red ink, which produced the term "redline", eventually becoming synonymous with "as-built". This approach is tractable in buildings because the 1) deviation from the design is often highly constrained and 2) once a building is complete, it rarely evolves further. Redlining doesn't work in software because 1) the magnitude of the deviation may be arbitrarily large and 2) software is rarely finalised once delivered. 
+>
+>It is best to leave the original design documentation as-is, capturing the relevant parts of the system as they were initially conceived, and create a separate set of documents that represent the current state. This approach takes no additional effort; one can simply clone and repurpose the original documentation. The preservation of the originals also helps in the propagation of context. Suppose the system encountered substantial compromises along its delivery, owing to certain pragmatic constraints unbeknownst to its designers. It may be discovered (much) later that the system does not exhibit the nonfunctional characteristics originally envisaged. Having a clear distinction between the as-designed and as-built documentation enables one to determine where the gaps may lie.
+
+## Interface definitions
+Continuing the topic of as-builts, among the most useful nuggets of knowledge is how a subsystem or component is meant to communicate with its peers or the outside world. This is particularly useful for integrators and other teams who don't want to know every detail about some component of a system, only how to talk to it.
+
+By interfaces, we refer to not only the synchronous APIs that a component exposes but also the messaging contracts if the component communicates asynchronously, for example, over a message broker or an event streaming platform. Since there may be many such interfaces and associated schemas, the effort should be concentrated in documenting those interfaces that operate at the subsystem boundaries. If subsystems have not been formally defined, prioritise interfaces that govern cross-team interactions. Why should boundary contracts be prioritised?
+
+Firstly, these contracts and the underlying services support cross-team collaboration, which is generally more taxing than collaboration among the members of one team. External teams may be unaware of your services catalogue because they were not part of its development; even minimal documentation here may well prove indispensable. Conversely, interfaces between the components belonging to one team may be discovered by its members with little effort by asking or poking around in a more familiar code base.
+
+Secondly, boundary contracts typically act as direct or transitive supporters of functionality that exists elsewhere; these relationships being particularly difficult to trace in distributed systems. As Leslie Lamport famously said: "A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable." (Lamport, 1987.) Lamport is, of course, talking from the perspective of a consumer. Paraphrasing to suit our context: ... a failure of a service you didn't know existed rendered yours unusable. Thus, to help traceability and minimise surprises, all services provided by one team and consumed by another should be thoroughly documented.
+
+Finally, teams will periodically refactor their components to improve some nonfunctional characteristic and prolong their life in general. Refactoring ideally avoids impacts to external parties; it is a localised activity. Conversely, changes to boundary contracts rarely have purely local effects. Boundary contracts thus tend to change less frequently compared to the internal ones. Taking a cost-benefit perspective on documentation, and in adherence to the "moderate the documentation effort based on stability" principle, boundary contracts should take priority.
+
+## Documentation of CI/CD artefacts, infrastructure, and processes
+The documentation of the engineering aspects relating to continuous integration (CI) and continuous delivery (CD) paradigms tends to be overlooked. Perhaps it is because CI/CD infrastructure tends to be exercised daily (often multiple times a day), and that redundant tacit knowledge exists in the minds of many engineers within the organisation. There is little concern in the minds of the management that CD/CD represents a knowledge risk to the organisation.
+
+It is no more difficult to argue against this thinking than it is to quiesce the opponents of documenting application code. After all, code is changed daily and yet we agree _in principle_ that knowledge continuity is critical when it comes to application code. (In principle, we agree; in practice, we often neglect. But that is another matter.)
+
+I believe the real reason is that management simply does not recognise CI/CD artefacts, infrastructure, and processes as intellectual assets. They are helpers for the final mile, if that. And helpers not in writing or debugging code, but in some menial automation activities; brain-dead activities those that up until only a few decades ago used to be done by hand.
+
+If you have succumbed to this kind of thinking, ask yourself a couple of simple questions: Why does it take so long for our pipelines to build? And why are they so goddamn flaky? 
+
+I say that the pipelines are often so hopelessly bad because they've not been treated as engineering assets, despite being maintained by engineers. (In the best case, by engineers. In many others, by infrastructure personnel who have little awareness of automation concerns, often acting as proxies for engineers.)
+
+Documenting the relevant aspects of CI/CD at both the overarching engineering and team levels will not solve the problem overnight. But it will position CI/CD as an engineering concern. The subsequent sharing of documentation may also encourage healthy debate. And the act of documentation in and of itself may provoke thought.
+
+In the documentation, you may wish to consider the following:
+
+* Database upgrade strategies.
+* Deployment models: e.g., blue-green or rolling.
+* Rollback vs. roll-forward strategies.
+
+
+
+* Interface schemas (for both synchronous APIs and asynchronous events or messages).
+    + Focus on those schemas that govern cross-team interactions, more so than intra-team.
+    + Cross-team interfaces are inherently more stable. Their documentation is less likely to change.
+
 
 * High-level architecture of the system:
     + The main components/subsystems that make up the overarching system and their relationships. Focus on visual representations: consider using diagrams whenever possible, accompanied by text to explain complex aspects.
