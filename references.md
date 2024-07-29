@@ -10,6 +10,8 @@ Alves, N. S., Mendes, T. S., de Mendonça, M. G., Spinola, R. O., & Shull, F. (2
 
 Appleton, B. (1998). Patterns in a Nutshell. CM Crossroads. Resources for ALM, Agile and Cloud.
 
+Avast. (2017, March.) Why we still need World Backup Day. Available: https://blog.avast.com/why-we-still-need-world-backup-day.
+
 Basili, V., & Turner J. (1975). "Iterative Enhancement: A Practical Technique for Software Development", IEEE Trans. Software Eng., pp. 390-396.
 
 Beaudan, E. (2006). Making change last: How to get beyond change fatigue. Ivey Business Journal.
@@ -187,6 +189,8 @@ Stiglitz, Joseph E. (1986). "The Efficiency of Capital Markets and the New Infor
 Stoneburner, G., Goguen, A., & Feringa, A. (2002). "Risk Management Guide for Information Technology Systems: Recommendations of the National Institute of Standards and Technology", NIST Special Publication 800-30, National Institute of Standards and Technology, Gaithersburg, MD; http://csrc.nist.gov/publications/nistpubs/800-30/sp800-30.pdf. 
 
 Sutherland, J., Viktorov, A., Blount, J., & Puntikov, N. (2007). "Distributed Scrum: Agile project management with outsourced development teams", Hawaii International Conference on System Sciences, 274a-274a.
+
+Swanson, M., Bowen, P., Phillips, A. W., Gallup, D., Lynes, D. (2010, May.) NIST Special Publication 800-34 Rev. 1, Contingency Planning Guide for Federal Information Systems, National Institute of Standards and Technology. Available: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf.
 
 Sweller, J. (1988). "Cognitive load during problem solving: Effects on learning", Cognitive Science, 12(2), 257-285.
 

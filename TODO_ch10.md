@@ -220,7 +220,7 @@ The high-level architecture of the system is the equivalent of the national map 
 ## Engineering principles
 While the overarching system will evolve according to a set of architectural principles, the implementation of its components will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
 
-Teams differ from practices. A team is a group of professionals working together to achieve specific goals. A practice is a grouping of people based on common characteristics, such as methods or ways of working.
+Teams differ from practices. A team is a group of professionals working together to achieve specific goals. A practice is a grouping of people based on common characteristics, such as methods or ways of working. The cardinalities of the person-team and person-practice relationships also differ: while an engineer (or tester) will belong to exactly one team, they may simultaneously partake in zero or more practices. For example, a person may be a member of both mobile application development and DevOps practices.
 
 Consider an example: A company has three cross-functional engineering teams, comprising both front-end and back-end developers. The teams look after three separate customer experience verticals: shopping cart, product catalogue, and account management. Simultaneously, the company operates separate practices for front-end and back-end technologies. The company has a common set of engineering principles, covering such crosscutting concerns as logging and security.
 
@@ -280,31 +280,96 @@ Secondly, boundary contracts typically act as direct or transitive supporters of
 Finally, teams will periodically refactor their components to improve some nonfunctional characteristic and prolong their life in general. Refactoring ideally avoids impacts to external parties; it is a localised activity. Conversely, changes to boundary contracts rarely have purely local effects. Boundary contracts thus tend to change less frequently compared to the internal ones. Taking a cost-benefit perspective on documentation, and in adherence to the "moderate the documentation effort based on stability" principle, boundary contracts should take priority.
 
 ## Documentation of CI/CD artefacts, infrastructure, and processes
-The documentation of the engineering aspects relating to continuous integration (CI) and continuous delivery (CD) paradigms tends to be overlooked. Perhaps it is because CI/CD infrastructure tends to be exercised daily (often multiple times a day), and that redundant tacit knowledge exists in the minds of many engineers within the organisation. There is little concern in the minds of the management that CD/CD represents a knowledge risk to the organisation.
+The documentation of the engineering aspects relating to continuous integration (CI) and continuous delivery (CD) paradigms tends to be overlooked. Perhaps it is because CI/CD infrastructure tends to be exercised daily (often multiple times a day), and that redundant tacit knowledge exists across many engineers within the organisation. There is little concern in the minds of the management that CD/CD represents a knowledge risk to the organisation.
 
-It is no more difficult to argue against this thinking than it is to quiesce the opponents of documenting application code. After all, code is changed daily and yet we agree _in principle_ that knowledge continuity is critical when it comes to application code. (In principle, we agree; in practice, we often neglect. But that is another matter.)
+It is no more difficult to argue against this thinking than it is to quiesce the opponents of documenting application code. After all, code is changed daily and yet we agree _in principle_ that knowledge continuity is critical when it comes to application code and intellectual assets in general. (In principle, we agree; in practice, we often neglect. But that is another matter.)
 
-I believe the real reason is that management simply does not recognise CI/CD artefacts, infrastructure, and processes as intellectual assets. They are helpers for the final mile, if that. And helpers not in writing or debugging code, but in some menial automation activities; brain-dead activities those that up until only a few decades ago used to be done by hand.
+I believe the real reason is that management simply does not recognise CI/CD artefacts, infrastructure, and processes as intellectual assets. They are helpers for the final mile, if that. And helpers not in writing or debugging code, but in some menial automation activities; brain-dead tasks that up until only a few decades ago used to be done by hand.
 
-If you have succumbed to this kind of thinking, ask yourself a couple of simple questions: Why does it take so long for our pipelines to build? And why are they so goddamn flaky? 
+If you have succumbed to this kind of thinking, ask yourself a couple of simple questions: Why does it take so long for our pipelines to run? And why are they so goddamn flaky? 
 
-I say that the pipelines are often so hopelessly bad because they've not been treated as engineering assets, despite being maintained by engineers. (In the best case, by engineers. In many others, by infrastructure personnel who have little awareness of automation concerns, often acting as proxies for engineers.)
+I suggest that the pipelines are often so hopelessly neglected because they've not been treated as engineering assets, despite being maintained by engineers. (In the best case, by engineers. In many others, by infrastructure personnel who have little awareness of automation concerns, often acting as proxies for engineers.)
 
-Documenting the relevant aspects of CI/CD at both the overarching engineering and team levels will not solve the problem overnight. But it will position CI/CD as an engineering concern. The subsequent sharing of documentation may also encourage healthy debate. And the act of documentation in and of itself may provoke thought.
+Documenting the relevant aspects of CI/CD at both the overarching engineering and team levels will not solve the problem overnight. But it will position CI/CD as an engineering concern, at a minimum. The subsequent sharing of documentation may also encourage healthy debate. And the act of documenting in and of itself may provoke thought.
 
 In the documentation, you may wish to consider the following:
 
-* Database upgrade strategies.
-* Deployment models: e.g., blue-green or rolling.
-* Rollback vs. roll-forward strategies.
+* **Tooling**, including the infrastructure, programming languages, libraries, and frameworks used to define and execute CI/CD artefacts. The tooling documentation should support existing engineers and new starters alike. For the latter, it could be seen as a landing pad — a place to begin the self-onboarding process.
+* **Coding and configuration guidelines**, ensuring that CI/CD artefacts meet agreed quality requirements, analogously to their contemporaries in the application development sphere. Good documentation in this area can save considerable effort in debating the nuances of coding style, and can minimise frustration and productivity bottlenecks.
+* **Pipeline stages**, including the detailed description of each stage (e.g., build, test, deploy) where necessary. Workflow diagrams can aid in the representation of the pipeline stages and their sequences, as well as any conditional logic used to trigger or bypass stages.
+* **Database upgrade strategies**, involving the planning and execution of updates to the database schema and data. These upgrades need to be carefully considered and documented to allow for smooth transitions without disruptions or manual intervention. 
+* **Deployment models**; e.g., blue-green or rolling. These specify how new code changes are rolled out across environment. Effective documentation of these models can ensure consistency and reliability in deployments.
+* **Failure handling strategies**; e.g., rollback or roll-forward strategies. These specify what happens when an application, for whatever reason, could not be deployed to its target environment.
+* **Troubleshooting guidance**, comprising a list of common problems and their solutions.
+* **Roles and responsibilities**, outlining which teams are responsible for various aspects of the CI/CD process. For example, the infrastructure team is the designated custodian of the infrastructure, the application developers are responsible for writing and supporting the pipeline code, and the environment owners are responsible for approving deployments to their respective environments.
+* **Change management**, specifying how changes to CI/CD artefacts and deployment environments are administered. Change management documentation may overlap with the roles and responsibilities documentation, as it specifies the approval process for changes to the pipeline and deployment to specific environments. It is often missed or treated implicitly in many organisations. The importance of explicitly defined change management processes is elevated substantially for systems operating in highly regulated industries. 
+* **Security**, detailing the methods used to secure the CI/CD pipeline and ensure only authorised personnel can make changes. Security documentation may also include auditing controls, ensuring that all changes to the pipeline and deployments to high-assurance environments are irrevocably recorded and associated with the appropriate user principal. Whether this sort of documentation is required depends heavily on the operating environment.
+
+## Incident management processes
+These are essential for ensuring that incidents are handled efficiently and their impact on business operations is minimised. Documenting these processes provides clear guidelines and ensures consistency in how incidents are managed. This reduces the level of chaos that is often associated with incidents and improves (mainly by de-stressing) the lives of support personnel and rostered engineers.
+
+Consider documenting the following:
+
+* **Definition and classification**, specifying unambiguously what constitutes an incident and criteria for assessing its severity (e.g., critical, high, medium, low). A critical incident, for instance, may prevent the business from operating entirely with no workarounds possible. Incident classification helps avoid undue kerfuffle during minor events and enables more effective prioritisation of actions, particularly when multiple issues are being observed concurrently. It is also important to define when an incident can be deemed resolved, which is ideally distinguished from any follow-up postmortem activities that may take place later.
+* **Reporting and logging**, specifying how incidents should be reported (e.g., via a ticketing system, email, or group chat). The most useful thing that can be done once an incident has been identified is to log it and ensure that the relevant context (timestamps, environments, application versions, error messages, reproduction steps, etc.) has been attached to the incident record. A well-honed incident management process always records the problem before attempting to solve it.
+* **Roles and responsibilities**, outlining the teams or individual roles responsible for overseeing the incident as well as those acting in a supporting capacity. It may include guidelines on when and how to escalate an incident to a higher authority. Defining expectations at a role level has the advantage of making team members interchangeable. If someone is familiar with a specific role, they can step into that role for any incident, allowing for flexibility and ensuring continuity in response efforts.
+* **Response procedures**. These are specific steps that should be followed to diagnose and troubleshoot faults or mitigate their effects. Comprehensive root cause analysis may be the only method available in some cases, and not all faults may be dealt with a run sheet. But for many kinds of faults, mitigation processes should be defined.
+* **Communication plan**, specifying how and when to communicate with internal stakeholders (e.g., staff, management, compliance officers, C-suite) and external stakeholders (e.g., customers, integration partners, the media, law enforcement, the general public). Guidance may be offered on the frequency and content of status updates during the incident. 
+
+If you recall Jackman's five workplace toxins in Chapter 6, a frenzied work environment was among them. Proper incident management documentation can act as an effective remedy. It offers clear, predefined steps for handling incidents, thereby reducing stress and confusion during the most inopportune moments.
+
+## Backup and recovery procedures
+Without a well-defined and tested backup and recovery process, an organisation is exposed to a very significant risk of losing data and, in some cases, operational ability. The following aspects should be documented:
+
+* **Requirements and policies**, consisting of the types of data to be backed up, frequency of the backups, and the backup retention period. Requirements should be stated in measurable terms, for example, using recovery point (defined as the maximum amount of data — as measured by time) and recovery time (defined as the maximum duration of the disruption) objectives. The number of redundant copies should also be specified, as well as any constraints on their storage locations. Businesses rarely attribute the same value to all of their data; it is thus necessary to distinguish among them when stipulating their backup requirements.
+* **Procedures**, specifying using clear, step-by-step instructions how data should be backed up and restored. This section should also encompass all of the tooling used during backup and recovery actions, as well as the relevant configuration. Backup schedules should also be specified, as well as the effects on the system during backups. Snapshot files may need to be verified post-backup and encrypted; such follow-up actions should also be detailed in the backup procedures.
+* **Testing strategy**. This is probably the most important part of the documentation, aimed at ensuring that backups actually work. The importance of testing cannot be overstated: according to Avast (2017), around 60 per cent of backups are incomplete and around half of restores fail. The implications are profound: of the companies that have experienced a data-related outage for more than ten consecutive days, 93 per cent have filed for bankruptcy within twelve months of the incident. Ensuring that testing processes have been defined and comprehensively documented (and thereafter practiced regularly) can prevent a catastrophe.
+
+The formation of data backup and recovery processes mustn't be left to chance, particularly when one considers that ad-hoc or vaguely defined processes cannot be effectively tested. For more information on defining the backup and recovery processes, and contingency planning in general, consult the NIST-800-34 special publication (Swanson et al., 2010).
+
+## Disaster recovery plan
+A distant cousin of (data) backup and recovery, disaster recovery (DR) is concerned with the restoration of a business's operation (or part thereof) at an alternate facility in response to a major failure. The failure may be due to problems with software, hardware, or the facilities 
+themselves. (We focus on failures relating to — affecting or affected by — engineering.) The following aspects should be documented:
+
+* **Trigger criteria**, define unambiguously the conditions under which the DR plan will be activated. There may be specific events (e.g., unrecoverable hardware failure) or metrics (e.g., performance degradation, observed failure rate) that enact the transition.
+* **Roles and responsibilities**, outlining the teams or individual roles responsible for coordinating DR procedures and ensuring the readiness of software systems, engineering and support staff.
+* **Cutover procedures**, specifying using step-by-step instructions how functionality should be transitioned from one site to another.
+* **Communication plan**, specifying how and when to communicate with (predominantly) internal stakeholders.
+* **Testing strategy**, detailing how the DR plan should be verified for fitness. This may include the scheduling of "fire drills" to practice live or simulated cutover activities.
+* **Training and awareness**. While activities like data restoration impact a relative minority of engineering staff, a DR-initiating event may impact a much larger contingent. Training manuals may need to be issued to all staff likely impacted by a DR event.
+
+## Security and compliance guidelines
+Not all stakeholders of a system will seek feature delivery; some are more concerned with nonfunctional qualities of a system such as security and compliance with specific controls (e.g., standards, regulation). The aspects requiring documentation include —
+
+* **Data protection policies**: How sensitive data is handled, stored, and transmitted.
+* **Access control**: Procedures for granting and revoking access to systems and data.
+* **Practices for managing sensitive information**, such as API keys and passwords.
+* **Secure coding and logging practices**, ensuring that code is secure and free from vulnerabilities.
+* **Artefact scanning tooling and processes**. This may be defined at both the source code and binary level.
+
+## Onboarding guides
+Much effort is routinely expended on assisting new starters in navigating an unfamiliar environment. While some of it is unavoidable, many activities can be streamlined through high-quality documentation that is kept up to date and readily on hand. Looking at onboarding from the viewpoint of a new starter, a handful of typical questions can be quickly answered with little more than a one-pager:
+
+* At the organisation level: how do I make use of various corporate systems, email, VPN, time-sheeting, and so forth? This is almost entirely generic and typically provided by the corporate IT mob, along with the usual disclaimers. Engineering normally shouldn't be concerned with producing documentation of this nature, with the exception of small companies lacking a dedicated IT department.
+* At the department level: what problems do we solve as a larger group? Again, documentation of this type will likely already be available in some form. It may include the usual history, mission, vision, values, and culture. There is little for Engineering to take ownership of here.
+* At the system level: what are we building and where will my contributions fit in? This documentation may be furnished by multiple groups within the greater Engineering community:
+    + The architects, responsible for system architecture documentation.
+    + The engineering management, responsible for engineering principles, requirements, standards, conventions, and guidelines. This group includes testing and architecture managers, as new starters are not always developers.
+    + The product team, responsible for the outline-level definition of the products supported by the system and how they dovetail into the organisation's broader product portfolio.
+* At the practice level (if applicable): how will my contributions be guided by our choice of technology and ways of working? Technology-specific principles maintained by the relevant practice(s) will be useful here.
+* At the team level: how do I become an effective member of my team? A bare-bones guide on how to set up their development environment, access code repositories and various tooling (e.g., CI/CD, log aggregators, team dashboards), and run the components locally will be useful.
+
+## Testing strategy
+There is a saying that anything worth doing is worth doing right. To paraphrase in an engineering milieu: anything worth doing is worth testing.
+
+Many of the preceding sections included a point on testing strategy. And indeed, every process described earlier that is even remotely important to the business should have some mechanism for verification. How do we know that our backups work? How do we know that our disaster recovery processes can be trusted? You won't, not until you've tried them.
 
 
+//TODO for each documentation section, assign an owner — the individual role accountable for ensuring that the complete documentation exists, is accurate and updated in line with changing business needs.
 
 * Interface schemas (for both synchronous APIs and asynchronous events or messages).
     + Focus on those schemas that govern cross-team interactions, more so than intra-team.
     + Cross-team interfaces are inherently more stable. Their documentation is less likely to change.
-
-
 * High-level architecture of the system:
     + The main components/subsystems that make up the overarching system and their relationships. Focus on visual representations: consider using diagrams whenever possible, accompanied by text to explain complex aspects.
     + List of technology (programming languages, infrastructure, etc.) used by the system, also identifying which parts of the system use that technology.
