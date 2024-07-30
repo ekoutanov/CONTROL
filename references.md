@@ -98,6 +98,8 @@ IEEE-USA, IEEE-USA Salary & Benefits Survey Report - 2019 Edition, IEEE, 2019.
 
 Ingham, A. G., Levinger, G., Graves, J., & Peckham, V. (1974). "The Ringelmann effect: Studies of group size and group performance", Journal of Experimental Social Psychology, 10(4), 371-384.
 
+International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC). (2013). Software Testing - Part 1: Concepts and Definitions (ISO/IEC 29119-1:2013). ISO/IEC. doi: 10.1109/IEEESTD.2013.6564381
+
 International Software Testing Qualifications Board. (2018). Certified Tester Foundation Level Syllabus. Available: https://istqb-main-web-prod.s3.amazonaws.com/media/documents/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf.
 
 Jackman, M. (1998, July). "Homeopathic Remedies for Team Toxicity," IEEE Software, pp. 43–45.
@@ -179,6 +181,8 @@ Rosenblatt, V. (2012). "Hierarchies, Power Inequalities, and Organizational Corr
 Royce, W. (1970). "Managing the Development of Large Software Systems", Proceedings of IEEE WESCON; https://dl.acm.org/doi/10.5555/41765.41801.
 
 Ruff J. (2023, December). Change Fatigue in The Workplace: Definition, Causes, Effects, Signs, And How to Overcome. ChangingPoint. Available: https://changing-point.com/change-fatigue-in-the-workplace/.
+
+Sommerville, I. (2016) Software Engineering. 10th Edition, Pearson Education Limited, Boston.
 
 Sapiro, A. (2024). Operating Model and Organization Design. In: Strategic Management. Classroom Companion: Business. Springer, Cham; https://doi.org/10.1007/978-3-031-55669-2_11.
 
