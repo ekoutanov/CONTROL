@@ -24,8 +24,10 @@ _Dedicated to my mentors, who guided me with wisdom and patience._
 
 Chapter 9. Maintenance
 
-Chapter 10. Recommendations
+Chapter 10. Principled Decision-Making
 
-[Chapter 11. Adoption](ch11.md)
+Chapter 11. Documentation
+
+[Chapter 12. Adoption](ch12.md)
 
 [References](references.md)
