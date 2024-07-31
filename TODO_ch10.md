@@ -217,6 +217,10 @@ The above is not a complete list of architectural aspects, but I believe it to b
 
 The high-level architecture of the system is the equivalent of the national map in the "prefer breadth of documentation to depth" principle. It gives its explorers a place to start their journey.
 
+**Document owner(s):** The Architecture team is responsible for producing the system architecture and ensuring its validity. 
+
+**Accountable party:** The Head of Architecture (or equivalent) is accountable for the effectiveness of the documentation, ensuring that it fulfils its purpose.
+
 ## Engineering principles
 While the overarching system will evolve according to a set of architectural principles, the implementation of its components will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
 
@@ -228,9 +232,13 @@ In addition, each practice lays down specific principles relating to their respe
 
 >Most engineering organisations feature multiple engineering teams but only few commit to engineering practices. I believe this to be a missed opportunity, especially considering the ease with which a practice may be spun up and their benefits relative to cost. For starters, it's an informal group that can be truly self-organising. While teams are managed by accountable individuals, practices may be run in more egalitarian ways. Individuals' participation in practices may take active or passive forms, depending on their interests and available time. In addition to the obvious benefits of driving consistency and promoting overall excellence, they offer a club-like experience for their members. Practices support their members and help smoothen the new-starter experience. They can heighten the individuals' sense of belonging and provide a platform for continuous learning, fostering a culture of collaboration. They can also set the scene for mentorship, allowing more experienced engineers to share their knowledge and help junior members grow.
 
-Finally, some engineering teams may adopt principles of their own. For example, the account management team benefits from a consistent, if opinionated approach from its team members regarding the storage and transmission of personally identifiable information (PII). Crucially, principles local to teams and practices mustn't conflict with higher-level principles. In our example, the team's principled handling of PII must be in line with all security principles codified at the engineering and architecture levels. Remember, if a pair of principles contradict, one or both are incorrect or misinterpreted. Clarifications or amendments may be required.
+Finally, some engineering teams may adopt principles of their own. For example, the account management team benefits from a consistent, if opinionated approach from its team members regarding the storage and transmission of personally identifiable information (PII). Crucially, principles local to teams and practices mustn't conflict with higher-level principles. In our example, the team's principled handling of PII must be in line with all security principles codified at the engineering and architecture levels. Remember, if a pair of principles contradict, one or both are incorrect or misinterpreted; clarifications or amendments may be required.
 
 Principles should be documented close to their intended audience and readily accessible. When using a wiki, for example, the team principles should be contained in the team's local space. The responsibility and (in most cases) accountability for defining and maintaining principles rests with those managing the intended audience. For example, the Head of Engineering maintains the engineering principles, while the Engineering Manager handles the principles for their team. Delegation is possible and sometimes necessary. Practice-level principles are maintained by either the practice lead, the seniormost member, or the complete collective, depending on the chosen structure and conventions. There may not be a single person accountable for a practice. It is chiefly for that reason that engineering practices and centres of excellence are not part of the CONTROL delivery organisation, although their presence is encouraged.
+
+**Document owner(s):** At the overarching level, the Engineering Managers and Principal Engineers collaborate on the definition of engineering principles, guided by the Head of Engineering. They may consult the Architecture team to ensure that engineering and architecture principles are not in contradiction. At the practice level, members of the practice or the practice lead will maintain the principles. At the team level, the principles will be maintained by Engineers, guided by their manager.
+
+**Accountable party:** The Head of Engineering is accountable for the overarching principles, as well as ensuring that the practice-level principles are captured. At the team level, the accountability rests with the EMs.
 
 ## Requirements, standards, conventions, and guidelines
 These are extensions of the engineering principles but are more specialised. They are rules prescribing the day-to-day activities of various team members — coding, testing, releasing, and deploying software, for example. They should be specified unambiguously where possible. Ideally, their use should be enforced programmatically (e.g., code coverage ratio) although this is not always achievable (e.g., code review guidelines).
@@ -251,7 +259,11 @@ Examples of these rules include:
     + What sort interactions should have traces associated with them. How should traces be stitched together in a distributed system.
     + Which telemetry libraries are preferred, and whether there is a preference for auto-instrumentation or hand-crafted production of telemetry.
 
-Much like engineering principles, these specialised rules can be established different levels of the engineering organisation and further refined by the team or practice dimension. Those in charge of the principles also curate the more specialised rules at the corresponding level.
+Much like engineering principles, these specialised rules can be established different levels of the engineering organisation — refined by the team or practice dimension. Those in charge of the principles also curate the more specialised rules at the corresponding level.
+
+**Document owner(s):** As per the engineering principles.
+
+**Accountable party:** As per the engineering principles.
 
 ## Team inventory and as-builts
 This comprises an enumeration of the intellectual assets of each engineering team, detailing the items under each team's care. Some of these assets may have already been captured by the system architecture at an outline level. The team-level documentation offers a more detailed account.
@@ -268,6 +280,10 @@ It is thus necessary for engineering teams to maintain an accurate account of th
 >
 >It is best to leave the original design documentation as-is, capturing the relevant parts of the system as they were initially conceived, and create a separate set of documents that represent the current state. This approach takes no additional effort; one can simply clone and repurpose the original documentation. The preservation of the originals also helps in the propagation of context. Suppose the system encountered substantial compromises along its delivery, owing to certain pragmatic constraints unbeknownst to its designers. It may be discovered (much) later that the system does not exhibit the nonfunctional characteristics originally envisaged. Having a clear distinction between the as-designed and as-built documentation enables one to determine where the gaps may lie.
 
+**Document owner(s):** Engineers maintain as-builts, ensuring that all material changes to a team's intellectual assets are reflected in the documentation. Their managers provide guidance and feedback on the contents of the team inventory, ensuring that all of the essentials have been captured at a suitable level of detail.
+
+**Accountable party:** The Engineering Manager is accountable for the continuity of knowledge and reduction of key personnel risks within the team. Team-level documentation is, therefore, the province of the Engineering Manager.
+
 ## Interface definitions
 Continuing the topic of as-builts, among the most useful nuggets of knowledge is how a subsystem or component is meant to communicate with its peers or the outside world. This is particularly useful for integrators and other teams who don't want to know every detail about some component of a system, only how to talk to it.
 
@@ -278,6 +294,10 @@ Firstly, these contracts and the underlying services support cross-team collabor
 Secondly, boundary contracts typically act as direct or transitive supporters of functionality that exists elsewhere; these relationships being particularly difficult to trace in distributed systems. As Leslie Lamport famously said: "A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable." (Lamport, 1987.) Lamport is, of course, talking from the perspective of a consumer. Paraphrasing to suit our context: ... a failure of a service you didn't know existed rendered yours unusable. Thus, to help traceability and minimise surprises, all services provided by one team and consumed by another should be thoroughly documented.
 
 Finally, teams will periodically refactor their components to improve some nonfunctional characteristic and prolong their life in general. Refactoring ideally avoids impacts to external parties; it is a localised activity. Conversely, changes to boundary contracts rarely have purely local effects. Boundary contracts thus tend to change less frequently compared to the internal ones. Taking a cost-benefit perspective on documentation, and in adherence to the "moderate the documentation effort based on stability" principle, boundary contracts should take priority.
+
+**Document owner(s):** As per the team inventory and as-builts.
+
+**Accountable party:** As per the team inventory and as-builts.
 
 ## Documentation of CI/CD artefacts, infrastructure, and processes
 The documentation of the engineering aspects relating to continuous integration (CI) and continuous delivery (CD) paradigms tends to be overlooked. Perhaps it is because CI/CD infrastructure tends to be exercised daily (often multiple times a day), and that redundant tacit knowledge exists across many engineers within the organisation. There is little concern in the minds of the management that CD/CD represents a knowledge risk to the organisation.
@@ -304,6 +324,10 @@ In the documentation, you may wish to consider the following.
 * **Roles and responsibilities**, outlining which teams are responsible for various aspects of the CI/CD process. For example, the infrastructure team is the designated custodian of the infrastructure, the application developers are responsible for writing and supporting the pipeline code, and the environment owners are responsible for approving deployments to their respective environments.
 * **Change management**, specifying how changes to CI/CD artefacts and deployment environments are administered. Change management documentation may overlap with the roles and responsibilities documentation, as it specifies the approval process for changes to the pipeline and deployment to specific environments. It is often missed or treated implicitly in many organisations. The importance of explicitly defined change management processes is elevated substantially for systems operating in highly regulated industries. 
 * **Security**, detailing the methods used to secure the CI/CD pipeline and ensure only authorised personnel can make changes. Security documentation may also include auditing controls, ensuring that all changes to the pipeline and deployments to high-assurance environments are irrevocably recorded and associated with the appropriate user principal. Whether this sort of documentation is required depends heavily on the operating environment.
+
+**Document owner(s):** Depends on the separation of infrastructure and software development roles within the organisation. This documentation carries a broad scope: Some of its aspects (e.g., tooling, security, change management) may be documented by the infrastructure team. Other aspects may be owned by software developers and should be documented accordingly. The Head of Engineering is the ultimate owner of the document, allocating responsibilities for its completeness to the appropriate parties. He is also responsible for defining the roles and responsibilities.
+
+**Accountable party:** Assuming that all of the document owners are subordinates to the Head of Engineers, he is accountable over the entirety of this documentation. If the reporting hierarchy is divergent, it is best to partition the CI/CD documentation into sections, such that each section has a clear accountable party.
 
 ## Incident management processes
 These are essential for ensuring that incidents are handled efficiently and their impact on business operations is minimised. Documenting these processes provides clear guidelines and ensures consistency in how incidents are managed. This reduces the level of chaos that is often associated with incidents and improves (mainly by de-stressing) the lives of support personnel and rostered engineers.
@@ -401,9 +425,19 @@ Those who care about the efficiency and repeatable of the software engineering p
 
 Responsibilities and accountabilities may be captured in a manner similar to how they were described in Chapter 6. One may even use this book as a staring point and elaborate from there. However, that mightn't be enough. A comprehensive set of "accountability contracts" should be supported by the following.
 
-* **The extent of their remit**: What each role is permitted to do and forbidden from doing should be called out explicitly; any grey areas will require coordination with their manager. Some of this may be implied in the responsibilities section. For example, the "acts as line manager of Engineers" responsibility of an Engineering Manager carries certain implications, but their extent may not be entirely clear.
-* **The means of measuring performance**:
-* **A negotiation process**:
+* **Clarifying the extent of their remit**: What each role is permitted to do and forbidden from doing should be called out explicitly; any grey areas will require coordination with their manager. Some of this may be implied in the responsibilities section. But not everything can be easily inferred:
+    + For example, the "responsible for hiring and performance management" expectation from an Engineering Manager carries certain implications, but their extent may not be entirely clear. The details of performance management aren't within CONTROL's direct sphere of influence, although the overarching need for it has been highlighted repeatedly. The adopting organisation will likely impose specific constraints on performance management activities; some of these may be derived from legislation, others from internal policy.
+    + Do not assume that if CONTROL omits some aspect of a role's expectation, then it is unimportant. Selective omissions (like the one in the previous example) avoid the overspecification of the method. Some effort on behalf of the adopting organisation will still be required.
+* **Defining the means of assessing performance**: As per Chapter 4, accountability is ineffective if it cannot be assessed. Specific metrics or a qualitative approach will be needed to determine how a person is tracking according to the accountabilities defined by their role. The specific methods used to assess an individual's performance must be made transparent. These methods may well be subjective; nonetheless, team members should be given 
+* **A negotiation process**: Accountability cannot be bestowed upon an individual without their acceptance of it. 
+    + Some expectations may be defined in the employment contract; these tend to be highly generalised, fitting every employee. For example, ensuring the safety of a company's intellectual assets. In fairness, these are obligations<sup>3</sup> more so than accountabilities, but despite the distinctions their effects are similar. Engineering documentation shouldn't attempt to duplicate generic obligations, nor mimic the approach.
+    + Many expectations are specific to a role. These should be communicated explicitly and documented for subsequent reference. It is little use agreeing to something when the basis of the agreement may later be contested by either party (those accepting accountability and those assigning it). This form of documentation should be subject to stringent change control measures; it cannot be altered without a bilateral agreement.
+
+><sup>3 </sup>Obligations are legally binding and are defined in contracts or legislature. Also, unlike accountabilities, obligations are bidirectional. It is not only the employee who has obligations towards the employer; the reverse also holds. By comparison, accountabilities tend to compose hierarchically.
+
+People must be made aware of their expectations and the means by which these will be assessed.
+
+Anything that affects a person's accountability must be
 
 //TODO for each documentation section, assign an owner — the individual role accountable for ensuring that the complete documentation exists, is accurate and updated in line with changing business needs.
 
