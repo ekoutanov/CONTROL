@@ -176,9 +176,9 @@ Here, we consider the most important aspects of the system whose documentation c
 
 For each of the documents, there is specific recommendation on the document's owner(s). These are the roles responsible for producing the various sections and ensuring their completeness, accuracy, and currency — bearing in mind that some documents will be expansive, requiring multiple collaborating authors. While some documents will be relatively static, others will evolve periodically — their authors will change over time.
 
-Each document will have an accountable party, ensuring its efficacy and continuity. This role also guarantees that the necessary document owners have been engaged and each owner is aware of their specific responsibilities and accountabilities — in line with CONTROL's accountability model.
+Each document will have an accountable party, ensuring its efficacy and continuity. This role also guarantees that the necessary document owners have been engaged and each is aware of their specific responsibilities. The documentation must ultimately see to the needs of the delivery organisation and appropriate resources must be expended on its upkeep. (Sufficient but not excessive.) And while multiple people will contribute to these objectives, precisely one role will be accountable — in line with CONTROL's foundational principles.
 
-In some cases, a document's owners may have divergent reporting lines (i.e., they report to different managers). Who should be accountable in this case? For simplicity and convenience, we define a pseudo-role: _Head of Product and Technology_. Every document owner is its direct or indirect subordinate. This is not a concrete role and varies depending on the context. In practice, the Head of Product and Technology role may be fulfilled by the CTO or a middle manager, depending on the depth of the organisational hierarchy. This role is used when a more specific role cannot be identified.
+A document's owners may have divergent reporting lines (i.e., they report to different managers). Who should be accountable in this case? For simplicity and convenience, we assume it to be the Head of Engineering role; every prospective document owner is its direct or indirect subordinate. (This includes members of the Product, System Testing, and Infrastructure teams.) In practice, the Head of Engineering may be a dedicated role or a function fulfilled by the CTO, depending on the depth of the organisational hierarchy. This role is used as a surrogate when a more specific role cannot be identified.
 
 ## System architecture
 Imagine the system as a complex puzzle. The high-level architecture is like the box of the puzzle that shows a simplified version of the completed image. It provides a broad overview of the system's structure and the principles guiding its evolution. It identifies the key components and their relationships, and explains how those components and the system as a whole may change over time. At a minimum, architectural documentation should contain the following elements.
@@ -224,7 +224,7 @@ The high-level architecture of the system is the equivalent of the national map 
 
 **Document owner(s):** The Architecture team is responsible for producing the system architecture and ensuring its validity. 
 
-**Accountable party:** The Head of Architecture (or equivalent).
+**Accountable party:** The Architecture Manager (or equivalent). In the absence of this role, the Head of Engineering takes accountability.
 
 ## Engineering principles
 While the overarching system will evolve according to a set of architectural principles, the implementation of its components will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
@@ -330,9 +330,9 @@ In the documentation, you may wish to consider the following.
 * **Change management**, specifying how changes to CI/CD artefacts and deployment environments are administered. Change management documentation may overlap with the roles and responsibilities documentation, as it specifies the approval process for changes to the pipeline and deployment to specific environments. It is often missed or treated implicitly in many organisations. The importance of explicitly defined change management processes is elevated substantially for systems operating in highly regulated industries. 
 * **Security**, detailing the methods used to secure the CI/CD pipeline and ensure only authorised personnel can make changes. Security documentation may also include auditing controls, ensuring that all changes to the pipeline and deployments to high-assurance environments are irrevocably recorded and associated with the appropriate user principal. Whether this sort of documentation is required depends heavily on the operating environment.
 
-**Document owner(s):** Depends on the separation of infrastructure and software development roles within the organisation. This document covers a broad scope: Some of its aspects (e.g., tooling, security, change management) may be filled by the infrastructure team. Other aspects may be owned by software developers. The Head of Product and Technology is the ultimate owner of the document, allocating responsibilities for its completeness to the appropriate parties. He is also responsible for defining the roles and responsibilities; ideally, this occurs before the rest of the document is compiled.
+**Document owner(s):** Depends on the separation of infrastructure and software development roles within the organisation. This document covers a broad scope: Some of its aspects (e.g., tooling, security, change management) may be filled by the infrastructure team. Other aspects may be owned by software developers. The Head of Engineering is the ultimate owner of the document, allocating responsibilities for its completeness to the appropriate parties. He is also responsible for defining the roles and responsibilities; ideally, this occurs before the rest of the document is compiled.
 
-**Accountable party:** The Head of Product and Technology.
+**Accountable party:** The Head of Engineering.
 
 ## Incident management processes
 These are essential for ensuring that incidents are handled efficiently and their impact on business operations is minimised. Documenting them provides clear guidelines and ensures consistency in how incidents are managed. This reduces the level of chaos that is often associated with incidents and improves (mainly by de-stressing) the lives of support personnel and rostered engineers.
@@ -349,7 +349,7 @@ If you recall Jackman's five workplace toxins in Chapter 6, a frenzied work envi
 
 **Document owner(s):** Depends on the availability of a dedicated application support team (or equivalent) and their structure. Areas relating to the classification of incidents, their logging and reporting, and the broader communication aspects will generally be handled by a dedicated "frontline" team. The response procedures will require significant involvement from Engineering.
 
-**Accountable party:** The Head of Product and Technology. He should begin with documenting the roles and responsibilities, as they relate to the incident management processes.
+**Accountable party:** The Head of Engineering. He should begin with documenting the roles and responsibilities, as they relate to the incident management processes.
 
 ## Backup and recovery procedures
 Without a well-defined and tested backup and recovery process, an organisation is exposed to a very significant risk of losing data and, in some cases, operational ability. The following aspects should be documented:
@@ -366,7 +366,7 @@ The formation of data backup and recovery processes mustn't be left to chance, p
 * Backup and recovery procedures are specified at a deeply technical level, requiring a solid understanding of the system's components and various sources of data. If requirements and policies are be treated as a problem, then the backup and recovery procedures form the technical solution. Engineering teams are responsible for designing and implementing the backup and recovery procedures, with guidance from Infrastructure and Architecture. Ideally, this would take place during Elaboration (the design of backups) and Construction (the definition of procedures and backup scripts), particularly for mission critical data. Once implemented, the Engineering teams ensure the currency of the backup and recovery documentation relating to their components.
 * Testing of backup and recovery procedures may occur at varying levels. Engineering teams will want to ensure that the persistent state of their components can be backed up and restored. Not all parts of the system will be attributable to a specific Engineering team; there may be common infrastructure with persistence concerns — such as message brokers — that can only by backed up and restored by the infrastructure custodians. Furthermore, the System Testing team will want to conduct an independent appraisal of the procedures, verifying that the overarching recovery point and time objectives are being met.
 
-**Accountable party:** The main challenge with this document is that it refers to high-value assets that keep changing as the system evolves and its functional scope expands. And while the Head of Product and Technology takes accountability for the document, he cannot possibly keep abreast of the changes. Even the occurrence of a material change may not be obvious to anyone outside the delivery organisation, let alone its details. He should, therefore, disseminate the accountabilities among the aware parties; for example, making the POs accountable for specifying data retention requirements.
+**Accountable party:** The main challenge with this document is that it refers to high-value assets that keep changing as the system evolves and its functional scope expands. And while the Head of Engineering takes accountability for the document, he cannot possibly keep abreast of the changes. Even the occurrence of a material change may not be obvious to anyone outside the delivery organisation, let alone its details. He should, therefore, disseminate the accountabilities among the aware parties; for example, making the POs accountable for specifying data retention requirements.
 
 
 ## Disaster recovery plan
@@ -387,7 +387,7 @@ themselves. (We focus on failures relating to — affecting or affected by — e
 * The System Testing team is responsible for verifying the overall efficacy of the DR plan and maintaining the testing-related aspects of the documentation.
 * Engineering broadly owns the training and communication aspects as they relate to the system. Ownership responsibilities will be farmed out by the Head of Engineering.
 
-**Accountable party:** The Head of Product and Technology takes accountability for the overarching document, disseminating accountability among the various document owners as appropriate. 
+**Accountable party:** The Head of Engineering takes accountability for the overarching document, disseminating accountability among the various document owners as appropriate. 
 
 ## Security and compliance guidelines
 Not all stakeholders of a system will seek feature delivery; some are more concerned with nonfunctional qualities of a system such as security and compliance with specific controls (e.g., standards, regulation). The aspects requiring documentation include —
@@ -400,7 +400,7 @@ Not all stakeholders of a system will seek feature delivery; some are more conce
 
 **Document owner(s):** The requirements and policies for protecting data are sourced from stakeholders as well as overarching policies that apply at the organisation level, elicited by POs during the Abstraction phase. Engineering is responsible for implementing the abovementioned controls; the EMs must ensure that the security and compliance documentation relating to their teams' assets is current. Some security and compliance guidelines may also be defined at the practice level.
 
-**Accountable party:** The Head of Product and Technology is ultimately accountable for the system meeting security and compliance controls, and for the completeness and accuracy of documents and other artefacts that demonstrate this.
+**Accountable party:** The Head of Engineering is ultimately accountable for the system meeting security and compliance controls, and for the completeness and accuracy of documents and other artefacts that demonstrate this.
 
 ## Onboarding guides
 Much effort is routinely expended on assisting new starters in navigating an unfamiliar environment. While some of it is unavoidable, many activities can be streamlined through high-quality documentation that is kept up to date and readily on hand. Looking at onboarding from the viewpoint of a new starter, a handful of typical questions can be quickly answered with little more than a one-pager:
@@ -418,7 +418,7 @@ Note that the detail of the onboarding documentation should be closer to a count
 
 **Document owner(s):** The EMs and Head of Engineering for the engineering-level concerns; the Architects for the system architecture definition (a separate document discussed earlier); and the POs for product definitions.
 
-**Accountable party:** The Head of Product and Technology.
+**Accountable party:** The Head of Engineering.
 
 ## Software testing strategy
 There is a saying that anything worth doing is worth doing right. To paraphrase within an engineering milieu: anything worth doing is worth testing.
@@ -455,7 +455,9 @@ We only scrape the surface here, covering the bare essentials at an outline leve
     + Developer-led testing (unit, component, integration, etc.) is exempt from explicit reporting requirements. If software fails a test, it will be changed until the test passes. (Not always; in some legitimate cases, it is the test that needs changing.) The metric that interests most stakeholders is the rate of development progress.
     + Testing administered outside of the engineering teams will generally report on its outcomes. This is not just to appease management and stakeholders; it forms an asynchronous feedback loop back to the engineering teams
 
-**Document owner(s):**
+**Document owner(s):** The delivered capabilities and the overall system will be tested by different people at different times. This includes Engineers, System Testers, Information Security, Compliance, as well as the system's end-users and customers. The testing concerns local to the delivery organisation will naturally be documented by the corresponding roles within. (E.g., EMs, System Testers.) External (to the delivery organisation) testing concerns will be documented by the Head of Engineering, who may delegate as appropriate.
+
+**Accountable party:** The Head of Engineering.
 
 ## Responsibilities and accountabilities
 Those who care about the efficiency and repeatable of the software engineering process may well find this to be the most important documentation of all. And they'd be right; it is the one that cannot be ignored, deferred, or substituted with a face-to-face interaction. It serves as an irrefutable contract between each member of the delivery organisation and their manager.
@@ -472,11 +474,9 @@ Responsibilities and accountabilities may be captured in a manner similar to how
 
 ><sup>3 </sup>Obligations are legally binding and are defined in contracts or legislature. Also, unlike accountabilities, obligations are bidirectional. It is not only the employee who has obligations towards the employer; the reverse also holds. By comparison, accountabilities tend to compose hierarchically.
 
-People must be made aware of their expectations and the means by which these will be assessed.
+**Document owner(s):** The Head of Engineering.
 
-Anything that affects a person's accountability must be
-
-//TODO for each documentation section, assign an owner — the individual role accountable for ensuring that the complete documentation exists, is accurate and updated in line with changing business needs.
+**Accountable party:** The Head of Engineering.
 
 * Interface schemas (for both synchronous APIs and asynchronous events or messages).
     + Focus on those schemas that govern cross-team interactions, more so than intra-team.
