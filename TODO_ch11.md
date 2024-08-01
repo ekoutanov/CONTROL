@@ -40,9 +40,9 @@ The second audience group is what the most experienced and battle-hardened pract
 
 Such practitioners might appear to act selfishly, using documentation to buttress their future successes. But it is this experience-induced "selfishness" that helps everyone. As they are less likely to mislabel the obscure as the obvious, the system will grow more approachable overall and easier to maintain in the long run. Engineering organisations could benefit greatly from such selfish individuals.
 
-The third audience group is almost entirely ignored from the documentation rationale. Those previously engaged in either professional writing or scientific research activities involving volumes of written material will understand precisely what that means. I will explain it best I can.
+The third audience group is almost entirely ignored from the documentation rationale. Some readers will have previously engaged in professional writing or scientific research activities involving substantial written material. They will understand precisely what is being referred to. I will explain it best I can.
 
-It may have been Leslie Lamport who first said that "writing is nature's way of telling us how lousy our thinking is." When we contemplate a problem, we feel it, we react to it. Much of the solution may be drawn from intuition — humans' innate ability to understand instinctively without involving conscious reasoning. For example, when a programmer is asked to print the first 100 natural numbers, she will naturally visualise the snippet `for (int i = 1; i <= 100...`; very little conscious thinking takes place.
+When we contemplate a problem, we feel it, we react to it. Much of the solution may be drawn from intuition — humans' innate ability to understand instinctively without involving conscious reasoning. For example, when a programmer is asked to print the first 100 natural numbers, she will naturally imagine the snippet `for (int i = 1; i <= 100...`; very little conscious thinking takes place.
 
 Intuition is powerful because it enables us to solve complex problems without dwelling on the minutiae. It serves as a mental abstraction. Programming is challenging enough with intuition aiding us; if every line required meticulous deliberation and induced self-doubt, the process would be incredibly arduous. While it's typical for beginners with little command of a programming language to scrutinise every detail, it's unthinkable for seasoned programmers. This development of intuition significantly impacts productivity.
 
@@ -50,7 +50,7 @@ Like many powers, intuition is also dangerous. It can lead to decisions that lac
 
 It is not only the trivial parts that are derived intuitively. Complex solutions may too be distorted by misguided intuition. A common example is ignoring edge cases when designing distributed applications. Many engineers gloss over the effects of failures on the state of the system, leading to inconsistencies that are difficult to identify and resolve.
 
-When we write, we are forced to rationalise and explain to a virtual audience. We use language and images to convey our thoughts. Called to write on a topic, we often realise how flawed or incomplete our thinking had been. We summarily revisit the solution — fill the voids or redo it altogether. We then resume documenting. It is a structured, orderly process.
+It may have been Leslie Lamport who first said that "writing is nature's way of telling us how lousy our thinking is." When we write, we are forced to rationalise and explain to a virtual audience. We use language and images to convey our thoughts. Called to write on a topic, we often realise how flawed or incomplete our thinking had been. We summarily revisit the solution — fill the voids or redo it altogether. We then resume documenting. It is a structured, orderly process.
 
 Writing isn't just communicating. Done with purpose, writing is an extension of the thinking process. The same is true of talking and of attempting to educate others. As it has been wisely said, you never really learn something until you teach it. (Or as in the case of documentation, explain it.) 
 
@@ -170,9 +170,15 @@ One can get by without a town map; once they get to the town, they'll either ask
 Exploring a complex software system without high-level documentation is like trekking through unfamiliar terrain without a map. Where to begin? Whom to ask? Access to detailed component designs will not help those starting out. On the other hand, overview-level documentation can be used for further prompting. The audience can leverage their newfound knowledge of the coarse-grained elements and their relationships to drill into specific areas of the system that interest them most. Their queries may be answered by the owners of components or subsystems. Over time, the frequency and nature of the queries can empirically inform the optimum allocation of effort for subsequent documentation.
 
 # What to document
-Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail. Where should you begin?
+Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail. Where do you begin?
 
-Here, we consider the most important aspects of the system whose documentation cannot be neglected. At minimum, the following should be put to paper.
+Here, we consider the most important aspects of the system whose documentation cannot be neglected. The sections that follow outline the minimum recommended content that should be put to paper.
+
+For each of the documents, there is specific recommendation on the document's owner(s). These are the roles responsible for producing the various sections and ensuring their completeness, accuracy, and currency — bearing in mind that some documents will be expansive, requiring multiple collaborating authors. While some documents will be relatively static, others will evolve periodically — their authors will change over time.
+
+Each document will have an accountable party, ensuring its efficacy and continuity. This role also guarantees that the necessary document owners have been engaged and each owner is aware of their specific responsibilities and accountabilities — in line with CONTROL's accountability model.
+
+In some cases, a document's owners may have divergent reporting lines (i.e., they report to different managers). Who should be accountable in this case? For simplicity and convenience, we define a pseudo-role: _Head of Product and Technology_. Every document owner is its direct or indirect subordinate. This is not a concrete role and varies depending on the context. In practice, the Head of Product and Technology role may be fulfilled by the CTO or a middle manager, depending on the depth of the organisational hierarchy. This role is used when a more specific role cannot be identified.
 
 ## System architecture
 Imagine the system as a complex puzzle. The high-level architecture is like the box of the puzzle that shows a simplified version of the completed image. It provides a broad overview of the system's structure and the principles guiding its evolution. It identifies the key components and their relationships, and explains how those components and the system as a whole may change over time. At a minimum, architectural documentation should contain the following elements.
@@ -218,7 +224,7 @@ The high-level architecture of the system is the equivalent of the national map 
 
 **Document owner(s):** The Architecture team is responsible for producing the system architecture and ensuring its validity. 
 
-**Accountable party:** The Head of Architecture (or equivalent) is accountable for the effectiveness of the documentation, ensuring that it fulfils its purpose.
+**Accountable party:** The Head of Architecture (or equivalent).
 
 ## Engineering principles
 While the overarching system will evolve according to a set of architectural principles, the implementation of its components will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
@@ -324,22 +330,26 @@ In the documentation, you may wish to consider the following.
 * **Change management**, specifying how changes to CI/CD artefacts and deployment environments are administered. Change management documentation may overlap with the roles and responsibilities documentation, as it specifies the approval process for changes to the pipeline and deployment to specific environments. It is often missed or treated implicitly in many organisations. The importance of explicitly defined change management processes is elevated substantially for systems operating in highly regulated industries. 
 * **Security**, detailing the methods used to secure the CI/CD pipeline and ensure only authorised personnel can make changes. Security documentation may also include auditing controls, ensuring that all changes to the pipeline and deployments to high-assurance environments are irrevocably recorded and associated with the appropriate user principal. Whether this sort of documentation is required depends heavily on the operating environment.
 
-**Document owner(s):** Depends on the separation of infrastructure and software development roles within the organisation. This documentation carries a broad scope: Some of its aspects (e.g., tooling, security, change management) may be documented by the infrastructure team. Other aspects may be owned by software developers and should be documented accordingly. The Head of Engineering is the ultimate owner of the document, allocating responsibilities for its completeness to the appropriate parties. He is also responsible for defining the roles and responsibilities.
+**Document owner(s):** Depends on the separation of infrastructure and software development roles within the organisation. This document covers a broad scope: Some of its aspects (e.g., tooling, security, change management) may be filled by the infrastructure team. Other aspects may be owned by software developers. The Head of Product and Technology is the ultimate owner of the document, allocating responsibilities for its completeness to the appropriate parties. He is also responsible for defining the roles and responsibilities; ideally, this occurs before the rest of the document is compiled.
 
-**Accountable party:** Assuming that all of the document owners are subordinates to the Head of Engineers, he is accountable over the entirety of this documentation. If the reporting hierarchy is divergent, it is best to partition the CI/CD documentation into sections, such that each section has a clear accountable party.
+**Accountable party:** The Head of Product and Technology.
 
 ## Incident management processes
-These are essential for ensuring that incidents are handled efficiently and their impact on business operations is minimised. Documenting these processes provides clear guidelines and ensures consistency in how incidents are managed. This reduces the level of chaos that is often associated with incidents and improves (mainly by de-stressing) the lives of support personnel and rostered engineers.
+These are essential for ensuring that incidents are handled efficiently and their impact on business operations is minimised. Documenting them provides clear guidelines and ensures consistency in how incidents are managed. This reduces the level of chaos that is often associated with incidents and improves (mainly by de-stressing) the lives of support personnel and rostered engineers.
 
 Consider documenting the following.
 
 * **Definition and classification**, specifying unambiguously what constitutes an incident and criteria for assessing its severity (e.g., critical, high, medium, low). A critical incident, for instance, may prevent the business from operating entirely with no workarounds possible. Incident classification helps avoid undue kerfuffle during minor events and enables more effective prioritisation of actions, particularly when multiple issues are being observed concurrently. It is also important to define when an incident can be deemed resolved, which is ideally distinguished from any follow-up postmortem activities that may take place later.
-* **Reporting and logging**, specifying how incidents should be reported (e.g., via a ticketing system, email, or group chat). The most useful thing that can be done once an incident has been identified is to log it and ensure that the relevant context (timestamps, environments, application versions, error messages, reproduction steps, etc.) has been attached to the incident record. A well-honed incident management process always records the problem before attempting to solve it.
+* **Logging and reporting**, specifying how incidents should be reported (e.g., via a ticketing system, email, or group chat). The most useful thing that can be done once an incident has been identified is to log it and ensure that the relevant context (timestamps, environments, application versions, error messages, reproduction steps, etc.) has been attached to the incident record. A well-honed incident management process always records the problem before attempting to solve it.
 * **Roles and responsibilities**, outlining the teams or individual roles responsible for overseeing the incident as well as those acting in a supporting capacity. It may include guidelines on when and how to escalate an incident to a higher authority. Defining expectations at a role level has the advantage of making team members interchangeable. If someone is familiar with a specific role, they can step into that role for any incident, allowing for flexibility and ensuring continuity in response efforts.
 * **Response procedures**. These are specific steps that should be followed to diagnose and troubleshoot faults or mitigate their effects. Comprehensive root cause analysis may be the only method available in some cases, and not all faults may be dealt with a run sheet. But for many kinds of faults, mitigation processes should be defined.
 * **Communication plan**, specifying how and when to communicate with internal stakeholders (e.g., staff, management, compliance officers, C-suite) and external stakeholders (e.g., customers, integration partners, the media, law enforcement, the general public). Guidance may be offered on the frequency and content of status updates during the incident. 
 
 If you recall Jackman's five workplace toxins in Chapter 6, a frenzied work environment was among them. Proper incident management documentation can act as an effective remedy. It offers clear, predefined steps for handling incidents, thereby reducing stress and confusion during the most inopportune moments.
+
+**Document owner(s):** Depends on the availability of a dedicated application support team (or equivalent) and their structure. Areas relating to the classification of incidents, their logging and reporting, and the broader communication aspects will generally be handled by a dedicated "frontline" team. The response procedures will require significant involvement from Engineering.
+
+**Accountable party:** The Head of Product and Technology. He should begin with documenting the roles and responsibilities, as they relate to the incident management processes.
 
 ## Backup and recovery procedures
 Without a well-defined and tested backup and recovery process, an organisation is exposed to a very significant risk of losing data and, in some cases, operational ability. The following aspects should be documented:
@@ -350,25 +360,47 @@ Without a well-defined and tested backup and recovery process, an organisation i
 
 The formation of data backup and recovery processes mustn't be left to chance, particularly when one considers that ad-hoc or vaguely defined processes cannot be effectively tested. For more information on defining the backup and recovery processes, and contingency planning in general, consult the NIST-800-34 special publication (Swanson et al., 2010).
 
+**Document owner(s):** There are several roles involved in defining and verifying (testing and rehearsing) backup and recovery procedures:
+
+* Retention requirements will mainly originate from various data owners, potentially spanning multiple departments. The definition of specific backup policies should be based on these requirements, as well as overarching policies that apply at the organisation level. CONTROL doesn't prescribe the parties responsible for defining requirements and policies; in practice, these roles will vary significantly among organisations. Furthermore, this role is not a technical one; it requires an understanding stakeholders' needs and the value of different types of data within the business. The elicitation of backup requirements should ideally happen during the Abstraction phase of capability delivery, and is the responsibility of POs. Deferring backup requirements post-delivery is not recommended unless the business is tolerant of data loss.
+* Backup and recovery procedures are specified at a deeply technical level, requiring a solid understanding of the system's components and various sources of data. If requirements and policies are be treated as a problem, then the backup and recovery procedures form the technical solution. Engineering teams are responsible for designing and implementing the backup and recovery procedures, with guidance from Infrastructure and Architecture. Ideally, this would take place during Elaboration (the design of backups) and Construction (the definition of procedures and backup scripts), particularly for mission critical data. Once implemented, the Engineering teams ensure the currency of the backup and recovery documentation relating to their components.
+* Testing of backup and recovery procedures may occur at varying levels. Engineering teams will want to ensure that the persistent state of their components can be backed up and restored. Not all parts of the system will be attributable to a specific Engineering team; there may be common infrastructure with persistence concerns — such as message brokers — that can only by backed up and restored by the infrastructure custodians. Furthermore, the System Testing team will want to conduct an independent appraisal of the procedures, verifying that the overarching recovery point and time objectives are being met.
+
+**Accountable party:** The main challenge with this document is that it refers to high-value assets that keep changing as the system evolves and its functional scope expands. And while the Head of Product and Technology takes accountability for the document, he cannot possibly keep abreast of the changes. Even the occurrence of a material change may not be obvious to anyone outside the delivery organisation, let alone its details. He should, therefore, disseminate the accountabilities among the aware parties; for example, making the POs accountable for specifying data retention requirements.
+
+
 ## Disaster recovery plan
 A distant cousin of (data) backup and recovery, disaster recovery (DR) is concerned with the restoration of a business's operation (or part thereof) at an alternate facility in response to a major failure. The failure may be due to problems with software, hardware, or the facilities 
 themselves. (We focus on failures relating to — affecting or affected by — engineering.) The following aspects should be documented:
 
-* **Trigger criteria**, define unambiguously the conditions under which the DR plan will be activated. There may be specific events (e.g., unrecoverable hardware failure) or metrics (e.g., performance degradation, observed failure rate) that enact the transition.
+* **Trigger criteria**, define unambiguously the conditions under which the DR plan will be activated. There may be specific events (e.g., unrecoverable hardware failure) or leading indicators (e.g., performance degradation, observed failure rate) that enact the transition.
 * **Roles and responsibilities**, outlining the teams or individual roles responsible for coordinating DR procedures and ensuring the readiness of software systems, engineering and support staff.
 * **Cutover procedures**, specifying using step-by-step instructions how functionality should be transitioned from one site to another.
 * **Communication plan**, specifying how and when to communicate with (predominantly) internal stakeholders.
 * **Testing strategy**, detailing how the DR plan should be verified for fitness. This may include the scheduling of "fire drills" to practice live or simulated cutover activities.
 * **Training and awareness**. While activities like data restoration impact a relative minority of engineering staff, a DR-initiating event may impact a much larger contingent. Training manuals may need to be issued to all staff likely impacted by a DR event.
 
+**Document owner(s):** Similar to that of the backup and recovery procedures: 
+
+* The specific capabilities requiring enhanced availability (via DR) is specified by POs during Abstraction, through consultation with the relevant stakeholders. 
+* The design and implementation proceed within Elaboration and Construction. Once implemented, the Engineering teams ensure the currency of the DR documentation relating to their components.
+* The System Testing team is responsible for verifying the overall efficacy of the DR plan and maintaining the testing-related aspects of the documentation.
+* Engineering broadly owns the training and communication aspects as they relate to the system. Ownership responsibilities will be farmed out by the Head of Engineering.
+
+**Accountable party:** The Head of Product and Technology takes accountability for the overarching document, disseminating accountability among the various document owners as appropriate. 
+
 ## Security and compliance guidelines
 Not all stakeholders of a system will seek feature delivery; some are more concerned with nonfunctional qualities of a system such as security and compliance with specific controls (e.g., standards, regulation). The aspects requiring documentation include —
 
-* **Data protection policies**: How sensitive data is handled, stored, and transmitted.
+* **Requirements and policies**: How sensitive data is handled, stored, and transmitted.
 * **Access control**: Procedures for granting and revoking access to systems and data.
 * **Practices for managing sensitive information**, such as API keys and passwords.
 * **Secure coding and logging practices**, ensuring that code is secure and free from vulnerabilities.
 * **Artefact scanning tooling and processes**. This may be defined at both the source code and binary level.
+
+**Document owner(s):** The requirements and policies for protecting data are sourced from stakeholders as well as overarching policies that apply at the organisation level, elicited by POs during the Abstraction phase. Engineering is responsible for implementing the abovementioned controls; the EMs must ensure that the security and compliance documentation relating to their teams' assets is current. Some security and compliance guidelines may also be defined at the practice level.
+
+**Accountable party:** The Head of Product and Technology is ultimately accountable for the system meeting security and compliance controls, and for the completeness and accuracy of documents and other artefacts that demonstrate this.
 
 ## Onboarding guides
 Much effort is routinely expended on assisting new starters in navigating an unfamiliar environment. While some of it is unavoidable, many activities can be streamlined through high-quality documentation that is kept up to date and readily on hand. Looking at onboarding from the viewpoint of a new starter, a handful of typical questions can be quickly answered with little more than a one-pager:
@@ -383,6 +415,10 @@ Much effort is routinely expended on assisting new starters in navigating an unf
 * At the team level: how do I become an effective member of my team? A bare-bones guide on how to set up their development environment, access code repositories and various tooling (e.g., CI/CD, log aggregators, team dashboards), and run the components locally will be useful.
 
 Note that the detail of the onboarding documentation should be closer to a county map than to a village map. It should have links to more detailed documentation in specific areas. The immediate objective is to get a new team member to become aware to a point that they can discover on their own and ask for directions if necessary.
+
+**Document owner(s):** The EMs and Head of Engineering for the engineering-level concerns; the Architects for the system architecture definition (a separate document discussed earlier); and the POs for product definitions.
+
+**Accountable party:** The Head of Product and Technology.
 
 ## Software testing strategy
 There is a saying that anything worth doing is worth doing right. To paraphrase within an engineering milieu: anything worth doing is worth testing.
@@ -414,10 +450,12 @@ We only scrape the surface here, covering the bare essentials at an outline leve
     + When should testing commence? As a given, engineers will integrate and test continuously. Other teams may not be adequately resourced to attend every versioned change to the system, bearing in mind that not all changes are released individually. (Most releases comprise a set of changes; the can be tested as an atomic unit.) The idealistic approach of always testing everything may be infeasible. In some cases, resources may need to be booked in advance; e.g., penetration testing or the client's external acceptance team. Therefore, some testing steps may need to be serialised, contingent upon the outcomes of the previous step. The most expensive and laborious testing will generally come last. 
     + Specific criteria must be defined to guard the entry to each step. For example, third-party penetration testing should not be scheduled until every reported major defect is rectified.
     + The exit criteria for each step must also be defined. These criteria are generally a lot more straightforward for functional testing; for nonfunctional testing, a tolerance may need to be applied. For example, performance testing will be subject to variability, owing to a multitude of factors outside of our (reasonable) control. The acceptance criteria must be tuned to minimise the likelihood of false positives (rejecting adequately performing systems) without adversely impacting the likelihood of false negatives (accepting underperforming systems).
-* **Change management**, specifying how changes to test artefacts (e.g., plans, scripts, pass/fail thresholds) are administered. Change management may remain largely informal in most commercial systems; the testing manager may sign off on some of the larger and more impactful changes. Conversely, systems whose incorrect operation may incur loss of life, injury, or unmitigable losses of other kinds, will require more stringent change controls. Unvetted changes to the the acceptance criteria of a computed tomography machine, for instance, may have consequences for the patients.
+* **Change management**, specifying how changes to test artefacts (e.g., plans, scripts, pass/fail thresholds) are administered. Change management may remain largely informal in most commercial systems; the testing manager may selectively review and sign off on some of the larger and more impactful changes. Conversely, systems whose incorrect operation may incur loss of life, injury, or unmitigable losses of other kinds, will require more stringent change controls. Unvetted changes to the the acceptance criteria of a computed tomography machine, for instance, may have serious consequences for the patients.
 * **Deliverables and communication**, identifying the expected outputs from the testing process, such as test plans, test cases, test reports, and defect reports, and how these are communicated to various stakeholders:
     + Developer-led testing (unit, component, integration, etc.) is exempt from explicit reporting requirements. If software fails a test, it will be changed until the test passes. (Not always; in some legitimate cases, it is the test that needs changing.) The metric that interests most stakeholders is the rate of development progress.
     + Testing administered outside of the engineering teams will generally report on its outcomes. This is not just to appease management and stakeholders; it forms an asynchronous feedback loop back to the engineering teams
+
+**Document owner(s):**
 
 ## Responsibilities and accountabilities
 Those who care about the efficiency and repeatable of the software engineering process may well find this to be the most important documentation of all. And they'd be right; it is the one that cannot be ignored, deferred, or substituted with a face-to-face interaction. It serves as an irrefutable contract between each member of the delivery organisation and their manager.
