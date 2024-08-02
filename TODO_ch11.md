@@ -1,8 +1,8 @@
 Chapter 11. Documentation
 ---
-**WORK IN PROGRESS**
+Documentation is and will likely remain a grey area in the development of software systems. It is ostensibly valuable and sometimes mandated by forces outside our control, yet it doesn't contribute directly to working code and rarely delights the customer. The murky relationship between documentation and productivity has sparked more than its fair share of debates and left many questions unanswered. How much energy should be expend in its creation and upkeep? What should be documented? Should people just talk more and read less?
 
-//TODO intro
+This chapter explores the multifaceted nature of documentation, its role in software maintenance, and the principles that guide effective documentation practices and ultimately improve communication and knowledge retention. By examining the interplay between documentation and software development, we will uncover a balanced approach that acknowledges the needs of diverse stakeholders and system continuity.
 
 # The dividing line
 The generation of documentation, as well as other non-executable artefacts associated with software, is among the most polarising aspects of software development methods, often used to compare Classical and Agile methodologies. Seemingly, one inundates developers with documentation while the other throws documentation out of the window.
@@ -104,9 +104,9 @@ The preservation of context is one of CONTROL's foundational principle, stating 
 ## Written communication is not a substitute for face-to-face interaction
 Written communication, while highly efficient, is not always a substitute for face-to-face interactions<sup>2</sup>. Documentation assumes some level of background knowledge and skills (language, technical, domain, etc.) on behalf of the audience. When writing, we usually target a specific audience with some but usually minimal variability in receptiveness. We could produce documentation with weaker assumptions — containing explanations of simpler topics and more overall redundancy, which may be frustrating to some readers. Equally, we acknowledge that stronger assumptions in documentation can alienate an audience that is less technically proficient or is unfamiliar with certain domain-specific terminology. We rarely have the luxury of targeting a truly diverse audience in technical documentation.
 
-><sup>2 </sup>While this may sound suspiciously like a principle from the Agile canon, the latter takes a more extreme form, stating that face-to-face interactions are better unequivocally. Here, we are saying that only some face-to-face interactions may be more suitable.
+><sup>2 </sup>While this may sound suspiciously like a principle from the Agile canon, the latter takes a more extreme form, stating that face-to-face interactions are better unequivocally. Here, we are saying that only occasionally face-to-face interactions may be more suitable.
 
-Compromises must, therefore, be made. One shouldn't assume that a monologue with their audience will always suffice. While documentation can and should make the best attempt at conveying knowledge asynchronously, certain complex concepts or intricate details may require additional explanations that are more effectively conveyed in person. Like it or not, some things will need explaining, and some things will need it repeatedly.
+Compromises must, therefore, be made. One shouldn't assume that a monologue with their audience will always suffice. While documentation can and should make the best attempt at conveying knowledge asynchronously, certain complex concepts or intricate details may require additional explanations that are more effectively conveyed in person. Non-verbal cues such as body language, facial expressions, and tone of voice play a significant role in communication and understanding, which are absent in written documentation. They also help spot when someone has concerns or is confused, allowing for immediate addressing of issues. Like it or not, some things will need explaining in person, and some things will need it repeatedly.
 
 This is not a call to minimise documentation; only to avoid the disillusionment that might ensue if it is relied upon as the sole carrier of knowledge.
 
@@ -126,7 +126,7 @@ Be careful in answering questions in haste without understanding the reason for 
 
 1. If the question has been asked by someone who is not across the topic, then the best course of action may be to explain directly or refer the individual to some background reading. A face-to-face interaction may end up being the optimal course of action, depending on questioner's abilities.
 2. If it is asked by someone who hasn't read the documentation properly, then it is best to refer them back to the source. As a token of courtesy, one should direct them to the relevant passage. The questioner may have missed the original point by accident, out of sheer laziness, or a contempt for reading. A hastily made assumption here may prove incorrect. Hanlon's Razor will serve you well: never assume malice where incompetence, or a simple oversight, or a momentary lapse of judgement, will do.
-3. If the question is sensible but the answer to it is not documented, then consider revising the documentation before responding. In fact, it is better to respond with reference to the updated documentation and have the questioner confirm later that the updated documentation completes their understanding. This is
+3. If the question is sensible but the answer to it is not documented, then consider revising the documentation before responding. In fact, it is better to respond with reference to the updated documentation and have the questioner confirm later that the updated documentation completes their understanding. Doing so improves the documentation for the future audience.
 
 Point 3 is precisely the concept embodied by this principle. Stated otherwise, documentation should act as a medium for answering questions within a feedback loop. This is a highly effective method for verifying and enhancing the accuracy of documentation. Sadly, this method is rarely practiced in our industry.
 
@@ -158,7 +158,7 @@ Point 3 is precisely the concept embodied by this principle. Stated otherwise, d
 >
 >In the same way that awaiting a second marshmallow increases our likelihood of success, taking the time to uplift our skills achieves the same.
 
-Each of us has a role to play in ensuring that our colleagues and, in reciprocation, ourselves, are acting judiciously and not succumbing to perilous expediences. It is for their good and ours. Regarding documentation, the occasional need for verbal explanations notwithstanding, the questions that may be answered via documentation should be answered via documentation.
+Each of us has a role to play in ensuring that our colleagues and, in reciprocation, ourselves, are acting judiciously and not succumbing to perilous expediences. It is for their good and ours. Regarding documentation, the occasional need for verbal explanations notwithstanding, the questions that can be answered via documentation should be answered via documentation.
 
 ## Prefer breadth of documentation to depth
 Assuming that the resources expendable on documentation are finite, it is better to strive for more high-level documentation covering diverse areas than to have a narrow concentration of low-level documentation.
@@ -172,13 +172,15 @@ Exploring a complex software system without high-level documentation is like tre
 # What to document
 Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail. Where do you begin?
 
+Documentation is like brushing your teeth. Everyone acknowledges its importance and few will argue the contrary. But what if you miss one day? Or three? How far can we push our luck?
+
 Here, we consider the most important aspects of the system whose documentation cannot be neglected. The sections that follow outline the minimum recommended content that should be put to paper.
 
 For each of the documents, there is specific recommendation on the document's owner(s). These are the roles responsible for producing the various sections and ensuring their completeness, accuracy, and currency — bearing in mind that some documents will be expansive, requiring multiple collaborating authors. While some documents will be relatively static, others will evolve periodically — their authors will change over time.
 
-Each document will have an accountable party, ensuring its efficacy and continuity. This role also guarantees that the necessary document owners have been engaged and each is aware of their specific responsibilities. The documentation must ultimately see to the needs of the delivery organisation and appropriate resources must be expended on its upkeep. (Sufficient but not excessive.) And while multiple people will contribute to these objectives, precisely one role will be accountable — in line with CONTROL's foundational principles.
+Each document will have an accountable party, ensuring its efficacy and continuity. This role also guarantees that the necessary document owners have been engaged and each is aware of their specific responsibilities. The documentation must ultimately see to the needs of the delivery organisation and appropriate resources must be expended on its upkeep. (Sufficient but not excessive, since cost is an object.) And while multiple people will contribute to these objectives, precisely one role will be accountable — in line with CONTROL's foundational principles.
 
-A document's owners may have divergent reporting lines (i.e., they report to different managers). Who should be accountable in this case? For simplicity and convenience, we assume it to be the Head of Engineering role; every prospective document owner is its direct or indirect subordinate. (This includes members of the Product, System Testing, and Infrastructure teams.) In practice, the Head of Engineering may be a dedicated role or a function fulfilled by the CTO, depending on the depth of the organisational hierarchy. This role is used as a surrogate when a more specific role cannot be identified.
+A document's owners may have divergent reporting lines (i.e., they report to different managers). Who should be accountable in this case? For simplicity and convenience, we assume it to be the Head of Engineering; every prospective document owner is his direct or indirect subordinate. (This includes members of the Product, System Testing, and Infrastructure teams.) In practice, the Head of Engineering may be a dedicated role or a function fulfilled by the CTO, depending on the depth of the organisational hierarchy. This role is used as a surrogate when a more specific role cannot be identified.
 
 ## System architecture
 Imagine the system as a complex puzzle. The high-level architecture is like the box of the puzzle that shows a simplified version of the completed image. It provides a broad overview of the system's structure and the principles guiding its evolution. It identifies the key components and their relationships, and explains how those components and the system as a whole may change over time. At a minimum, architectural documentation should contain the following elements.
@@ -224,7 +226,7 @@ The high-level architecture of the system is the equivalent of the national map 
 
 **Document owner(s):** The Architecture team is responsible for producing the system architecture and ensuring its validity. 
 
-**Accountable party:** The Architecture Manager (or equivalent). In the absence of this role, the Head of Engineering takes accountability.
+**Accountable party:** The Architecture Manager (or equivalent). In this role's absence, the Head of Engineering takes accountability.
 
 ## Engineering principles
 While the overarching system will evolve according to a set of architectural principles, the implementation of its components will be subject to a further set of engineering principles. These are produced at varying levels of decomposition. At the top-most level, engineering principles govern the complete engineering organisation; in other words, they apply equally to all teams or practices that operate under the engineering umbrella. In turn, each engineering practice or team may have unique principles of their own.
@@ -474,110 +476,54 @@ Responsibilities and accountabilities may be captured in a manner similar to how
 
 ><sup>3 </sup>Obligations are legally binding and are defined in contracts or legislature. Also, unlike accountabilities, obligations are bidirectional. It is not only the employee who has obligations towards the employer; the reverse also holds. By comparison, accountabilities tend to compose hierarchically.
 
-**Document owner(s):** The Head of Engineering.
+The importance of the negotiation process cannot be overstressed. This document is special compared to the others. While the rest can get by with writing alone, the documenting of people's accountabilities mustn't be done without their direct involvement.
 
-**Accountable party:** The Head of Engineering.
+**Document owner(s):** The direct managers of each of the roles in the delivery organisation will ensure that expectations have been agreed upon and documented.
 
-* Interface schemas (for both synchronous APIs and asynchronous events or messages).
-    + Focus on those schemas that govern cross-team interactions, more so than intra-team.
-    + Cross-team interfaces are inherently more stable. Their documentation is less likely to change.
-* High-level architecture of the system:
-    + The main components/subsystems that make up the overarching system and their relationships. Focus on visual representations: consider using diagrams whenever possible, accompanied by text to explain complex aspects.
-    + List of technology (programming languages, infrastructure, etc.) used by the system, also identifying which parts of the system use that technology.
-    + Functional ownership areas: which teams own (or are responsible for) which components/subsystems.
-    + The architectural principles governing the system's evolution.
-* Engineering principles (for both the delivery organisation and the individual teams that compose it)
-* Team-level coding requirements, standards, and guidelines:
-    + Language-specific coding conventions and best practices: style guides, linting rules, etc.
-    + Acceptable code coverage level, which may be specified at both the line and branch level.
-    + Branching strategies, code review and merge policies.
-    + Where applicable, guidelines for selecting and adding new dependencies.
-    + Code and API documentation standards or guidelines. For example, "we encourage an API-first approach with OpenAPI 3.0 as the specification language, and Swagger as our interactive documentation tool."
-    + Standards for writing integration and performance tests. The latter, in particular, are not frequently practiced by Agile organisations but are required by CONTROL's focus on nonfunctional requirements and its accountability model in general. The expectations on software engineers should thus be documented clearly.
-    + Error handling practices.
-    + Telemetry standards and guidelines: 
-        + What to log and how to structure and organise logs. For example, some teams will format logs using JSON.
-        + What should be captured in metrics; e.g., latency, retry rates, error rates, throughput, and queue depth. How should these be organised: whether metrics should be capturing scalar values or histogram-like distributions, and guidance on when one approach might be preferred over another.
-        + What sort interactions should have traces associated with them. How traces should be stitched together in a distributed system.
-        + Which telemetry libraries are preferred, and whether the team has a preference for auto-instrumentation or hand-crafted production of telemetry.
-* Catalogues of components owned by each team and their interactions. These may be entire subsystems.
-* Interactions of components (or subsystems) at team boundaries.
-* Interface schemas (for both synchronous APIs and asynchronous events or messages).
-    + Focus on those schemas that govern cross-team interactions, more so than intra-team.
-    + Cross-team interfaces are inherently more stable. Their documentation is less likely to change.
-* A deployment view of the complete system:
-    + A catalogue of environments; e.g., development, staging, and production.
-    + A description of the network topologies and perimeter controls used; e.g., subnets, firewalls, and load-balancers
-    + Material differences between environments; e.g., development and staging use lower-spec hardware.
-* Documentation of CI/CD pipelines and their development considerations:
-    + Database upgrade strategies.
-    + Deployment models: e.g., blue-green or rolling.
-    + Rollback vs. roll-forward strategies.
-* Incident management procedures:
-    + Steps to follow during a system outage or security incident. For example, run sheets to help guide fault-finding and application support activities.
-    + Who to contact and how to escalate issues.
-* Backup and recovery procedures:
-    + How and when data is backed up.
-    + Steps to recover systems and data after a catastrophic failure.
-* Security and compliance guidelines:
-    + Data protection policies: How sensitive data is handled, stored, and transmitted.
-    + Access control: Procedures for granting and revoking access to systems and data.
-    + Best practices for managing sensitive information such as API keys and passwords.
-    + Secure coding and logging practices, ensuring that code is secure and free from vulnerabilities.
-    + Artefact scanning tooling and processes. This may be defined at both the source code and binary level.
-* Onboarding documentation at varying levels:
-    + At the organisation level: how do I make use of various corporate systems, email, time-sheeting, and so forth?
-    + At the department level: what problems do we solve as a larger group?
-    + At the system level: what are we building and where will my contributions fit in?
-    + At the team level: how do I become an effective member of my team? A bare-bones guide on how to set up their development environment, access code repositories, and run the components locally.
-* Change management
-* As-builts vs designs
-* Testing strategy
-* Roles and accountabilities
+**Accountable party:** The Head of Engineering is accountable for the communication of responsibilities and accountabilities of every role within his remit. Part of the overarching accountability will be disseminated among the next level of management — EMs and STMs. Some non-managerial roles (e.g., PEs, Architects) may report directly to the Head of Engineering, making him directly accountable for negotiating their expectations.
 
-* Don't document too soon, before the feature is stabilised
-* The best documentation is the kind that doesn't have to be written:
-    + Self-documenting code
-    + Standard and idiomatic design and coding practices
-    + Convention over configuration
-    + Patterns and guidelines
-    + Use of off-the-shelf libraries or components
-* Prefer high-level documentation to low-level. For an explorer who doesn't know where to start, a map of a county is better than a detailed map of one village.
-* Convey the context where possible.
-* Written communication, while highly efficient, is not always a substitute for face-to-face interactions.
-    + Documentation assumes some level of background knowledge and comprehension (language, technical, etc.) skills on behalf of the audience.
-    + In practice, this varies greatly.
-    + While documentation can and should make the best attempt at conveying knowledge asynchronously, certain complex concepts or intricate details may require additional explanation that is more effectively conveyed in person.
-    + Reading of comprehensive documentation may generate additional follow-up questions, which are sometimes best explained in person. (Especially when the documentation covers these queries adequately but the reader may not be best-equipped to understand it.)
-* Some knowledge will invariably remain in tacit form. It is, nonetheless, irresponsible to say that we should accept this as a factor beyond our control. There is more within our control than we care to admit. The question is one of priority. It may not be practical to document everything and do so exhaustively. One must, therefore, choose which aspects of the system should be documented and at what level of detail.
-* Documentation does not build relationships. 
-    + Interpersonal communication can foster collaboration and even create mentoring opportunities, especially when knowledge transfer flows from more senior and experienced engineers to the juniors. Personal interactions can boost motivation and morale, making team members feel more connected and engaged with the project.
-    + Understanding Nuances: Non-verbal cues such as body language, facial expressions, and tone of voice play a significant role in communication and understanding, which are absent in written documentation.
-    + Addressing Concerns: Non-verbal signals can also help identify when someone has concerns or is confused, allowing for immediate addressing of issues.
-* Trick of not answering questions directly but updating the documentation instead
-
-At minimum, the following should be documented:
-
-
-
-The above is not meant to be an exhaustive list.
 
 # Chalk outlines
-There are three recommendations in this chapter that do not conform to mainstream thinking. At least, it does not conform to mainstream acting.
+There are three recommendations in this chapter that do not conform to mainstream thinking. At the very least, it does not conform to mainstream behaviour, thinking aside.
 
-The first recommendation is that documentation ought to address the "third audience" — the present self. The general consensus within the software community is that documentation should elucidate others and the future self. Within the majority opinion, documentation is a form of communication, no more, no less.
+The first recommendation is that documentation ought to address the "third audience" — the present self. The general consensus within the software community is that documentation should elucidate others and the future self. Within the majority opinion, documentation is a form of communication, no more, no less. Its value is confined to software maintenance.
 
 Writing fosters a process of self-reflection, identifying gaps in our subconscious reasoning; subtle gaps that are our intuition may be oblivious to. Writers have known this for centuries and philosophers for longer still, and yet there are many engineers who fail to recognise writing as an extension of thinking.
 
-Documentation is an essential artefact in the software engineering process. It is also a distinguishing factor between software engineering and mere programming. If one were to treat software engineering as a structured process rooted in a scientific discipline, then repeatability would presumably be a factor of some importance. Especially if one subscribes to Newell and Simon's viewpoint (1975) that each new piece of software is an experiment. It is hard to imagine experimental repeatability without some form of documentation.
+Documentation is an essential artefact in the software engineering process. It is also a distinguishing factor between software engineering and mere programming or hacking. If one were to treat software engineering as a structured process rooted in a scientific discipline, then repeatability would presumably be a factor of some importance. Especially if one subscribes to Newell and Simon's viewpoint (1975) that each new piece of software is an experiment. It is hard to imagine experimental repeatability without some form of documentation.
 
-Yet I do not indulge in documentation and do not expect others to. The topic is nonetheless close to my heart. As a part-time author, it is the writing that I find constructive. Having written several books, and peer-reviewed academic papers on various computer science topics, not to mention random blogs and work-related pieces for my clients, I can attest to the effectiveness of introspection via the written word. The same applies to my journal-keeping experience; many of my thoughts have never been shared (which is perhaps a good thing) but in their writing they have been scrutinised. (And some debunked.) I am, without doubt, my most formidable critic.
+Yet I do not indulge in documentation and do not expect others to. The topic is nonetheless close to my heart. As a part-time author, it is the reflection that I find constructive. Having written several books and peer-reviewed academic papers, in addition to random blogs and work-related pieces, I can attest to the effectiveness of introspection via the written word. The same applies to my journal-keeping experience; many of my thoughts have never been shared (which is perhaps a good thing) but in their writing they have been scrutinised. (And some debunked.) I am, without doubt, my most formidable critic.
 
-The second recommendation is that documentation should be used as a medium for answering questions.//TODO
+The second recommendation is that documentation should be used as a medium for answering questions. All too often, engineers will labour over appreciable quantities of meticulous documentation, only to abandon it the moment a question is asked. It boils down to people's struggles in gauging the opinions of their peers, for whom it is often quicker and easier to ask a question or arrange a workshop than to offer feedback and await the updates. Over time, the completeness and accuracy of the documentation is eroded; in turn, this leads to more impromptu queries that further undermine the documentation's utility. The spiral of intellectual asset devaluation continues, taking one turn after another, until eventually these assets become historic artefacts, consigned to the attics of corporate wikis.
 
-The third recommendation is to never delay studying a topic whose understanding is pivotal to your future success. Do not fall into the trap of instant gratification. Don't ask a question before you have convinced yourself that the answer is not already at your disposal. Read the friggin' manual. Taking the time to study a subject thoroughly will offer answers to many questions not yet asked.
+The only way to keep documentation alive is to actively encourage its use as the primary communication medium for certain (not all) kinds of knowledge sharing activities. Interpersonal interactions are used in a supplemental capacity to build relationships, foster collaboration, and help with the absorption of the written material rather than to sidestep it. Crucially, this form of encouragement, if we may call it that, cannot be burdened upon the individual. I cringe at the thought of some unfortunate author repeatedly and tirelessly encouraging her colleagues to act selflessly and in the interests of the larger collective. It's a sure path to burnout. The Head of Engineering must ensure that the intellectual assets are protected, their creation is rewarded, and everyone understands the value of these assets and contributes to their growth.
 
-Everyone learns from their mistakes eventually but the more intelligent learn from the mistakes of others.
+The third recommendation is to never delay studying a topic whose understanding is pivotal to your future success. Do not fall into the trap of instant gratification. Don't ask a question before you have convinced yourself that the answer is not already at your disposal. Read the friggin' manual, as it so frequently "encouraged". Taking the time to study a subject thoroughly will offer answers to many questions not yet asked.
 
 # Summary
+Documentation is a contentious issue in software development, often pitting proponents of comprehensive documentation against the productivity gurus who value little else over working code. Yet, this dichotomy belies a more nuanced reality.
+
+Theoretical differences often lead to practical extremes, with some practitioners either inundating projects with excessive documentation or neglecting it entirely. Documentation, despite not being executable, plays a crucial role in long-term software maintenance, which can account for over 60% of total software costs. It aids in onboarding new team members and ensuring system continuity. The question is not whether one should be preferred or working code, but one of cost and resulting value. 
+
+We have discussed the value of documentation for three main audience groups: 1) others, present and future, 2) one's future self, and 3) one's present self. Targeting the first two audience groups mainly addresses maintainability, serving as a means for knowledge preservation and communication. The third group is the most interesting of the bunch; engaging with one's present self fosters a process of self-scrutiny and deep, introspective reflection. Ultimately, it leads to more rational and hence robust decisions.
+
+
+
+
+It emphasizes the need to document the complex and obscure aspects of a system to support future maintenance and facilitate a deeper understanding of the software. By engaging in documentation, developers can identify gaps in their thinking and improve the overall quality of their solutions. The process of writing and rationalising thoughts can lead to more robust and maintainable software systems.
+
+
+
+As we delve into the world of software documentation, it becomes clear that the value of documentation lies not in its volume, but in its relevance, timeliness, and audience. 
+
+Documentation is a contentious issue in software development, often pitting proponents of comprehensive documentation against advocates of agile, code-centric approaches. Yet, this dichotomy belies a more nuanced reality. As we delve into the world of software documentation, it becomes clear that the value of documentation lies not in its volume, but in its relevance, timeliness, and audience. In this chapter, we will explore the multifaceted nature of documentation, its role in software maintenance, and the principles that guide effective documentation practices. By examining the interplay between documentation and software development, we will uncover a more balanced approach that acknowledges the needs of diverse stakeholders and the evolving landscape of software creation.
+
 The goal is to create a clear and concise overview that sets the stage for understanding the system in more detail. It's about providing enough information to get a sense of the system without getting bogged down in specifics.
+
+Documentation is often viewed as a necessary evil, a chore to be endured rather than embraced. This perspective is misguided. When approached strategically and with a clear understanding of its purpose, documentation becomes a powerful tool for enhancing software quality, improving maintainability, and facilitating knowledge transfer.
+
+By focusing on the core principles outlined in this chapter – understanding the audience, balancing breadth and depth, and recognising the value of documentation as a knowledge-sharing tool – organisations can create documentation that is not only informative but also impactful.
+
+It is essential to remember that documentation is a living document that should evolve alongside the software system. Regular reviews and updates are crucial to ensure its accuracy and relevance.
+
+Ultimately, the goal is to produce documentation that empowers developers, testers, and other stakeholders to understand, maintain, and enhance the software effectively. By investing time and effort in creating high-quality documentation, organisations can reap significant long-term benefits.
