@@ -1,6 +1,6 @@
 CONTROL: Remedy for Software Engineering Chaos
 ---
-![Static Badge](https://img.shields.io/badge/0.2-green?style=flat-square&label=version)
+![Static Badge](https://img.shields.io/badge/0.3-green?style=flat-square&label=version)
 
 _Dedicated to my mentors, who guided me with wisdom and patience._
 
