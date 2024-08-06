@@ -2,6 +2,35 @@ Chapter 10: Principled Decision-Making
 ===
 **WORK IN PROGRESS**
 
+
+We've all seen this before. The architect<sup>1</sup> is deliberating among several shortlisted solution options. She writes down their pros and cons:
+
+* Solution 1: **API-driven order processing.**
+    + **Pro**: Quick to implement, requiring few changes to the existing system.
+    + **Con**: Doesn't scale to increased web traffic.
+* Solution 2: **Event-driven order processing with broker-side pre-filtering and routing.**
+    + **Pro**: Scales to increased loads and has no points of failure.
+    + **Pro**: Quick to implement, requiring few changes to the existing system.
+    + **Con**: Requires proprietary technology. Cannot be easily deployed on the public Cloud.
+* Solution 3: **Event-driven order processing with consumer-side filtering.**
+    + **Pro**: Scales to increased loads and has no points of failure.
+    + **Pro**: Relies solely on open-source technology.
+    + **Con**: High change impact, risking cost blow-outs and late delivery.
+
+<sup>1 </sup>Architects are picked on here because they're responsible for more than their fair share of bad decisions. The example applies equally to all decision-makers.
+
+The benefits and drawbacks of each solution are numerous and substantial; they do not seem to separate the good from the bad. The architect responds by assigning weights to each trait; these have been gathered through consultation with various stakeholders — business and technical. Unsurprisingly, costs and schedules are treated with the most attention.
+
+
+
+While the solution options are entirely contrived, it is easy to imagine similar decisions faced by practitioners around the world. The benefits and drawbacks are numerous and substantial; they do not seem to demarcate the good and the bad solutions.
+
+The architect responds by 
+
+I'll state it now without any reservations or caveats. This approach doesn't work and never has.
+
+
+
 Our approach to decision-making affects the quality of our decisions...
 
 What often happens:
