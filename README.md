@@ -26,7 +26,7 @@ Chapter 9. Maintenance
 
 Chapter 10. Principled Decision-Making
 
-Chapter 11. Documentation
+[Chapter 11. Documentation](ch11.md)
 
 [Chapter 12. Adoption](ch12.md)
 
