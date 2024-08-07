@@ -2,7 +2,7 @@ Chapter 10: Principled Decision-Making
 ===
 **WORK IN PROGRESS**
 
-
+# Into the 'Matrix'
 We've all seen this before. The architect<sup>1</sup> is deliberating among several shortlisted solution options. She writes down their pros and cons:
 
 * Solution 1: **API-driven order processing.**
@@ -17,17 +17,50 @@ We've all seen this before. The architect<sup>1</sup> is deliberating among seve
     + **Pro**: Relies solely on open-source technology.
     + **Con**: High change impact, risking cost blow-outs and late delivery.
 
-<sup>1 </sup>Architects are picked on here because they're responsible for more than their fair share of bad decisions. The example applies equally to all decision-makers.
+<sup>1 </sup>Architects are picked on here because they're responsible for more than their fair share of poor decisions. The example applies equally to all decision-makers.
 
-The benefits and drawbacks of each solution are numerous and substantial; they do not seem to separate the good from the bad. The architect responds by assigning weights to each trait; these have been gathered through consultation with various stakeholders — business and technical. Unsurprisingly, costs and schedules are treated with the most attention.
+The benefits and drawbacks of each solution are numerous and substantial; they do not seem to separate the good from the bad. A game of trade-offs is afoot. The architect responds by assigning weights to each factor; these have been gathered through consultation with various stakeholders — business and technical alike. Unsurprisingly, costs and schedules have attracted the most attention, followed by reliability and scalability. One technical stakeholder expressed concerns regarding the potential lock-in effects of adopting proprietary infrastructure. The stakeholders' collective opinions were encoded on a scale of one (least important) to five (most important).
 
+The responses (i.e., the pros and cons) of each solution were also scored on a one—five scale, signifying their contribution to the factor in question, ranging from strongly negative to strongly positive. The weighted average score of each solution was then computed by taking the product of the factors' weights and the response scores and dividing by the number of product terms. The following table presents the weights, response scores, and the results of the calculations.
+
+|Factor                  |Weight|Solution 1<br/>responses|Solution 2<br/>responses|Solution 3<br/>responses|
+|:-----------------------|-----:|---------:|---------:|---------:|
+|Reliability             |     4|         3|         5|         5|
+|Scalability             |     4|         2|         5|         5|
+|Cost & schedule impacts |     5|         4|         5|         2|
+|Nonproprietary          |     2|         5|         1|         5|
+|                        |      |          |          |          |
+|**Weighted average**    |      |  **12.5**| **16.75**| **16.25**|
+
+Solution 2 edges out Solution 3, while Solution 1 is obviously a no-go. However, the architect is unconvinced. There is an inkling that despite everyone's best efforts, the outcome is too close to call. So, she spends time elaborating each solution and presents her analysis to the stakeholders, along with her professional recommendation — Solution 2. It is voted in, almost unanimously. In discussing their choice, many panelists again stress the resourcing and scheduling angle.
+
+While the example above is entirely fabricated, it is an incontrovertible fact that a myriad of analogous decision-making challenges is faced by practitioners daily. Not just architects and, certainly, not just technical people. You'll have seen it at work and at home, and many times, I'll wager. In making important decisions, our confidence is boosted as the separation among decision options grows. The more the favoured option eclipses its competition on some scale, however subjective or arbitrary, the more comfort is instilled and the stronger the sense of integrity. 
+
+When the solutions cannot be separated cleanly, we respond by tweaking. Minor adjustments are made to weights and scores to enhance separability. If that fails, we may revise the criteria entirely; perhaps there are other factors that we failed to consider. There is an infinite number of matrices of factor weights and response scores that yield adequate separation. And yet we only need one such matrix to reach a conclusive decision. With a bit of creativity and determination, it will be found.
+
+It's not always smooth sailing, of course, and the scenario above exemplifies this. When all else fails, we abdicate the decision-making responsibility. We pad out the solution with enough context and hand it over for our stakeholders to make the final call. Who better to make the decision? They are, after all, maximally impacted by it.
+
+The above technique (sans the abdication part) is called a Weighted Decision Matrix. It is sometimes referred to as the Pugh Matrix, after its inventor — British product designer — Stuart Pugh (1981). It is among the most commonly used structured decision-making frameworks, appearing prominently in fields like Engineering, Information Technology, Product Development, and Project Management.
+
+# The 'red pill'
+I'll state this now without any reservations or caveats. The Weighted Decision Matrix approach doesn't work in the real world and never has.
+
+The problem is not with the calculation method, which is numerically sound and reasonably straightforward. It is with our inherent inability to satisfy the underlying assumptions; namely, that within some margin of error, the factors are complete, the weights are accurate, and the scores are objective. Consider the problems:
+
+* **Subjectivity of quantification**: Most of the factors being assessed are qualitative. Their quantification is a matter of opinion, and yet their effects are profound. For instance, reducing the "cost and schedule impacts" from five to four would have tied Solutions 2 and 3. Taking it down to three will have crowned Solution 3 as the victor.
+* **Incomplete factor selection**: The selection of factors is biased by the analyst. Why did we limit our analysis to four factors in the earlier example? Probably because these factors were important to her. Or maybe the analyst simply overlooked them.
+* **Tweaking**: We expect the method to yield an outcome; a tie or a handful of closely matched outcomes will not do. Because we accept subjectivity from the outset, there are no moral or ethical inhibitors preventing us from tweaking the numbers or moderating this process in any way.
+* **Confirmation bias**: Extrapolating from the previous point, we instill comfort into the separability of solutions. A clear and uncontested decision outcome creates satisfaction with the process to the point that we stop questioning the inputs. We accept the decision and move on. Challenging the inputs would likely muddy the weighted averages and erode the confidence.
+* **Lack of repeatability**:
+
+Small weighing or scoring changes can swing the outcome from one solution to another. 
+
+While the
 
 
 While the solution options are entirely contrived, it is easy to imagine similar decisions faced by practitioners around the world. The benefits and drawbacks are numerous and substantial; they do not seem to demarcate the good and the bad solutions.
 
 The architect responds by 
-
-I'll state it now without any reservations or caveats. This approach doesn't work and never has.
 
 
 

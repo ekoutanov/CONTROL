@@ -164,6 +164,8 @@ Pressman, R. S., & Maxim, B. R. (2020). Software Engineering: A Practitioner's A
 
 Project Management Institute (PMI). (2021). A Guide to the Project Management Body of Knowledge (PMBOK Guide) – Seventh Edition. Project Management Institute. Available: https://www.pmi.org/pmbok-guide-standards/foundational/pmbok.
 
+Pugh, S. (1981). Concept selection: a method that works. In: Hubka, V. (ed.), Review of design methodology. Proceedings international conference on engineering design, March 1981, Rome. Zürich: Heurista, 1981, blz. 497 – 506.
+
 Ramasubbu, N., & Kemerer, C. F. (2016). "Technical debt and the reliability of enterprise software systems: A competing risks analysis", Management Science, 62(5), 1298-1316.
 
 Rico, R., & Cohen, S. (2004). "Effects of task interdependence and type of communication on performance in virtual teams", Journal of Management Information Systems, 20(4), 297-323.
