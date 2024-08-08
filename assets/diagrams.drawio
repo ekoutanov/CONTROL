@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-08-06T21:02:02.477Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="rUvjOc6JcbrJwupjTneo" version="24.6.4" type="device" pages="16">
+<mxfile host="Electron" modified="2024-08-08T08:07:04.536Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="pVTKowprN-lW4mXuevTN" version="24.6.4" type="device" pages="16">
   <diagram id="_TLl7XVfBIo5E37kNzWz" name="overview">
     <mxGraphModel dx="602" dy="440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -960,10 +960,10 @@
             <mxPoint x="1140" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qt5hfa3aXi_kD_p4MB_r-8" value="DIRECTION" style="rounded=0;whiteSpace=wrap;html=1;direction=south;horizontal=0;strokeColor=none;fillColor=#AEB6C2;fontColor=#FFFFFF;" parent="1" vertex="1">
+        <mxCell id="Qt5hfa3aXi_kD_p4MB_r-8" value="LEVEL 2:&amp;nbsp;&amp;nbsp;&lt;b&gt;DIRECTION&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;direction=south;horizontal=0;strokeColor=none;fillColor=#AEB6C2;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="10" y="210" width="30" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="Qt5hfa3aXi_kD_p4MB_r-9" value="EXECUTION" style="rounded=0;whiteSpace=wrap;html=1;direction=south;horizontal=0;strokeColor=none;fillColor=#AEB6C2;fontColor=#FFFFFF;" parent="1" vertex="1">
+        <mxCell id="Qt5hfa3aXi_kD_p4MB_r-9" value="LEVEL 1:&amp;nbsp;&amp;nbsp;&lt;b&gt;EXECUTION&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;direction=south;horizontal=0;strokeColor=none;fillColor=#AEB6C2;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="10" y="450" width="30" height="140" as="geometry" />
         </mxCell>
         <mxCell id="Qt5hfa3aXi_kD_p4MB_r-10" value="STRATEGIC" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#4A5763;" parent="1" vertex="1">
