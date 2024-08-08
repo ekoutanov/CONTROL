@@ -34,24 +34,39 @@ The responses (i.e., the pros and cons) of each solution were also scored on a o
 
 Solution 2 edges out Solution 3, while Solution 1 is obviously a no-go. However, the architect is unconvinced. There is an inkling that despite everyone's best efforts, the outcome is too close to call. So, she spends time elaborating each solution and presents her analysis to the stakeholders, along with her professional recommendation — Solution 2. It is voted in, almost unanimously. In discussing their choice, many panelists again stress the resourcing and scheduling angle.
 
-While the example above is entirely fabricated, it is an incontrovertible fact that a myriad of analogous decision-making challenges is faced by practitioners daily. Not just architects and, certainly, not just technical people. You'll have seen it at work and at home, and many times, I'll wager. In making important decisions, our confidence is boosted as the separation among decision options grows. The more the favoured option eclipses its competition on some scale, however subjective or arbitrary, the more comfort is instilled and the stronger the sense of integrity. 
+While the example above is entirely fabricated, it is an incontrovertible fact that a myriad of analogous decision-making challenges bestands practitioners daily. Not just architects and, most certainly, not just technical people. You'll have seen it at work and at home, in the shops, in relationships, and many times over, I'll wager. In making important decisions, our confidence is boosted as the separation among decision options grows. The more the favoured option eclipses its competition on some scale, however subjective or arbitrary, the more comfort is instilled and the stronger the sense of decision integrity. 
 
 When the solutions cannot be separated cleanly, we respond by tweaking. Minor adjustments are made to weights and scores to enhance separability. If that fails, we may revise the criteria entirely; perhaps there are other factors that we failed to consider. There is an infinite number of matrices of factor weights and response scores that yield adequate separation. And yet we only need one such matrix to reach a conclusive decision. With a bit of creativity and determination, it will be found.
 
-It's not always smooth sailing, of course, and the scenario above exemplifies this. When all else fails, we abdicate the decision-making responsibility. We pad out the solution with enough context and hand it over for our stakeholders to make the final call. Who better to make the decision? They are, after all, maximally impacted by it.
+It's not always smooth sailing, of course, and our scenario exemplifies this. When all else fails, we abdicate the decision-making responsibility. In other words, we pad out the solution with enough context and hand it over for our stakeholders to decide. And who better to make the final call? They are, after all, maximally impacted by it.
 
 The above technique (sans the abdication part) is called a Weighted Decision Matrix. It is sometimes referred to as the Pugh Matrix, after its inventor — British product designer — Stuart Pugh (1981). It is among the most commonly used structured decision-making frameworks, appearing prominently in fields like Engineering, Information Technology, Product Development, and Project Management.
 
-# The 'red pill'
-I'll state this now without any reservations or caveats. The Weighted Decision Matrix approach doesn't work in the real world and never has.
+# The glitch
+I'll state this now without any reservations or caveats: The Weighted Decision Matrix approach doesn't work in the real world and never has.
 
-The problem is not with the calculation method, which is numerically sound and reasonably straightforward. It is with our inherent inability to satisfy the underlying assumptions; namely, that within some margin of error, the factors are complete, the weights are accurate, and the scores are objective. Consider the problems:
+The problem is not with the calculation method, which is mathematically sound and reasonably straightforward. It is with our inherent inability to satisfy the underlying assumptions; namely, that within some margin of error, the factors are complete, the weights are accurate, and the scores are objective. Consider the challenges:
 
 * **Subjectivity of quantification**: Most of the factors being assessed are qualitative. Their quantification is a matter of opinion, and yet their effects are profound. For instance, reducing the "cost and schedule impacts" from five to four would have tied Solutions 2 and 3. Taking it down to three will have crowned Solution 3 as the victor.
-* **Incomplete factor selection**: The selection of factors is biased by the analyst. Why did we limit our analysis to four factors in the earlier example? Probably because these factors were important to her. Or maybe the analyst simply overlooked them.
-* **Tweaking**: We expect the method to yield an outcome; a tie or a handful of closely matched outcomes will not do. Because we accept subjectivity from the outset, there are no moral or ethical inhibitors preventing us from tweaking the numbers or moderating this process in any way.
-* **Confirmation bias**: Extrapolating from the previous point, we instill comfort into the separability of solutions. A clear and uncontested decision outcome creates satisfaction with the process to the point that we stop questioning the inputs. We accept the decision and move on. Challenging the inputs would likely muddy the weighted averages and erode the confidence.
-* **Lack of repeatability**:
+* **Incomplete factor selection**: The selection of factors is biased by the analyst. Why was the earlier example limited to four factors? Maybe they were important to her. Maybe she was influenced by her stakeholders. Or maybe she simply overlooked them.
+* **Tweaking**: We expect the method to yield an outcome; a tie or a handful of closely matched outcomes will not do. Because the analysts accept the subjectivity of quantification, there are no moral or ethical inhibitors preventing them from tweaking the numbers or moderating these tweaks in any way.
+* **Confirmation bias**: Extrapolating from the previous point, we instill comfort into the separability of solutions. A clear and uncontested decision outcome creates instant satisfaction with the process, to the effect that we stop questioning the inputs. We accept the decision and move on. Challenging the inputs would likely muddy the weighted averages, decrease separability, and erode our confidence in the outcome.
+* **Illusion of objectivity**: An _a priori_ subjective decision method telegraphs its limitations from the outset. Conversely, a process containing some maths and copious evidence of analysis may appear to stakeholders as objective; in reality it's a cook up.
+* **Illusion of precision**: In our example, the weighted averages were precise to four significant figures. The numerical output
+* **Assumption of independence**: The calculation is sound only when all factors are independent of each other, which is not always the case. Consider a pair of factors — change impact and maintainability. The former favours simpler solutions that impact fewer areas of an existing system. The latter is also negatively correlated with complexity. A simple solution will therefore score well against both factors, amplifying its score beyond reason; equivalently, complex solutions are doubly penalised. This can be mitigated by vetting factors for correlation<sup>2</sup>.
+* **Waste of effort**: Illusion of objectivity doesn't come cheap. Each option must be analysed with enough rigour to permit the quantification of its response scores. Ultimately, one solution will be chosen; the others will be consigned to history.
+
+><sup>2 </sup>Experience suggests that this is often gets neglected. Sadly, there are no 
+
+In summarising the above, I suggest there are two congenital flaws with this method, both unmitigable:
+
+1. **It's irreproducible.** The multiple sources of subjectivity and biases present in the application of the method imply a high likelihood of a pair analysts reaching different outcomes, even if equipped with similar knowledge, skills, and problem context.
+2. **It's unstable.** Small changes in response scores and factor weights can lead to radically different outcomes.
+
+
+
+# The red pill
+
 
 Small weighing or scoring changes can swing the outcome from one solution to another. 
 
