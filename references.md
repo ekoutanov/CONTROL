@@ -64,6 +64,8 @@ Dikert, K., Paasivaara, M., & Lassenius, C. (2016). "Challenges and success fact
 
 Dingsøyr, T., Nerur, S., Balijepally, V., & Moe, N. B. (2012). "A decade of agile methodologies: Towards explaining agile software development", Journal of Systems and Software, 85(6), 1213-1221.
 
+Evans, D. & Hubbard, D. (2010). "Problems with scoring methods and ordinal scales in risk assessment". IBM. DOI: 10.1147/JRD.2010.2042914.
+
 Erickson, C. (2023). Better Custom Software Estimates. Available: https://atomicobject.com/client-resources/better-custom-software-estimates.
 
 Finkelstein, S., Hambrick, D. C., & Cannella, A. A. (2009). Strategic Leadership: Theory and Research on Executives, Top Management Teams, and Boards. Oxford University Press.
@@ -207,6 +209,10 @@ The Open Group. (2018). The TOGAF Standard, Version 9.2. Available: https://pubs
 Thomas, D. (2014). Agile Is Dead (Long Live Agility). Available: http://pragdave.me/blog/2014/03/04/time-to-kill-agile/ (Accessed June 29, 2024).
 
 Tom, E., Aurum, A., & Vidgen, R. (2013). "An exploration of technical debt", Journal of Systems and Software, 86(6), 1498-1516.
+
+United States Department of Health and Human Services. (2007). Draft Guidance on Allocating and Targeting Pandemic Influenza Vaccine. Available: http://www.pandemicﬂu.gov/vaccine/prioritization.html.
+
+van Vactor, J. D. (2009). "Risk mitigation through a composite risk management process: The U.S. army risk assessment". Org. Dev. J., vol. 27, no. 4, pp. 84–97. 
 
 Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User Acceptance of Information Technology: Toward a Unified View. MIS Quarterly, 27(3), 425-478.
 
