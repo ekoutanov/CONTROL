@@ -171,7 +171,7 @@ There is a nonzero upfront cost to instantiating a process model but the benefit
 * Gives the delivery organisation a chance to experiment with subscale processes and tweak the process model according to their needs.
 * Offers senior engineers an opportunity to take on delivery ownership in low-risk, low-pressure environments, so that they may someday take on more challenging projects in PE roles.
 
-><sup>4 </sup>This is yet another reason for strong personal accountability. Even with a polished process, clear goals and priorities, and a jelled team, accountable people are ultimately at the helm. Process is a means to an end; helmsmen may choose to follow it to the letter or deviate entirely without affecting their accountability. People hiding behind processes is a symptom of inadequate or dysfunctional accountability.
+><sup>4 </sup>This is yet another reason for strong personal accountability. Even with a polished process, clear goals and priorities, and a jelled team, accountable people are ultimately at the helm. Process is a means to an end; helmsmen may choose to follow it to the letter or deviate entirely without affecting their accountability. People hiding behind processes is a symptom of inadequate, misaligned, or an otherwise dysfunctional accountability model.
 
 # Chalk outlines
 I discourage attempts to devise objective measures to compare product and technical capabilities for the benefit of their prioritisation. I believe such a pathway to be prospectless.
