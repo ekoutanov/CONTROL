@@ -154,7 +154,9 @@ Mischel, W., Shoda, Y., & Peake, P. K. (1988). The nature of adolescent competen
 
 Mischel, W., Shoda, Y., & Peake, P. K. (1990). Predicting Adolescent Cognitive and Self-Regulatory Competencies From Preschool Delay of Gratification: Identifying Diagnostic Conditions. Developmental Psychology. 26. 978-986. 10.1037/0012-1649.26.6.978. 
 
-Mischel, W., Shoda, Y., & Rodriguez, M. I. (1989). Delay of gratification in children. Science (New York, N.Y.), 244(4907), 933–938. https://doi.org/10.1126/science.2658056
+Mischel, W., Shoda, Y., & Rodriguez, M. I. (1989). Delay of gratification in children. Science (New York, N.Y.), 244(4907), 933–938. https://doi.org/10.1126/science.2658056.
+
+Mitnick, B. M. (2006). Origin of the Theory of Agency: An Account by One of the Theory's Originators. Available: https://sites.pitt.edu/~mitnick/agencytheory/agencytheoryoriginrev11806r.htm.
 
 Newell, A., & Simon, H. A. (1975). "Computer Science as Empirical Inquiry: Symbols and Search", Carnegie-Mellon University, Pittsburgh, Pennsylvania.
 
