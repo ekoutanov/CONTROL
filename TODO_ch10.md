@@ -5,17 +5,11 @@ Chapter 10: Principled Decision-Making
 # Into the 'Matrix'
 We've all seen this before. The architect<sup>1</sup> is deliberating among several shortlisted solution options. She writes down their pros and cons:
 
-* Solution 1: **API-driven order processing.**
-    + **Pro**: Quick to implement, requiring few changes to the existing system.
-    + **Con**: Doesn't scale to increased web traffic.
-* Solution 2: **Event-driven order processing with broker-side pre-filtering and routing.**
-    + **Pro**: Scales to increased loads and has no points of failure.
-    + **Pro**: Quick to implement, requiring few changes to the existing system.
-    + **Con**: Requires proprietary technology. Cannot be easily deployed on the public Cloud.
-* Solution 3: **Event-driven order processing with consumer-side filtering.**
-    + **Pro**: Scales to increased loads and has no points of failure.
-    + **Pro**: Relies solely on open-source technology.
-    + **Con**: High change impact, risking cost blow-outs and late delivery.
+|                          |Solution 1        |Solution 2        |Solution 3        |
+|:-------------------------|:-----------------|:-----------------|:-----------------|
+|Description               |API-driven order processing.|Event-driven order processing with broker-side pre-filtering and routing.|Event-driven order processing with consumer-side filtering.
+|Pros                      |• Quick to implement, requiring few changes to the existing system.|• Scales to increased loads and has no points of failure.<br/>• Quick to implement, requiring few changes to the existing system.|• Scales to increased loads and has no points of failure.<br/>• Relies solely on open-source technology.
+|Cons                      |• Doesn't scale to increased web traffic.|• Requires proprietary technology.<br/>• Cannot be easily deployed on the public Cloud.|• High change impact, risking cost blow-outs and late delivery.
 
 <sup>1 </sup>Architects are picked on here because they're responsible for more than their fair share of poor decisions. The example applies equally to all decision-makers.
 
@@ -80,7 +74,24 @@ In a study of risk assessment methods, Dylan Evans and Douglas Hubbard have expr
 
 
 # The red pill
+A police detective is looking to charge a felon with a minor offense. The charge carries a minimal penalty; if it stands up, that is. It requires much evidence gathering and paperwork. And importantly, there is a mountain of more pressing case files that need getting through. There are "proper" murderers and rapists to rid the town of. So, what does he do?
 
+Well... He doesn't flesh out a Pugh matrix or conduct a cost-benefit analysis. He doesn't put the matter up for a vote among his colleagues, nor does he abdicate the decision to a more senior officer. He simply does what he has been trained to. It mightn't appear to be the best use of the detective's time, but the decisions he makes are grounded in a set of principles instilled in him since joining the force.
+
+Principled decision-making is the method by which we tackle "fuzzy" problems lacking a logical or analytical solution. It works for straightforward problems as well as those with difficult to quantify criteria and responses, and poorly separable outcomes. It is the very method upon which CONTROL is founded.
+
+Decisions are guided by a consistent set of values, ethical standards, and established principles, rather than by convenience, expedience, vote, emotional impulse, stakeholder opinion, popular sentiment, "gut feel", personal "favour", misguided pragmatism, or faux objectivity<sup>5</sup>.
+
+><sup>5 </sup>Like trying to quantify the unquantifiable or drawing on superficial metrics. Or willfully plugging oneself into the Pugh matrix.
+
+
+
+
+Business: In corporate settings, principled decision-making can guide leaders to balance profitability with social responsibility, ensuring that their companies contribute positively to society while achieving financial success.
+
+Law Enforcement and Public Service: For professionals like detectives or public officials, principled decision-making ensures that actions are taken in accordance with the law and ethical standards, rather than personal biases or external pressures.
+
+Personal Life: On a personal level, individuals can apply principled decision-making to align their choices with their values, leading to a more coherent and fulfilling life.
 
 Small weighing or scoring changes can swing the outcome from one solution to another. 
 
