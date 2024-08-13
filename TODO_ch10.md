@@ -54,6 +54,7 @@ The problem is not with the calculation method, which is mathematically sound an
 * **Illusion of precision**: In our example, the weighted averages were precise to four significant figures for two of the solution options. However, the least precise factor in the calculation had only one significant figure. According to the rules for calculations with limited precision, the final outputs should have also been presented to one significant figure. The three options would have scored 10, 20, and 20, respectively, making the last two inseparable. In practice, however, hardly anyone considers the limitations of precision when performing such calculations<sup>3</sup>. And most people interpreting the results will not question the calculations because of how simple they appear to be.
 * **Assumption of independence**: The calculation is sound only when all factors are independent of each other, which is not always the case. Consider a pair of factors — "change impact" and "maintainability". The former favours simpler solutions that impact fewer areas of an existing system. The latter is also negatively correlated with complexity. Simple solutions score well against both factors, amplifying their scores beyond reason; equivalently, complex solutions are doubly penalised. This problem can be mitigated by vetting factors for correlation<sup>4</sup>.
 * **Waste of effort**: Illusion of objectivity doesn't come cheap. Each option must be analysed with enough rigour to permit the quantification of its response scores. Ultimately, one solution will be chosen; the others will be consigned to history.
+* **Permissiveness**: The solutions are not eliminated, only graded. The method will, therefore, find one solution to be superior to the rest (although some tweaking may be required for separability). What if they're all bad? This tendency to accept all solutions may be mitigated by assigning cutoff tolerances to each of the factors, rejecting "bad" solutions from the outset.
 
 ><sup>3 </sup>The process can also be gamed. Instead of quoting scores and weights to one significant figure, an extra decimal or two of precision can be added; for example, writing the "scalability" weight as 4.00 instead of 4. For enhanced legitimacy, the factors and weights can be tweaked slightly, like 4.25 instead of 4.00.
 
@@ -74,17 +75,64 @@ In a study of risk assessment methods, Dylan Evans and Douglas Hubbard have expr
 
 
 # The red pill
-A police detective is looking to charge a felon with a minor offense. The charge carries a minimal penalty; if it stands up, that is. It requires much evidence gathering and paperwork. And importantly, there is a mountain of more pressing case files that need getting through. There are "proper" murderers and rapists to rid the town of. So, what does he do?
+A police detective is looking to charge a felon with a minor offense. The charge carries a minimal penalty; if it stands up in court, that is. It requires witness testimonies, evidence gathering, and paperwork. And importantly, there is a mountain of more pressing case files that need getting through. There are "proper" murderers and rapists to rid the town of. So, what does he do?
 
-Well... He doesn't flesh out a Pugh matrix or conduct a cost-benefit analysis. He doesn't put the matter up for a vote among his colleagues, nor does he abdicate the decision to a more senior officer. He simply does what he has been trained to. It mightn't appear to be the best use of the detective's time, but the decisions he makes are grounded in a set of principles instilled in him since joining the force.
+Well... He doesn't flesh out a Pugh matrix or conduct a cost-benefit analysis. He doesn't put the matter up for a vote among his colleagues, nor does he abdicate the decision to a more senior officer. He simply does what he has been trained to. It mightn't _appear_ to be the best use of the detective's time<sup>5</sup>, but the decisions he makes are grounded in a set of principles instilled in him since joining the force.
+
+><sup>5 </sup>For law enforcement professionals like detectives, principled decision-making guarantees actions are taken in accordance with the law and ethical standards, rather than being influenced by personal biases or external pressures. When certain crimes are consistently prioritised over others (for the sake of metrics or reporting), those that are constantly denied investigative effort will effectively become unpunishable, thereby encouraging their perpetration by criminals.
 
 Principled decision-making is the method by which we tackle "fuzzy" problems lacking a logical or analytical solution. It works for straightforward problems as well as those with difficult to quantify criteria and responses, and poorly separable outcomes. It is the very method upon which CONTROL is founded.
 
-Decisions are guided by a consistent set of values, ethical standards, and established principles, rather than by convenience, expedience, vote, emotional impulse, stakeholder opinion, popular sentiment, "gut feel", personal "favour", misguided pragmatism, or faux objectivity<sup>5</sup>.
+Decisions are guided by a consistent set of values, ethical standards, and established principles, rather than by convenience, expedience, vote, emotional impulse, stakeholder opinion, popular sentiment, "gut feel", personal "favour", misguided pragmatism, or faux objectivity<sup>6</sup>.
 
-><sup>5 </sup>Like trying to quantify the unquantifiable or drawing on superficial metrics. Or willfully plugging oneself into the Pugh matrix.
+><sup>6 </sup>Like trying to quantify the unquantifiable or drawing on superficial metrics. Or willfully plugging oneself into the Pugh matrix.
+
+Principled decision-making works by rapidly eliminating solution options, assessing each against an _a priori_ set of principles<sup>7</sup>. In our original example, Solution 1 would have been culled quickly if the architect had considered the principle "Favour message-driven communication patterns in asynchronous workflows." Similarly, Solution 2 would have fallen to "Favour open, standards-compliant, accessible, and interchangeable technology and skills." Importantly, the options wouldn't have required comprehensive elaboration — they would have been summarily dismissed at the outline level. Much effort would have been saved.
+
+><sup>7 </sup>Other criteria, such as values and ethical principles, we treat synonymously with principles for convenience.
+
+We say that the method works by elimination, but it can also be made to work in reverse — by synthesis. In our example, the three solutions were developed and refined _independently_ of the decision-making method. But it doesn't have to be this way; solution development may _actually_ be guided by the principles, provided the analyst is well aware of them (which they should be). Knowledge of the two aforementioned principles could have yielded a good solution (or several), _a priori_ compliant with the principles.
+
+A notable challenge with the principled approach is the treatment of various "red herrings" that may be separating solutions in other dimensions (orthogonal to the principles). The solution options contrasted change impacts and their effect on cost and delivery schedules. Should we fabricate new principles to deal with time and cost? "Favour the cheapest solutions," perhaps?
+
+Absolutely not. Schedules and costs are _constraints_; they do not factor into principled decision-making. _Engineering is accountable for the quality of all software artefacts within its remit._ Since accountability is ineffective without authority, Engineering must have the final say in the quality of all solutions it commits to. Assuming schedules and costs are roughly immovable, the business stakeholders (via the Product team) have a say on scope. If, for instance, a compromised solution _X_ impacting just one team is inadequate in the quality dimension, while a high-quality solution _Y_ impacting three teams is costly, then the Product team has precisely three choices:
+
+1. Pick _Y_ with its original scope, adjusting budgets and schedules accordingly.
+2. Pick _Y_ with a reduced scope. Once the product gains traction, the complete solution may be delivered later as a separate initiative.
+3. Do nothing.
+
+Regardless of the choice made, Engineering will be in a position of guaranteeing the maintainability and supportability of the system. Note, this doesn't imply that the system _will_ be maintainable and supportable, only that Engineering alone will be held accountable over these obligations. They cannot, for example, later refer to being coerced into a pathway outside their ability or willingness to maintain and support. Equivalently, the Product team will know upfront what they are signing up for. They will have some confidence that the product will not come unstuck after its release. In turn, they can make more realistic promises to their stakeholders.
+
+Consider the benefits of principled decision-making:
+
+* **Consistency and reproducibility**: Decisions made under this approach are uniform across similar situations because they adhere to a stable set of guiding principles. No other factors are considered. And there are no quantification uncertainties, internal correlations, or numerical precision effects to contend with. Given a common set of clear and unambiguous principles, a pair of seasoned analysts (well-trained in the method) will likely arrive at similar decisions, even if they may not always agree.
+* **Integrity**: In environments where there might be a temptation to take shortcuts, pressure to achieve results at any cost, chase short-term goals, or favour one vendor of another (or open-source, for that matter), the enhanced traceability offered by a principle-led method natural leads to more integral decisions.
+* **Accountability**: Because decisions are grounded in well-defined principles, it becomes easier to hold decision-makers accountable for their actions. They cannot easily shift blame or justify poor decisions by external factors because the decision-making process itself is transparent and its outcomes must be justifiable.
+* **Long-term perspective**: Where principles are focused on long-term benefits to the organisation, decisions made according to those principles will be equally conducive to the long-term goals.
+* **Stability**: When solutions are assessed numerically, small variances in the quantified parameters (factors or responses) can result in flip-flopping between closely-matched outcome. In a principled approach, small variances in the interpretation of principles or solution responses are unlikely to alter the outcome drastically.
+* **Efficiency**: Effort on assessing extraneous solutions is minimised as most poor solutions can be eliminated at the point of conception. Instead, effort is channeled into those solutions that conform with the principles from the get-go.
+
+No method is flawless or universal, and this one is certainly not without its drawbacks and limitations:
+
+* **An implicit reliance on established principles.** Without a set of principles that is clear, efficacious, relevant, nonconflicting, and complete, decision-making is rendered impotent. Solutions won't be guided by anything useful. Decent solutions may end up being rejected on esoteric grounds.
+* **All options may be eliminated.** It is a sobering reality that, once subjected to a set of rigorous criteria, all candidate solutions may be deemed noncompliant, leaving the analyst empty-handed.
+* **Some options may be inseparable by principles alone.** While noncompliance may eliminate some candidates, the remaining may be equally compliant with the principles. This will leave the analyst with several options, requiring further analysis (and judgment) to isolate the optimal solution.
+* **Requires skilled subject matter experts to interpret principles correctly and assess solutions objectively.** Principles are generally conveyed abstractly, maximising their breadth of application. They are not spelt out for every conceivable problem that might fit their use. It takes skill and experience to place them in the right context and refine them to the matter at hand.
+* **Political pressure to 
+
+External Pressure: Principled decision-makers might face significant pressure to compromise their standards, particularly in highly competitive or politically charged environments. It takes resilience and strong moral character to maintain integrity in such situations.
+
+Perception of Rigidity: Sometimes, adherence to principles can be perceived as rigidity or inflexibility, especially in dynamic environments where adaptability is valued. Balancing principled decision-making with the need for flexibility is an ongoing challenge.
+
+Unsurprisingly, the method is heavily predicated on the quality of the underlying principles and the expertise of the practitioners who apply them. This reliance, without question, represents a limitation. Alternatives that require minimal upfront investment (e.g., in formulating principles) and place fewer demands on the analyst may seem preferable to many "experts". On the flip side, the failure to meet these requirements signals something far more concerning. An engineering organisation that struggles to formulate the binding "fabric" to safeguard the quality of its most significant and enduring decisions, and that is unwilling to cultivate its people's skills or promote its most merited talent (over, say, the best team players), will steadily drift toward the inescapable event horizon of the "software crisis."
 
 
+lacks the thrust to escape the gravitational pull of the black hole termed the "software crisis".
+
+
+ but on the other, it is an indicator that of something more troubling.
+
+there might be a temptation to take shortcuts or where there is significant pressure to achieve results at any cost.
 
 
 Business: In corporate settings, principled decision-making can guide leaders to balance profitability with social responsibility, ensuring that their companies contribute positively to society while achieving financial success.
@@ -256,7 +304,7 @@ Do not bake flexibility into a product's operational configuration unless it is 
 (Technology principles)
 
 ### Commoditise technology
-Favour open, standards-compliant, accessible and fungible technology and skills to reduce delivery cost and risk.
+Favour open, standards-compliant, accessible, and interchangeable technology and skills to reduce delivery cost and risk.
 
 * Open-source solutions are preferred over commercial analogues, unless the competitive advantage offered by the latter exceeds their cost.
 * Generalised tooling is preferred over niche tooling (languages, frameworks, infrastructure, etc.) unless the latter is essential to fulfil specific functional and/or performance objectives.
@@ -323,7 +371,19 @@ Regarding off-the-shelf patterns, Architects and Engineering Managers shouldn't 
 
 If any pair of principles contradict, it is an indication that one or both are incorrect, or that their interpretation is incorrect.  
 
+
+
+# Chalk outlines
+Much of my time is spent consulting clients on matters of software architecture and engineering strategy. In fact, I coach more Engineers around me on making decisions than deciding myself.
+
 # Summary
 //TODO
 
 Patterns and guidelines serve different but complementary roles in software development. Patterns provide concrete solutions to specific problems and ensure consistent and efficient problem-solving approaches. Guidelines offer broader recommendations and best practices to improve overall software quality and consistency. Both are essential tools for efficient and predictable software delivery.
+
+
+---
+
+ Many such vices have been exposed by Jerry Muller in _The Tyranny of Metrics_ (2018). The rollout of the Compstat ("computer statistics") system in New York in 1994 has led to systemic under-reporting of crime in order
+
+Muller, J. Z. (2018). The Tyranny of Metrics. Princeton University Press.
