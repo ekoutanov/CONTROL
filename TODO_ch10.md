@@ -73,6 +73,7 @@ In a study of risk assessment methods, Dylan Evans and Douglas Hubbard have expr
 >
 >Well... To be pedantic, it is the other way round. Classification methods based on linear combinations of weighted factors and inputs have been been known for many decades before Pugh took them to problems involving ordinal scoring. In machine learning specifically, these algorithms existed since 1943, invented by Warren McCulloch and Walter Pitts. (They were not implemented in hardware until 1957, however.)
 
+It is also worth remarking on the involvement of nontechnical stakeholders in technical decision-making. Although this practice is not, strictly speaking, formally a part of the Pugh/WDM approach, it is commonplace regardless. The typical reason is the lack of confidence in the would-be decision, and the resulting need to have that decision (or another) legitimised by people with skin in the game. This seems prudent on one hand — involving those immediately affected would suggest a better outcome quality, surely! The problem, however, lies in their (in)ability to make such decisions. Furthermore, when the decision-making process is expanded to a consortium of stakeholders, the resulting committee-led decision confuses _consensus_ with _correctness_. When more people agree on something they barely understand, it doesn't make the decision any more sound. And finally, nontechnical stakeholders deciding on technical items gives rise to a conflict of interest: decision-makers will likely be incentivised by costs and schedules, rather than important nonfunctional considerations such as maintainability and supportability.
 
 # The red pill
 A police detective is looking to charge a felon with a minor offense. The charge carries a minimal penalty; if it stands up in court, that is. It requires witness testimonies, evidence gathering, and paperwork. And importantly, there is a mountain of more pressing case files that need getting through. There are "proper" murderers and rapists to rid the town of. So, what does he do?
@@ -101,7 +102,7 @@ Absolutely not. Schedules and costs are _constraints_; they do not factor into p
 2. Pick _Y_ with a reduced scope. Once the product gains traction, the complete solution may be delivered later as a separate initiative.
 3. Do nothing.
 
-Regardless of the choice made, Engineering will be in a position of guaranteeing the maintainability and supportability of the system. Note, this doesn't imply that the system _will_ be maintainable and supportable, only that Engineering alone will be held accountable over these obligations. They cannot, for example, later refer to being coerced into a pathway outside their ability or willingness to maintain and support. Equivalently, the Product team will know upfront what they are signing up for. They will have some confidence that the product will not come unstuck after its release. In turn, they can make more realistic promises to their stakeholders.
+Regardless of the choice made, Engineering will be in a position of guaranteeing the maintainability and supportability of the system. Note, this doesn't imply that the system _will_ be maintainable and supportable, only that Engineering alone will be held accountable over these obligations. They cannot, for example, later refer to being coerced into a pathway outside their ability or willingness to maintain and support. In other words, the approach does not provide iron-clad assurances, only opportunities — by promoting ownership and discouraging blame. At the other end, the Product team will know upfront what they are signing up for. They will have confidence in that the product will not come unstuck after its release. In turn, they can make more realistic promises to their stakeholders.
 
 Consider the benefits of principled decision-making:
 
@@ -114,134 +115,136 @@ Consider the benefits of principled decision-making:
 
 No method is flawless or universal, and this one is certainly not without its drawbacks and limitations:
 
-* **An implicit reliance on established principles.** Without a set of principles that is clear, efficacious, relevant, nonconflicting, and complete, decision-making is rendered impotent. Solutions won't be guided by anything useful. Decent solutions may end up being rejected on esoteric grounds.
+* **An implicit reliance on the soundness of principles.** Without a set of principles that is clear, efficacious, relevant, nonconflicting, and complete, decision-making is rendered impotent. Solutions won't be guided by anything useful. Decent solutions may end up being rejected on esoteric grounds.
+* **Requires skilled subject matter experts to interpret principles correctly and assess solutions objectively.** Principles are generally conveyed abstractly, maximising their breadth of application. They are not spelt out for every conceivable problem that might fit their use. It takes skill and experience to place them in the right context and refine them to the matter at hand.
 * **All options may be eliminated.** It is a sobering reality that, once subjected to a set of rigorous criteria, all candidate solutions may be deemed noncompliant, leaving the analyst empty-handed.
 * **Some options may be inseparable by principles alone.** While noncompliance may eliminate some candidates, the remaining may be equally compliant with the principles. This will leave the analyst with several options, requiring further analysis (and judgment) to isolate the optimal solution.
-* **Requires skilled subject matter experts to interpret principles correctly and assess solutions objectively.** Principles are generally conveyed abstractly, maximising their breadth of application. They are not spelt out for every conceivable problem that might fit their use. It takes skill and experience to place them in the right context and refine them to the matter at hand.
-* **Political pressure to 
+* **Political pressure to accept compromises.** Principled decision-makers might face significant pressure to compromise their standards, particularly in highly competitive or politically charged environments. It takes resilience and strong moral character to maintain integrity in such situations.
+* **Perception of rigidity.** Adherence to principles can sometimes be perceived as rigidity, inflexibility, or stubbornness, especially in "dynamic" environments where adaptability and "pragmatism" are valued.
 
-External Pressure: Principled decision-makers might face significant pressure to compromise their standards, particularly in highly competitive or politically charged environments. It takes resilience and strong moral character to maintain integrity in such situations.
+Let's digest the above.
 
-Perception of Rigidity: Sometimes, adherence to principles can be perceived as rigidity or inflexibility, especially in dynamic environments where adaptability is valued. Balancing principled decision-making with the need for flexibility is an ongoing challenge.
+It should not come as a surprise that a principle-centric method is heavily predicated on the quality of the underlying principles and the expertise of the practitioners who apply them. This reliance, without question, represents a limitation. Alternatives that require minimal upfront investment (in formulating principles) and place fewer demands on the analyst may seem preferable to many industry "experts". On the flip side, the failure to meet these requirements signals something far more concerning. An engineering organisation that struggles to formulate the binding "fabric" to safeguard the quality of its most significant and enduring decisions, and that is unwilling to cultivate its people's skills or promote its most merited talent (over, say, the best team players), will steadily drift toward the inescapable event horizon of the "software crisis."
 
-Unsurprisingly, the method is heavily predicated on the quality of the underlying principles and the expertise of the practitioners who apply them. This reliance, without question, represents a limitation. Alternatives that require minimal upfront investment (e.g., in formulating principles) and place fewer demands on the analyst may seem preferable to many "experts". On the flip side, the failure to meet these requirements signals something far more concerning. An engineering organisation that struggles to formulate the binding "fabric" to safeguard the quality of its most significant and enduring decisions, and that is unwilling to cultivate its people's skills or promote its most merited talent (over, say, the best team players), will steadily drift toward the inescapable event horizon of the "software crisis."
+The elimination of unsuitable options is a good thing. The elimination of _all_ options, while a major inconvenience to the analyst, is nonetheless good in the grand scheme of things. It highlights gaps in the design process, indicating that the organisation's standards exceed the quality of the solutions being considered. One must change or the other, and the lowering of standards is generally ill-advised.
 
+Assuming that the principles are sound, the inseparability of some solutions by principles alone means that several "good enough" solutions have been elicited. It thereafter becomes a matter of determining the best among them, using any number of methods in the analyst's toolkit. Even methods that rely on weighted scoring may be employed to good effect, albeit with caution — to avoid the pitfalls described earlier. The cost of errors would have been reduced substantially — the principled decision-making method acting as safety net of sorts.
 
-lacks the thrust to escape the gravitational pull of the black hole termed the "software crisis".
+Regarding the political pressure to accept compromises or the perception of rigidity — both are evidence of an undisciplined or short-sighed approach to decision-making in the benign case and, in some cases, more systemic problems with the organisation's leadership and culture.
 
+>Writing about the perception of rigidity reminds me of a certain senior executive. Let's call him James. An impeccable knowledge of the product domain was complemented by a solid technical background. A well-respected and much admired leader, James was famous for his "pragmatic" decisions. He'd eagerly get involved in heated discussions (not always but usually technical), cutting through the rhetoric of the feuding parties with simple questions like "How does this benefit the customer?" Notably, his interventions were done with utmost respect and gallantry. People did not feel as though they were being talked down to.
+>
+>Over time, James grew bored with his official role, which wasn't as close to the coal face as he would have liked. He reminisced of the old days. He became more engaging in Engineering's routine decision-making processes, injecting himself into discussions where he was neither needed nor, frankly speaking, welcome. He used his pragmatic lens to steer decisions in favour of short-term outcomes and cut corners to that effect. In his mind, however, he was helping Engineers solve problems they otherwise struggled with. In their mind, he was a royal pain.
+>
+>This story offers two lessons: 
+>
+>1. Pragmatism's practical focus can be immensely useful when cutting through red tape or combating "analysis paralysis". When decision-making becomes bogged down in endless discussions or theoretical debates, a pragmatic approach that homes in on tangible outcomes can help move things forward. But used indiscriminately, pragmatism leads to superficial, short-term solutions that address symptoms rather than root causes, favouring decisions that are expedient but not necessarily sustainable. Pragmatism is also highly subjective, fraught with personal biases, and inconsistent and irreproducible as a result.
+>2. Weak decision-making regimens hinder progress, attracting external participants and opinions. While such interventions may be well-intentioned, they can disrupt the normal workflow, undermine trust in people, and contribute to a more frenzied and uncertain work environment. Ultimately, the result is a less confident team, whose weaknesses are amplified instead of being attenuated. A team that is increasingly more dependent than empowered.
 
- but on the other, it is an indicator that of something more troubling.
+# Defining and communicating the principles
+Principles form the backbone of all decision-making within a CONTROL delivery organisation, in much the same way that CONTROL is built on foundational principles of its own. The availability and soundness of the principles is paramount to the quality of the decisions, as well as people's ability to interpret and apply these principles masterfully at various levels of the organisation. Well-crafted principles —
 
-there might be a temptation to take shortcuts or where there is significant pressure to achieve results at any cost.
+* Provide clarity and direction;
+* Guide consistent decision-making;
+* Foster a shared understanding and language; and
+* Support empowerment and accountability.
 
+Principles should be drawn up at the very start of a software project, alongside if not before the initial sketches of its conceptual architecture. Just as the construction of a building begins with blueprints, the architecture and engineering principles serve as the blueprints for the development of a software system. At the outset, it is usually the senior-most technical decision-makers who are involved in defining the principles — Architects, Engineering Managers, and the Head of Engineering.
 
-Business: In corporate settings, principled decision-making can guide leaders to balance profitability with social responsibility, ensuring that their companies contribute positively to society while achieving financial success.
+Principles cannot be communicated (only) verbally. _They must be written down and made available to all key decision-makers._ While Chapter 11 discusses documentation in a lot more detail, we will jump the gun here slightly to get a taste of how principles might be described.
 
-Law Enforcement and Public Service: For professionals like detectives or public officials, principled decision-making ensures that actions are taken in accordance with the law and ethical standards, rather than personal biases or external pressures.
+We begin with an opening statement. It introduces principles and explains their importance.
 
-Personal Life: On a personal level, individuals can apply principled decision-making to align their choices with their values, leading to a more coherent and fulfilling life.
+_Our core principles are the essential building-blocks of the product and engineering culture. They help form a set of common values and beliefs that influence how we organise ourselves, collaborate, grow, develop sustainable solutions, reinforce good behaviour, and work with key stakeholders. Culture is a lot more than just a handful of principles, but we won't succeed without them._
 
-Small weighing or scoring changes can swing the outcome from one solution to another. 
+## Primordial principles
+Not all Engineering principles directly relate to the system being developed. One principle, in particular, is the cornerstone of all principles and yet is the most agnostic of all. It is the self-referencing principle that every decision draws on principles.
 
-While the
-
-
-While the solution options are entirely contrived, it is easy to imagine similar decisions faced by practitioners around the world. The benefits and drawbacks are numerous and substantial; they do not seem to demarcate the good and the bad solutions.
-
-The architect responds by 
-
-
-
-Our approach to decision-making affects the quality of our decisions...
-
-What often happens:
-
-List solution options
-
-Assess pros & cons
-
-Resolve conflicts with the help of a committee
-
-Problem 1: Objectivity of pros and cons
-Problem 2: Committee-led design confuses agreement with correctness
-
-A better way…
-
-Involve only those who are genuinely impacted by the decision
-
-Encourage bottom-up decision-making
-
-Don’t look for people with opinions who have no skin in the game
-
-Separate the accountable+responsible from the informed
-
-Follow established principles
-
-Pros/cons are irrelevant if an option contradicts a fundamental principle
-
-Principles occasionally contradict
-
-Principles can be used to reduce the set of options
-
-An opening statement. Introduces principles and explains their importance.
-
-_Our foundational principles are the essential elements of the product and engineering<sup>1</sup> culture. They help form a set of common values and beliefs that influence how we organise ourselves, collaborate, grow, develop sustainable solutions, reinforce behaviour and work with key stakeholders. Culture is a lot more than just a handful of principles, but we won't succeed without them._
-
-><sup>1 </sup>Engineering may include application development, data engineering, quant and analytics, architecture, and infrastructure operations.
-
-(Overarching principles)
+---
 
 ### Primacy of principles
+
 Principles are the prevailing decision-making criteria within the organisation.
 
 * An outcome supported by an established principle is favoured over an outcome that is neutral to, or contradicts a principle.
-* Sometimes principles may appear contradictory (e.g., security and compliance vs customer experience). Product and engineering compromises will be necessary.
-* A robust set of core principles mitigates the challenges of decentralised decision-making.
 * Without principles, we will not maintain conceptual integrity and will struggle with consistent and repeatable decision-making.
 
+---
 
+The principle of _personal accountability_, for instance, is also classed as primordial. It exists well in advance of the system being contemplated, let alone architected. Many of the more specific principles are founded upon it.
 
-(Behavioural principles)
+---
+
+### Personal accountability
+
+Performance is in our DNA, and _accountability is the main mechanism by which performance is achieved_. Accountability must be clear, uniquely attributable, within the individual's control, and measurable. 
+
+* A well-designed accountability model should balance holding individuals accountable with providing necessary resources and support, ensuring clarity, fairness, and psychological safety. 
+* The accountability model fosters motivation, ownership, and improved performance, reducing turnover.
+* Accountability composes hierarchically: managers delegate responsibilities and assign specific accountabilities to their direct reports, while retaining accountability for overall performance.
+
+---
+
+## Behavioural principles
+These principles influence the behaviour of the members of the delivery organisation. While they might not refer to technology directly, they ensure that people's actions contribute to the best possible outcomes for the system and its stakeholders. They shape the culture, and culture shapes technology. We consider some examples here.
+
+---
 
 ### Empowerment of individuals and teams
 The technical decision-making process is bottom-up.
 
 * Accountability and decision-making power are inseparable.
 * Engineering teams are responsible for local decision-making, delivering their part of the solution in the manner they see fit.
-* Responsibility split: the business specifies requirements (incl. non-functional), while the engineering team determines the optimal technology solution within the given constraints.
+* Responsibility split: Business specifies requirements (including nonfunctional) and sets constraints, while Engineering determines the optimal technology solutions within their remit.
+
+---
 
 ### Clear ownership demarcation
-Teams are responsible for the functionality, security and performance of all components that are wholly or jointly in their purview.
+Teams are responsible for the quality of all components that are wholly under their purview.
 
-* Where possible and practical, ownership of single responsibility solution components is reduced to single teams.
+* Ownership of single responsibility solution components is reduced to single teams.
 * Each team is responsible for a specific bounded context, ensuring clear ownership of that part of the system.
 * Teams work closely with domain experts to understand and model the business domain.
 * Teams are empowered to make technical decisions that best suit the domain requirements.
-* Shared solution components (libraries, cross-cutting BFFs, etc.) should have de facto custodians.
-* Custodianship extends to the data persisted by the solution components. Those who own stateful components also own the underlying state and are responsible for its quality, integrity and safekeeping.
-* Ownership comes with implied warranty.
+* Shared solution components (libraries, etc.) should have de facto custodians.
+* Custodianship extends to the data persisted by the solution components. Those who own stateful components also own the underlying state and are responsible for its quality, integrity, and safekeeping.
+* Ownership comes with implied warranty. Those who own it keep it running.
+
+---
 
 ### Avoid knowledge siloing
 Key knowledge should not be concentrated in the minds of the few.
 
 * Within a team, knowledge of specific solution elements must be spread across team members.
-* The degree of knowledge redundancy is left to team leads; critical components should be accorded a greater knowledge spread.
-* Team members should have an appreciation of the overall system architecture and the responsibilities of peer teams. Team leads will have a broader knowledge than their subordinates.
-* A common vocabulary goes a long way both within teams and across teams.
+* All critical knowledge, the loss of which is unacceptable, must be documented and reviewed.
+* The degree of acceptable knowledge redundancy is left to managers; business-critical components should be accorded a greater knowledge spread.
+* Team members should have an appreciation of the overall system architecture and the responsibilities of peer teams. 
+* Managers will have a broader knowledge than their subordinates (but not necessarily deeper).
+* A common vocabulary goes a long way to aid communication both within and across teams.
+
+---
 
 ### Avoid centralised communication
 Do not delegate communication; bypass middlemen where possible.
 
-* Don't ask your development manager or your friendly architect to have robust conversations with other teams on your behalf.
-* Built rapport with your peers, particularly your direct suppliers and customers. (I.e., teams and individuals who depend on your work and whose work you and your team depend on.)
+* Don't ask your Engineering Manager or resident Architect to have robust conversations with other teams or colleagues on your behalf unless contention cannot be resolved by other means.
+* Built rapport with your peers, particularly your direct suppliers and consumers. (I.e., teams and individuals who depend on your work and whose work you and your team depend on.)
+
+---
 
 ### Permission to be wrong
 We don't always get things right nor do we dwell on them.
 
-* Quality is the engineers' prerogative: engineering teams designate, monitor and uphold quality objectives.
-* Sometimes quality is intentionally relaxed; for example, for a proof-of-concept, to unblock a downstream team, to expedite feature delivery or to meet a regulatory deadline. In every case, time and resources must be budgeted for follow-up work.
-* Sometimes we get things wrong or discover better ways of doing things. We must give ourselves permission to be wrong. The role of the leadership team is to provide a safe space to evolve in.
+* Quality is the prerogative of Engineering: the teams designate, monitor, and uphold quality objectives.
+* Sometimes quality is intentionally relaxed; for example, for a proof-of-concept, to unblock a downstream team, to expedite feature delivery, or to meet a regulatory deadline. 
+    + It is always better to avoid technical debt, but they may not always be possible. Occasionally, technical debt may be leveraged for greater gains.
+    + In every case, time and resources _must_ be budgeted for follow-up work.
+* We don't always get things right the first time, and sometimes we discover better ways of doing things. _We must give ourselves permission to be wrong._
+    + The role of the leadership team is to uphold accountability while prioritising growth over blame.
+    + Leadership must provide a safe space to evolve in, encouraging measured risk-taking while guaranteeing psychological safety. 
 * We don't throw each other and our stakeholders under the bus. We take responsibility for our actions. If something didn't turn out the way we hoped, excuses like "we were told to get it out quickly" will not do.
+
+---
 
 ### Avoid false alignment
 Teams should be aligned internally based on their common objectives; namely, decisions that are essential to meeting those objectives. They shouldn't align to artificial constraints for-the-sake-of, unless these are provably required to achieve our goals.
@@ -250,6 +253,8 @@ For example, Engineering teams will be internally aligned to ensure we're all de
 
 Alignment across disparate teams should be limited to those collaborative areas that genuinely assist all parties in reaching their objectives. Done without due consideration, indiscriminate alignment robs teams of precious time and hurts morale; it does little to aid them in achieving their goals.
 
+---
+
 ### Avoid design by committee
 We've made some significant organisational and technology decisions already, and we have more decisions ahead of us. We must ensure that forthcoming decisions adequately support our system in the long term.
 
@@ -257,6 +262,9 @@ It may sound counterintuitive to some, but adding people does not necessarily le
 
 * Those who are materially impacted by the decision.
 * Those with the relevant subject matter expertise.
+* Do not confuse consensus with correctness.
+
+---
 
 ### Design and build iteratively
 Building a market-leading product is an evolutionary process. By overplanning and overbuilding, we risk venturing down the wrong path while wasting precious time in doing so. 
@@ -269,11 +277,14 @@ The challenge is to produce just enough architecture up-front so that design gap
 * Work done later can draw upon the skills, experience and wisdom obtained earlier in the project. More of the problem space is uncovered as the work progresses; deferred design decisions can take advantage of these greater learnings.
 * The cost of under-design is refactoring down the track. Be prepared for these costs.
 
+---
+
 ### Designs aren't the be-all and end-all
 We accept that designs are loose guidelines intended to inform the build process, and deliverables may deviate from the specification within reasonable bounds. There are many uncertainties in the Engineering process and those building the software know their job best.
 
 Ongoing dialogue, trust and mutual respect between the design and delivery teams are favoured over documents and specifications. Engagement starts well before we commence the build and does not end until the product or capability is effectively decommissioned.
 
+---
 
 (Product principles)
 
