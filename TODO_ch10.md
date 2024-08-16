@@ -200,11 +200,11 @@ The technical decision-making process is bottom-up.
 ---
 
 ### Clear ownership demarcation
-Teams are responsible for the quality of all components that are wholly under their purview.
+Teams are responsible for the quality of all components that are under their purview.
 
 * Ownership of single responsibility solution components is reduced to single teams.
-* Each team is responsible for a specific bounded context, ensuring clear ownership of that part of the system.
-* Teams work closely with domain experts to understand and model the business domain.
+* Each team is responsible for one or more bounded contexts, ensuring clear ownership of that part of the system.
+* Teams work closely with domain experts, the Product team, and Architects to understand and model the business domain.
 * Teams are empowered to make technical decisions that best suit the domain requirements.
 * Shared solution components (libraries, etc.) should have de facto custodians.
 * Custodianship extends to the data persisted by the solution components. Those who own stateful components also own the underlying state and are responsible for its quality, integrity, and safekeeping.
@@ -220,7 +220,7 @@ Key knowledge should not be concentrated in the minds of the few.
 * The degree of acceptable knowledge redundancy is left to managers; business-critical components should be accorded a greater knowledge spread.
 * Team members should have an appreciation of the overall system architecture and the responsibilities of peer teams. 
 * Managers will have a broader knowledge than their subordinates (but not necessarily deeper).
-* A common vocabulary goes a long way to aid communication both within and across teams.
+* A common vocabulary goes a long way in aiding communication both within and across teams.
 
 ---
 
@@ -242,14 +242,14 @@ We don't always get things right nor do we dwell on them.
 * We don't always get things right the first time, and sometimes we discover better ways of doing things. _We must give ourselves permission to be wrong._
     + The role of the leadership team is to uphold accountability while prioritising growth over blame.
     + Leadership must provide a safe space to evolve in, encouraging measured risk-taking while guaranteeing psychological safety. 
-* We don't throw each other and our stakeholders under the bus. We take responsibility for our actions. If something didn't turn out the way we hoped, excuses like "we were told to get it out quickly" will not do.
+* We don't throw each other and our stakeholders under the bus. _We take responsibility for our actions._ If something didn't turn out the way we hoped, excuses like "we were told to get it out quickly" will not do.
 
 ---
 
 ### Avoid false alignment
-Teams should be aligned internally based on their common objectives; namely, decisions that are essential to meeting those objectives. They shouldn't align to artificial constraints for-the-sake-of, unless these are provably required to achieve our goals.
+Teams should be aligned internally based on their common objectives, particularly the decisions essential to meeting those objectives. They shouldn't align with artificial constraints unless these constraints are demonstrably required to achieve our goals.
 
-For example, Engineering teams will be internally aligned to ensure we're all delivering on the one goal of building a market-leading product. They need not align on non-contradictory aspects, for example, technology stacks: the teams use a mixture of JavaScript, Rust, Python and Java. Despite their diversity, each team is effective in their delivery, and their deliverables are carefully aligned to a common goal.
+For example, Engineering teams will be internally aligned to ensure we're all delivering on the one goal of building a market-leading product. They need not align on implementation detail; for example, technology stacks. The teams use a mixture of JavaScript, Rust, Python and Java. Despite their diversity, each team is effective in their delivery, and their deliverables are carefully aligned to a common goal.
 
 Alignment across disparate teams should be limited to those collaborative areas that genuinely assist all parties in reaching their objectives. Done without due consideration, indiscriminate alignment robs teams of precious time and hurts morale; it does little to aid them in achieving their goals.
 
@@ -258,102 +258,104 @@ Alignment across disparate teams should be limited to those collaborative areas 
 ### Avoid design by committee
 We've made some significant organisational and technology decisions already, and we have more decisions ahead of us. We must ensure that forthcoming decisions adequately support our system in the long term.
 
-It may sound counterintuitive to some, but adding people does not necessarily lead to a better decision. There should be one key decision-maker who preserves the conceptual integrity of the overall system, supported by (and only by) —
+It may sound counterintuitive, but adding people does not necessarily lead to a better decision. There should be one key decision-maker who preserves the conceptual integrity of the overall system, supported by (and only by) —
 
-* Those who are materially impacted by the decision.
+* Those who are materially impacted by the decision; and
 * Those with the relevant subject matter expertise.
-* Do not confuse consensus with correctness.
 
 ---
 
 ### Design and build iteratively
 Building a market-leading product is an evolutionary process. By overplanning and overbuilding, we risk venturing down the wrong path while wasting precious time in doing so. 
 
-The challenge is to produce just enough architecture up-front so that design gaps will not haunt us later, but not so much that we dwell in hypothetical scenarios that are unlikely to materialise, and lose track of the tangibles as a result.
+The challenge is to produce enough architecture up-front so that design gaps will not haunt us later, but not so much that we dwell on hypothetical scenarios that are unlikely to materialise, and lose track of the tangibles as a result.
 
-* Certain critical design decisions must be made at the outset, as they unlock initial progress and set the foundation for the rest of the system.
+* Critical design decisions must be made at the outset, as they unlock initial progress and set the foundation for the rest of the system. Implementation does not begin until all key technical risks have been addressed.
 * Beware of drawing on assumptions that cannot be validated up-front. Parts of a design can only be fully validated once it is implemented in working software.
 * There might be a tendency to provision for features that later turn out to be unneeded. (The YAGNI principle.)
 * Work done later can draw upon the skills, experience and wisdom obtained earlier in the project. More of the problem space is uncovered as the work progresses; deferred design decisions can take advantage of these greater learnings.
-* The cost of under-design is refactoring down the track. Be prepared for these costs.
+* The implication of and undercooked design is costly refactoring down the track. Be aware and be prepared.
 
 ---
 
-### Designs aren't the be-all and end-all
-We accept that designs are loose guidelines intended to inform the build process, and deliverables may deviate from the specification within reasonable bounds. There are many uncertainties in the Engineering process and those building the software know their job best.
-
-Ongoing dialogue, trust and mutual respect between the design and delivery teams are favoured over documents and specifications. Engagement starts well before we commence the build and does not end until the product or capability is effectively decommissioned.
+# Product principles
+A CONTROL delivery organisation is populated by more than just technical personnel. The Product team plays as significant a role in achieving delivery objectives as Engineering. They, too, need principled guidance.
 
 ---
-
-(Product principles)
 
 ### Build products, not projects
 We value long-term commitment over short-term engagement.
 
-* The capabilities we build will serve the business for years and decades. Those involved (engineers, product and experience, designers, etc.) must take a long-term view.
+* The capabilities we build will serve the business for years and decades. Those involved (Engineers, Product Owners, UX designers, Architects, etc.) must take a long-term view.
 * Some of our most successful competitors would have adopted the product mindset and numerous successful organisations in other industries have done the same.
 * Products, unlike projects, don't have a well-defined end date. They evolve in response to market changes and business needs.
 * Subject matter expertise takes a long time to build; we cannot afford to shuffle people in and out.
 
-### Product decoupled from CRM
-The product is independent of the customer (relationship management) platform.
-
-* We already operate several customer platforms and this number may grow through acquisitions.
-* The platforms fulfil distinct needs and must be allowed to evolve separately.
-* Product scope is constrained by the customer platform. Where these platforms differ, a dependency on a proprietary (customer platform) capability limits the product's portability. Global products mustn't rely on proprietary/unique capabilities of customer platforms.
-* The product's design is decoupled from the nuances of the customer platform as per the (Liskov) substitution principle.
+---
 
 ### Robustness over flexibility
 Do not bake flexibility into a product's operational configuration unless it is essential or yields a competitive advantage. (Configurability here refers to operational parameters, rather than deployment, localisation, look and feel, content, and so forth.)
 
-* Excessive flexibility complicates product design, implementation and use. And in many cases can lead to improper use.
+* Excessive flexibility complicates product design, implementation, and use. And in many cases it can lead to improper use.
 * Decisions to alter a product's control surface should be based on empirical evidence.
 * With time, most elements of the product's operation will be automated. This reduces the need for certain kinds of flexibility down the line.
 
+---
 
-(Technology principles)
+## Technology principles
+The final set of products relate directly to the system being built. They simultaneously guide and constrain the use of technology to solve business problems.
+
+---
 
 ### Commoditise technology
 Favour open, standards-compliant, accessible, and interchangeable technology and skills to reduce delivery cost and risk.
 
-* Open-source solutions are preferred over commercial analogues, unless the competitive advantage offered by the latter exceeds their cost.
+* Open-source solutions are preferred over commercial analogues, unless the competitive advantage offered by the latter exceeds their cost significantly.
 * Generalised tooling is preferred over niche tooling (languages, frameworks, infrastructure, etc.) unless the latter is essential to fulfil specific functional and/or performance objectives.
-* Operational (and other) costs and risks of maintaining prospective technology must be factored into the cost-benefit analysis. For example, an on-premises message broker requires numerous infrastructure personnel that are suitably skilled. This presents a personnel risk.
-* Prefer platform/vendor-neutral solutions over platform/vendor-specific solutions. For example, certain serverless solutions (e.g., AWS Lambda), while not without their advantages, may limit our deployment options.
-* Control technical diversity. Where a proposed technology is closely interchangeable with existing and the latter is well-supported, prefer the latter. I.e., "new" or "different" not just for the sake of.
+* Operational (and other) costs and risks of maintaining prospective technology must be factored into the cost-benefit analysis. For example, a self-hosted message broker requires numerous infrastructure personnel that are suitably skilled. This presents a personnel risk.
+* Prefer platform/vendor-neutral solutions over platform/vendor-specific solutions. For example, certain proprietary serverless solutions, while not without their advantages, may limit our future deployment options.
+* Control technical diversity. Where a proposed technology is closely interchangeable with existing and well-supported technology, favour the latter. I.e., "new" or "different" not just for the sake of.
+
+---
 
 ### Strongly event-driven
 Our system is a substantial producer of data with many internal and external consumers. We have adopted the Event-Driven Architecture paradigm, ensuring that producers are minimally coupled to consumers.
 
-* An event is a notification of something that might be of material significance; it is not a direct instruction to do something. (I.e., not a command.) A consumer is free to interpret and process an event as it chooses.
-* Events are complete, correct and timely. Where the producer is a system of record, all material entity updates should be accompanied by the publishing of an event.
-* Producers determine the message contract and warrant that all published messages conform to the contract.
+* An event is a notification of something that might be of material significance; it is not a direct instruction to do something. (I.e., an event is not a command.) A consumer is free to interpret and process (or ignore) events as it chooses.
+* Events are complete, correct, and timely. Where the producer is a system of record, all material entity updates should be accompanied by the publishing of an event.
+* Producers determine the contract/schema for outgoing events and warrant that all published events conform to the contract.
 * Producers preserve causality by ensuring that the partitioning scheme captures the causal order of events.
-* Messages are versioned. Versioning should be non-breaking if possible; breaking versions will require "double publishing" to support legacy consumers.
+* Events are versioned. Versioning should be non-breaking where possible; breaking versions will require "double publishing" to support legacy consumers.
 * Consumers should be idempotent. An event may be received multiple times and should not cause adverse effects on the consumer.
+
+---
 
 ### Infrastructure as code
 Favour the management of infrastructure through code instead of manual processes.
 
-* Teams can provision and manage their own infrastructure using code.
+* Teams can provision and manage their own infrastructure using code (typically as declarative configuration).
 * Teams manage the state of their infrastructure, including updates and rollbacks.
 * Teams are responsible for the code that defines their infrastructure, ensuring it aligns with their service requirements.
-* Code ensures that environments are consistent across different stages of development.
+* Specifying infrastructure as code ensures that environments are consistent across different stages of development.
 
+---
 
 # Patterns and guidelines
-//TODO
+Principles are generally stated at a very high level of abstraction. They also tend to be succinct; a principle can be a embodied in one paragraph, yet it could be entirely unambiguous. An example is the "primary of principles" principle, which simply states that all decisions must refer to a principle where one exits. The combination of succinctness and abstraction makes principles broadly useful, but can also make their interpretation difficult in specific contexts.
 
-* While principles are generally stated at a very high level of abstraction, patterns and guidelines tend to be more refined.
-    + A principle can be a embodied in one paragraph, yet it could be entirely unambiguous. An example is the "primary of principles" principle, which simply states that all decisions must refer to a principle where one exits.
-    + Patterns are reusable solutions to common problems. They offer well-defined, scrutinised, and time-tested instructions that are effective in specific contexts.
-    + Guidelines are recommendations or best practices intended to influence how certain tasks should be performed. They are not ready-made solutions, unlike patterns. However, following a guideline should simplify the solutioning process and lead to higher quality (e.g., more robust) solutions.
-    + Patterns and guidelines have specific instructions that guide their implementation.
-* Unlike principles, patterns and guidelines are rarely mandatory. In some ways, people ought to treat patterns and guidelines as tools in a toolbox. They don't have to use these tools to solve problems, however, they are encouraged to do so where it is practical, to avoid reinventing the wheel, and drive consistency within the engineering organisation. Engineers may deviate from this advice on some occasions, although they may be expected to justify their decision to do so. On the other hand, principles must be followed at all times.
+Patterns and guidelines may be seen as refinements of principles, offering specific and actionable guidance for solving common problems:
+
+* Patterns are reusable solution templates. They offer well-defined, scrutinised, and time-tested instructions that are effective in specific contexts.
+* Guidelines are recommendations or best practices intended to influence how certain tasks should be performed. They are not clear-cut templates, unlike patterns. However, following a guideline should simplify the solutioning process and lead to higher quality (e.g., more robust) solutions.
+
+Unlike principles, patterns and guidelines are rarely mandatory. In some ways, people ought to treat patterns and guidelines as tools in a toolbox. They don't have to use these tools to solve problems, and tools can sometimes be used interchangeably. For example, a hammer can be used to drive a stripped screw by force. However, Engineers are encouraged to follow patterns and guidelines where it is practical — to avoid reinventing the wheel, and to drive consistency within Engineering. Practitioners may deviate from this advice on some occasions, although they may be required to justify their decision to do so. Conversely, principles must be followed at all times.
+
+Like principles, patterns and guidelines must be carefully vetted for the problem at hand:
+
 * Many patterns are sourced from the industry and often reflect specific technology choices. For example, object-orientated design patterns apply to specific programming languages.
 * Patterns and guidelines can be derived internally, especially for highly niche application domains where industry knowledge is hard to come by and is rarely shared. In many cases, internal patterns and guidelines can form the core intellectual property of an organisation; their leakage is highly undesirable.
-* Both patterns and guidelines serve common purposes. They aim improve the overall quality and maintainability of software. They ensure consistency in how problems are solved and tasks are performed across teams and software projects.
+
+Both patterns and guidelines serve common purposes. They aim improve the overall quality and maintainability of software. They ensure consistency in how problems are solved and tasks are performed across teams and software projects.
 
 >The history of software patterns begins not with computers but with buildings. They come to us from the world of architecture, first described by Christopher Alexander, Sara Ishikawa, and Murray Silverstein in 1977. In their original definition, a pattern is a "recurring solution to a common problem in a given context and system of forces."
 >
@@ -371,26 +373,36 @@ Some commonly used patterns include:
 * **Retry**: Automatically retry failed operations a set number of times before giving up.
 * **Strangler fig**: Incrementally replace an old system by gradually creating a new system around it, then slowly migrating functionalities.
 
-Patterns will typically offer more than a one-paragraph description. There will be references to problem contexts to which the patterns are ideally suited. Diagrammatic representations will frequently be used. And examples may be provided to guide the pattern's implementation. For example, the _strangler fig_ pattern would //TODO
+Patterns will typically offer more than a one-paragraph description. There will be references to problem contexts to which the patterns are ideally suited. Diagrammatic representations will frequently be used, while examples may be provided to guide the pattern's implementation.
 
-* How do guidelines differ from patterns?
-* Guidelines are more verbose and even more technology- or process-specific.
-    - Code review and merging guidelines
-    - Telemetry guidelines (covering the structure, organisation and best-practices relating logging, metrics, and traces.)
+Guidelines are generally more verbose and technology- or process-specific than patterns. Examples include:
 
-Regarding off-the-shelf patterns, Architects and Engineering Managers shouldn't assume that just because many patterns are commonly available and easily accessible, their use will be implied within the organisation. It is better to be explicit than to assume that Engineers will wilfully engage in research activities to determine the best tools for the job. (In theory, they will do precisely that. In practice, they won't.) Pick the most useful patterns that relate to your operating context and enrol them into the pattern catalogue. The same is said of guidelines.
+* Branching strategies, code review and merge policies.
+* Telemetry guidelines (covering the structure, organisation, and best-practices relating logging, metrics, and traces.)
+* API versioning guidelines.
 
-If any pair of principles contradict, it is an indication that one or both are incorrect, or that their interpretation is incorrect.  
-
-
+Regarding off-the-shelf patterns and guidelines, Architects and Engineering Managers shouldn't assume that because copious amounts useful material are commonly available and easily accessible, their use will be guaranteed. It is better to be explicit than to hope that Engineers will wilfully engage in research and self-education activities to determine the best tools for the job. (In theory, they will do precisely that. In practice, they won't.) Pick the most useful patterns that relate to your operating context and enrol them into the pattern catalogue. The same is said of guidelines. 
 
 # Chalk outlines
-Much of my time is spent consulting clients on matters of software architecture and engineering strategy. In fact, I coach more Engineers around me on making decisions than deciding myself.
+The contentious assertion is that the main decision-making method used by millions of organisations daily is of little value and yields results only marginally better than chance. Nonetheless, I stand by this claim. Furthermore, I believe that the ongoing software crisis is partly due to this reality. Beyond the gaps in decision-making, many methods, processes, and frameworks that we hold in high regard are indistinguishable from snake oil. They often lack empirical reasoning or rigorous testing, are frequently applied outside their intended context, and are chosen for the simple reason that others have also chosen the same. They are about as useful to solving our problems as umbrellas are to fish.
+
+Principled decision-making isn't without its challenges; like any method involving human judgment, it can be influenced by subjectivity, biases, and misunderstandings. I hold it in high regard not because of how good it is specifically but because how bad every _practical_ alternative is once scrutinised. A principled method discourages "tweaking" or, worse, "fudging". And while it alone doesn't guarantee the quality of the resulting decisions, it upholds the integrity of the process. In skilled hands, it is a robust method that can consistently produce good results.
 
 # Summary
 //TODO
 
 Patterns and guidelines serve different but complementary roles in software development. Patterns provide concrete solutions to specific problems and ensure consistent and efficient problem-solving approaches. Guidelines offer broader recommendations and best practices to improve overall software quality and consistency. Both are essential tools for efficient and predictable software delivery.
+
+# Concluding remarks
+A large part of my work involves consulting clients on software architecture and engineering strategy. In certain fields, like sports wagering, I'm also regularly asked to provide insights on product-related matters, essentially stepping in as a subject matter expert. Making decisions and being involved in decision-making processes is, therefore, central to what I do.
+
+Throughout the more senior period of my career, I have spent more time coaching "decision-makers" around me on making sound decisions than on deciding myself. If there is one observation made from my daily interactions with engineers, architects, and product folk, it is that most people — from greenhorns to seasoned professionals — are unskilled at decision-making. Even the more seasoned professionals haven't made significant strides in this area throughout their careers. I am convinced of this. I wouldn't have dedicated an entire chapter to decision-making had I thought otherwise.
+
+Decision-making isn't formally taught in schools and universities, even though students are regularly tasked with solving problems. Instead, educational institutions focus on developing analytical skills, critical thinking, and problem-solving abilities, implicitly assuming that these skills will translate into effective decision-making. They don't, because the emphasis is on _solving_ a problem, not distinguishing among valid solutions. This suits educators because the gaps, in their worldview, lie in the theoretical foundations and _some_ practical skills. The overarching objective is to prepare students for the industry. And _it_ will do the rest.
+
+Except that it doesn't. The industry has an objective of its own. Organisations exist to meet the needs of its stakeholders, first and foremost, not to educate those in its employ. Graduate development programmes that feature elements of education and training are really a mechanism for hiring candidates with good prospects at a salary that significantly undercuts that of an even minimally trained employee. These programmes have evolved in response to the acute imbalance between supply and demand that has plagued our industry. Beyond the initial training, however, recruits are on their own. The lucky ones will be mentored at various points and will receive good guidance from their managers, but the education outcomes are far from certain.
+
+So, if industry doesn't teach decision-making skills and professionals aren't acquiring them naturally in their careers, the burden is on educational institutions to be more attentive to decision-making skills in their curricula.
 
 
 ---
