@@ -24,7 +24,7 @@ _Dedicated to my mentors, who guided me with wisdom and patience._
 
 [Chapter 9. Maintenance](ch09.md)
 
-Chapter 10. Principled Decision-Making
+[Chapter 10. Principled Decision-Making](ch10.md)
 
 [Chapter 11. Documentation](ch11.md)
 
