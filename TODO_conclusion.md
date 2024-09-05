@@ -5,10 +5,12 @@ Our journey has come to its conclusion. It is not the end, however. The software
 Instead, my hope for this book is that it marks the beginning of the end — a close to false assumptions, illusions, silver bullets, and unfulfilled promises that have spread like wildfire through our industry. I refer in particular to the last three decades of software "evolution", wherein unscrupulous salesmen disguised as method experts have systematically undermined the integrity of the profession, fueling the ongoing software crisis instead of extinguishing it.
 
 # A brief recap
-## Waterfall is not the antithesis of Agile
-In large part, this book has been an exposé, uncovering lies that have been fed to current and aspiring software engineers by industry "thought leaders". We began our investigation — if one may call it that — with a _partial_ rehabilitation of Waterfall. Specifically, it is not the model that we seek to redeem but its de facto scapegoat status. Waterfall is not the antithesis of Agile methods as it is often made out to be. Nor is it endorsed by proponents of Classical methodology. Nevertheless, Waterfall is routinely used in scaremongering campaigns by Agileists to depict in no uncertain terms what might happen if an organisation were to try something _different_ and non-Agile.
+In large part, this book has been an exposé, uncovering lies that have been fed to current and aspiring software engineers by industry "thought leaders". We recount a few brief "lessons" below.
 
-## Agile is (only) sometimes appropriate
+## Waterfall is not the antithesis of Agile
+We began our investigation — if one may call it that — with a _partial_ rehabilitation of Waterfall. Specifically, it is not the model that we seek to redeem but its de facto scapegoat status. Waterfall is not the antithesis of Agile methods as it is often made out to be. Nor is it endorsed by proponents of Classical methodology. Nevertheless, Waterfall is routinely used in scaremongering campaigns by Agileists to depict in no uncertain terms what might happen if an organisation were to try something _different_ and non-Agile.
+
+## Agile is sometimes appropriate
 We also examined Agile methodology and the ideal problem context to which it is suited. Namely, 1) small, 2) highly-skilled teams, navigating 3) turbulent environments, supported by 4) highly engaged stakeholders. If the parameters of your project fit these constraints, then by all means go Agile; I'd be surprised if you haven't yet done so. Otherwise, if at least one of the aforementioned assumptions is unsatisfiable, then perhaps more suitable options ought to be considered. Reiterating one of the central themes of this book — _the reader must think and decide for themselves_. Herd mentality is best suited for cattle, both literally and figuratively.
 
 ## Teamwork is overvalued
@@ -37,11 +39,21 @@ A corollary of the above, a member of the business or product community will alm
 
 None of this should come as a surprise: _pursuit of self-interest is a fundamental aspect of human behaviour_. In psychology and economics, this trait is central to understanding motivation and decision-making in a variety of settings. It is an axiom that the world has known for millennia. The sooner software engineers "discover" it, the better it is for them and others.
 
-There is a solution, however unrefined or inelegant it may appear. Before proceeding, however, one must first let go of the illusion that technical and product initiatives may be objectively prioritised over each other by people who clearly benefit by one or the other. Both are needed for the system to meet its objectives and realise long-term business value. Therefore, the solution is to split engineering capacity so that each of the streams is delivered with no regard for the other. This stance may seem unscientific, and it is — but it gets the job done without bias or favoritism. Crude but bulletproof, this method cannot be easily "fudged" or subverted. Ultimately, it is better to work with the known but acceptable limitations of a method than to adopt another whose limitations are unknown or, worse, operate under the false belief that there are no limitations at all.
+There is a solution, however unrefined or inelegant it may appear. Before proceeding, however, one must first let go of the illusion that technical and product initiatives may be objectively prioritised over each other by people who clearly benefit by one or the other. Both sets of initiatives are needed for the system to meet its objectives and realise long-term business value. Therefore, the solution is to split engineering capacity so that each of the streams is delivered with no regard for the other. Our stance may seem overly simple and unscientific, and it is — but it gets the job done without bias or favoritism. Crude but bulletproof, this method cannot be easily "fudged" or subverted. Ultimately, it is better to work with the known but acceptable limitations of a method than to adopt another whose limitations are unknown or, worse, operate under the false belief that there are no limitations at all.
 
-## Decision-making is the bane of our existence
-Yet
+## Balanced decision-making is the bane of our existence
+Decision-making is a routine activity found in every engineering organisation, and one can hardly fathom its impact on the quality of software produced day to day. A popular myth is that decision-making should yield the optimal outcome through a careful balance of pros and cons. As the theory goes, aggregating all relevant criteria and attributing a weighting (quantitatively or qualitatively) will identify the best _overall_ solution — on the balance of all things considered. 
 
+In reality, many of the assumptions of this approach cannot be satisfied by its practitioners; in particular, appropriate (relevant, complete, and uncorrelated) factor selection, unbiased weight assignment, and objective scoring. This approach can also elicit "tweaking" behaviours that are questionable at best, and further undermine the decision quality. The result is an _illusion of objectivity_ — a "blue pill" that offers just the right amount of comfort that people have done their job to the best of their ability.
+
+The only approach that works consistently is a principled one. By assessing the candidates against a well-known set of steadfast principles, the principled decision-making eliminates solutions that fail to meet the standards defined by the organisation. Furthermore, by considering the principles from the outset, designers can formulate better solutions 
+
+
+
+
+Principled decision-making addresses both issues. By assessing the candidates against a well-known set of steadfast principles, the method swiftly eliminates solutions that fail to meet the standards defined by the organisation. By considering the principles from the outset — the same ones that will later be used for assessment — designers can formulate a set of _a priori_ compliant solutions. During subsequent analysis, instead of separating the "good" options from the "bad" ones, the analyst's effort is spent on deciding which among the "good" options is the best.
+
+Principled decision-making shines in tackling "fuzzy" problems — those where the answers aren't easily found through logic or numbers. It is also the backbone of the CONTROL method, where decisions are guided by heavily scrutinised principles rather than convenience, popular opinion, or superficial metrics. This method is stable and repeatable. It brings integrity, accountability, and a long-term perspective to the table, steering clear of the pitfalls that come with trying to judge by the feel of one's "gut" or quantify the unquantifiable.
 
  — in the common case, in the illusion of objectivity.
 
